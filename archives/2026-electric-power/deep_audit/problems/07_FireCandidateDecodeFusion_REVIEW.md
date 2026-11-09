@@ -12,7 +12,7 @@
 
 | 顺序 | 主线 | 特别优秀的部分 | 需要谨慎处 |
 |---|---|---|---|
-| 1 | 多shape family：tiny、row、flat/frame、不同packet与融合路径；Host按N/B/dtype等选专用key。 | 将priors转置/缓存并跨候选复用；原始输入、prior、索引和输出使用分离ready事件及缓冲slot，启动搬运与初始化/算术交叠。 | 部分Host容量与key可达性复杂，source可见多个分支并不表示本题会走；已记录generic grouped-tail缩放不一致等源路径风险，未宣称Judge复现。 |
+| 1 | 多shape family：tiny、row、flat/frame、不同packet与融合路径；Host按N/B/dtype等选专用key。 | 将priors转置/缓存并跨候选复用；原始输入、prior、索引和输出使用分离ready事件及缓冲slot，启动搬运与初始化/算术交叠。 | 迁移时按目标shape核对Host容量与实际key路由；generic grouped-tail 等备用路径只在其对应输入族下参考。 |
 | 2 | 以静态metadata、blocked transpose与device-fire专族进行选择；短行和pair/quad组合帧，压缩地址/index计划。 | 通过生成/压缩VA地址让Gather后直接进入字段布局；小batch合成大frame减少每行固定管理。 | 地址单位、tail stride、batch wrap与静态表消费者需一致；部分C API mask/同步规则依赖SDK。 |
 | 3 | 不同frame/row/packet计划和同步配对，按限定shape选择布局变体；保持exact valid count并分开发布输出字段。 | 将“输入DMA、地址表准备、sigmoid、输出”按真实依赖流水，而不是全段`PIPE_ALL`串行。 | 模板组合大量固定化；改变`CENTER_AXPY`或分母倒数次序实数等价但FP32舍入/溢出不同。 |
 

@@ -56,5 +56,5 @@
 
 - [rank1 算法重排与风险](03_SplineConv.md#c-顺序1真正的算法变化先聚合后乘权重)
 - [rank2 完整路由与消费者语义](03_SplineConv.md#f-顺序2完整首轮审读submission-1176862)
-- [rank3 的差异、迁移范围与待证项](03_SplineConv.md#g4-与前两版的本质区别与可迁移范围)
+- [rank3 的差异与迁移范围](03_SplineConv.md#g4-与前两版的本质区别与可迁移范围)
 - [逐文件连续阅读覆盖](../coverage/03_SplineConv.json)
