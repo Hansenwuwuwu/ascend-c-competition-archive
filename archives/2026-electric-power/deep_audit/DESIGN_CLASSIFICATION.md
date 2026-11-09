@@ -6,16 +6,16 @@
 
 |题目|覆盖行数|文件数|逐题报告|首轮源码审阅状态|
 |---|---:|---:|---|---|
-|01 安全带几何|12,172/12,172|21/21|[题1](problems/01_SafetyBeltViolationGeometry.md)|完成|
-|02 pinv|19,921/19,921|41/41|[题2](problems/02_pinv.md)|完成|
-|03 SplineConv|10,607/10,607|40/40|[题3](problems/03_SplineConv.md)|完成|
-|04 det|9,262/9,262|27/27|[题4](problems/04_det.md)|完成|
-|05 SwiGLU|本批无公示源码|—|[题5边界](problems/05_SwiGLU.md)|不适用|
-|06 lstsq|12,371/12,371|24/24|[题6](problems/06_lstsq.md)|完成|
-|07 FireCandidateDecodeFusion|18,301/18,301|44/44|[题7](problems/07_FireCandidateDecodeFusion.md)|完成|
-|08 eigh|25,114/25,114|26/26|[题8](problems/08_eigh.md)|完成|
-|09 solve|8,984/8,984|21/21|[题9](problems/09_solve.md)|完成|
-|10 TreeLineMinDistance|22,728/22,728|27/27|[题10](problems/10_TreeLineMinDistance.md)|完成|
+|01 安全带几何|12,172/12,172|21/21|[题1设计复盘](problems/01_SafetyBeltViolationGeometry_REVIEW.md) / [逐行证据账本](problems/01_SafetyBeltViolationGeometry.md)|完成|
+|02 pinv|19,921/19,921|41/41|[题2设计复盘](problems/02_pinv_REVIEW.md) / [逐行证据账本](problems/02_pinv.md)|完成|
+|03 SplineConv|10,607/10,607|40/40|[题3设计复盘](problems/03_SplineConv_REVIEW.md) / [逐行证据账本](problems/03_SplineConv.md)|完成|
+|04 det|9,262/9,262|27/27|[题4设计复盘](problems/04_det_REVIEW.md) / [逐行证据账本](problems/04_det.md)|完成|
+|05 SwiGLU|本批无公示源码|—|[题5边界与方法索引](problems/05_SwiGLU_REVIEW.md) / [原题面记录](problems/05_SwiGLU.md)|不适用|
+|06 lstsq|12,371/12,371|24/24|[题6设计复盘](problems/06_lstsq_REVIEW.md) / [逐行证据账本](problems/06_lstsq.md)|完成|
+|07 FireCandidateDecodeFusion|18,301/18,301|44/44|[题7设计复盘](problems/07_FireCandidateDecodeFusion_REVIEW.md) / [逐行证据账本](problems/07_FireCandidateDecodeFusion.md)|完成|
+|08 eigh|25,114/25,114|26/26|[题8设计复盘](problems/08_eigh_REVIEW.md) / [逐行证据账本](problems/08_eigh.md)|完成|
+|09 solve|8,984/8,984|21/21|[题9设计复盘](problems/09_solve_REVIEW.md) / [逐行证据账本](problems/09_solve.md)|完成|
+|10 TreeLineMinDistance|22,728/22,728|27/27|[题10设计复盘](problems/10_TreeLineMinDistance_REVIEW.md) / [逐行证据账本](problems/10_TreeLineMinDistance.md)|完成|
 |合计（有源码的9题）|139,460/139,460|271/271|—|27/27份提交完成|
 
 这是**源码首轮审阅完成**，不是全方位正确性/合规/性能认证：没有在本轮编译或运行下载代码，也没有目标CANN设备上的逐路径验证或单机制paired性能归因。各报告把尚欠的数学误差界、shape/资源前提、SDK/API、同步、运行时和性能证据明确列为待验证项。
@@ -38,7 +38,7 @@
 
 ### 01 安全带几何判定
 
-详见 [题1](problems/01_SafetyBeltViolationGeometry.md)，特别rank3-kernel与math-memory-sync。
+详见[题1设计复盘](problems/01_SafetyBeltViolationGeometry_REVIEW.md)；逐行来源见[证据账本](problems/01_SafetyBeltViolationGeometry.md)，特别 rank3-kernel 与 math-memory-sync。
 
 | 设计 | 范围 | 可借鉴什么 | 必须保留/不能照搬 |
 |---|---|---|---|
@@ -49,7 +49,7 @@
 
 ### 02 pinv
 
-详见 [题2](problems/02_pinv.md) r2-math、math-admission、r1-cube。
+详见[题2设计复盘](problems/02_pinv_REVIEW.md)；逐行来源见[证据账本](problems/02_pinv.md)的 r2-math、math-admission、r1-cube。
 
 | 设计 | 范围 | 成立逻辑 | 迁移边界 |
 |---|---|---|---|
@@ -61,7 +61,7 @@
 
 ### 03 SplineConv
 
-详见 [题3](problems/03_SplineConv.md) C/D/F/G；三份全文首轮已完成，数值/API证明另列待核。
+详见[题3设计复盘](problems/03_SplineConv_REVIEW.md)；逐行来源见[账本](problems/03_SplineConv.md) C/D/F/G。三份全文首轮已完成，数值/API证明另列待核。
 
 | 设计 | 范围 | 成立逻辑 | 迁移边界 |
 |---|---|---|---|
@@ -76,7 +76,7 @@
 
 ### 04 det
 
-详见 [题4](problems/04_det.md) S6–S18；三份9262行全文首轮已完成，实际路由与未启用实现、契约反例、数值待证均已分开。
+详见[题4设计复盘](problems/04_det_REVIEW.md)；逐行来源见[账本](problems/04_det.md) S6–S18。三份9262行全文首轮已完成，实际路由与未启用实现、契约反例、数值待证均已分开。
 
 | 设计 | 范围 | 成立逻辑 | 迁移边界 |
 |---|---|---|---|
@@ -91,11 +91,11 @@
 
 ### 05 SwiGLU
 
-题面已对齐，但该批公示归档没有题5获奖代码。不能凭我们历史实验、排名耗时或其他题同作者代码虚构获奖实现。以下只列后续对照维度，不列为新发现：X投影两路的数据复用F（共享左操作数GEMM）、投影与激活逐tile交接F/G、tiny专核与大矩阵Cube分路G、half中间舍入与题面契约P。历史L/T版本的正向结果应保留具体parent、目标硬件、shape、是否重复测量，不能当此归档某设计的证据。详见 [题5边界记录](problems/05_SwiGLU.md)。
+题面已对齐，但该批公示归档没有题5获奖代码。不能凭我们历史实验、排名耗时或其他题同作者代码虚构获奖实现。以下只列后续对照维度，不列为新发现：X投影两路的数据复用F（共享左操作数GEMM）、投影与激活逐tile交接F/G、tiny专核与大矩阵Cube分路G、half中间舍入与题面契约P。历史L/T版本的正向结果应保留具体parent、目标硬件、shape、是否重复测量，不能当此归档某设计的证据。详见[题5边界与方法索引](problems/05_SwiGLU_REVIEW.md)及[原始边界记录](problems/05_SwiGLU.md)。
 
 ### 06 lstsq
 
-详见 [题6](problems/06_lstsq.md) S4–S9。
+详见[题6设计复盘](problems/06_lstsq_REVIEW.md)；逐行证据见[账本](problems/06_lstsq.md) S4–S14。
 
 | 设计 | 范围 | 成立逻辑 | 迁移边界 |
 |---|---|---|---|
@@ -106,7 +106,7 @@
 
 ### 07 FireCandidateDecodeFusion
 
-详见 [题7](problems/07_FireCandidateDecodeFusion.md) rank3各模块和confirmed-and-risk。
+详见[题7设计复盘](problems/07_FireCandidateDecodeFusion_REVIEW.md)；逐行证据见[账本](problems/07_FireCandidateDecodeFusion.md)。
 
 | 设计 | 范围 | 成立逻辑 | 迁移边界 |
 |---|---|---|---|
@@ -117,7 +117,7 @@
 
 ### 08 eigh
 
-详见 [题8](problems/08_eigh.md) 的rank1/rank2/rank3逐段账；三版主kernel现均完成首轮全文审阅，实际路由与待证明项分开记录。
+详见[题8设计复盘](problems/08_eigh_REVIEW.md)；逐行来源见[账本](problems/08_eigh.md)，三版主kernel现均完成首轮全文审阅，实际路由与待证明项分开记录。
 
 | 设计 | 范围 | 成立逻辑 | 迁移边界 |
 |---|---|---|---|
@@ -130,7 +130,7 @@
 
 ### 09 solve
 
-详见 [题9](problems/09_solve.md) S4/S6/S8。
+详见[题9设计复盘](problems/09_solve_REVIEW.md)；逐行证据见[账本](problems/09_solve.md) S4–S12。
 
 | 设计 | 范围 | 成立逻辑 | 迁移边界 |
 |---|---|---|---|
@@ -143,7 +143,7 @@
 
 ### 10 TreeLineMinDistance
 
-详见 [题10](problems/10_TreeLineMinDistance.md)：三个rank版本均已全文审阅。平方距离归约、几何投影、tie保原索引是P；段数据跨point任务驻留、规则offset倍增、分层候选压缩与稳定逆映射属于有前提的F；独立ready链、输出owner和buffer生命周期属于G。rank1 half Top2无不漏解证书，与rank3带歧义修复/精确回退的路径必须区分；volatile宽预读的逻辑张量越界保留为风险示例，不推荐迁移。
+详见[题10设计复盘](problems/10_TreeLineMinDistance_REVIEW.md)；逐行来源见[账本](problems/10_TreeLineMinDistance.md)：三个rank版本均已全文审阅。平方距离归约、几何投影、tie保原索引是P；段数据跨point任务驻留、规则offset倍增、分层候选压缩与稳定逆映射属于有前提的F；独立ready链、输出owner和buffer生命周期属于G。rank1 half Top2无不漏解证书，与rank3带歧义修复/精确回退的路径必须区分；volatile宽预读的逻辑张量越界保留为风险示例，不推荐迁移。
 
 ## 3. 跨题真正可积累的“方法族”
 

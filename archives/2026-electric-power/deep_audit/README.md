@@ -15,16 +15,16 @@
 
 | 题 | 已审读物理行/总行 | 报告与状态 |
 |---|---:|---|
-|01 安全带几何|12172/12172|[报告](problems/01_SafetyBeltViolationGeometry.md)，三份提交首轮源码覆盖完成|
-|02 pinv|19921/19921|[报告](problems/02_pinv.md)，三份提交全部源码全文首轮完成；数值/SDK/同步/性能证明仍单列|
-|03 SplineConv|10607/10607|[报告](problems/03_SplineConv.md)，三份全部全文首轮完成，API/数值待证单列|
-|04 det|9262/9262|[报告](problems/04_det.md)，三份全部全文首轮完成，实际路由/未启用路径已区分|
-|05 SwiGLU|无公示源码|[边界记录](problems/05_SwiGLU.md)，题面已读，不冒充获奖代码审计|
-|06 lstsq|12371/12371|[报告](problems/06_lstsq.md)，三份提交首轮源码覆盖完成|
-|07 Fire解码|18301/18301|[报告](problems/07_FireCandidateDecodeFusion.md)，三份提交全部源码全文首轮完成；数值/API/同步/性能证明仍单列|
-|08 eigh|25114/25114|[报告](problems/08_eigh.md)，三份提交首轮源码覆盖完成；solver正确性与数值证书待证|
-|09 solve|8984/8984|[报告](problems/09_solve.md)，三份提交首轮源码覆盖完成|
-|10 树线距离|22728/22728|[报告](problems/10_TreeLineMinDistance.md)，三份提交首轮源码覆盖完成；剪枝证书边界待证|
+|01 安全带几何|12172/12172|[设计复盘](problems/01_SafetyBeltViolationGeometry_REVIEW.md)；[源码证据账本](problems/01_SafetyBeltViolationGeometry.md)，三份提交首轮源码覆盖完成|
+|02 pinv|19921/19921|[设计复盘](problems/02_pinv_REVIEW.md)；[源码证据账本](problems/02_pinv.md)，三份提交源码首轮完成；数值/SDK/同步/性能证明仍单列|
+|03 SplineConv|10607/10607|[设计复盘](problems/03_SplineConv_REVIEW.md)；[源码账本](problems/03_SplineConv.md)，API/数值待证单列|
+|04 det|9262/9262|[设计复盘](problems/04_det_REVIEW.md)；[源码账本](problems/04_det.md)，实际路由/未启用路径已区分|
+|05 SwiGLU|无公示源码|[边界与方法索引](problems/05_SwiGLU_REVIEW.md)；[题面边界](problems/05_SwiGLU.md)，不冒充获奖代码审计|
+|06 lstsq|12371/12371|[设计复盘](problems/06_lstsq_REVIEW.md)；[源码账本](problems/06_lstsq.md)，三份提交首轮源码覆盖完成|
+|07 Fire解码|18301/18301|[设计复盘](problems/07_FireCandidateDecodeFusion_REVIEW.md)；[源码账本](problems/07_FireCandidateDecodeFusion.md)，数值/API/同步/性能证明仍单列|
+|08 eigh|25114/25114|[设计复盘](problems/08_eigh_REVIEW.md)；[源码账本](problems/08_eigh.md)，solver正确性与数值证书待证|
+|09 solve|8984/8984|[设计复盘](problems/09_solve_REVIEW.md)；[源码账本](problems/09_solve.md)，三份提交首轮源码覆盖完成|
+|10 树线距离|22728/22728|[设计复盘](problems/10_TreeLineMinDistance_REVIEW.md)；[源码账本](problems/10_TreeLineMinDistance.md)，剪枝证书边界待证|
 
 全文首轮覆盖指每物理行已读或有明确等同文本复用依据，**不等于**数学所有误差界、API协议、同步、资源和性能归因均已通过。每题保留R级缺口。所有原源码SHA256和行数已重新校验，未改原ZIP/解压源码；没有执行、编译或安装下载代码。
 

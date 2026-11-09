@@ -1,10 +1,12 @@
-# 01 SafetyBeltViolationGeometry：逐行审读记录（in_progress）
+# 01 SafetyBeltViolationGeometry：源码逐行审读证据账本（已覆盖）
+
+> 面向算法理解与复用的主报告已移至[设计复盘](01_SafetyBeltViolationGeometry_REVIEW.md)。本文件保留源码行段、逐文件观察和风险证据，作为审计追溯账本；不应把这些行段笔记当成面向读者的最终报告。
 
 题面：[原始PDF](../../problems/01_SafetyBeltViolationGeometry.pdf)；[题目契约](../SPEC_CONTRACTS.md)。
 
 设计的题目专属/问题族/通用编排分类见 [适用范围总表](../DESIGN_CLASSIFICATION.md) 第01节；应用范围与性能证据独立记录。
 
-审读日期：2026-11-08。原始源码只读，未编译、未执行下载代码、未使用 NPU。本文不是三份源码全部完成的审计：rank3 七文件全文已读；rank1/rank2 的 Host/ABI 已读，但 kernel 中段及 rank2 key 长列表尚未全文读完。精确覆盖、SHA256、未读区间以 [coverage](../coverage/01_SafetyBeltViolationGeometry.json) 为准。不能由公示名次归因某个 trick 的收益。
+审读日期：2026-11-08起，补读截至2026-11-09。下文保留首轮阶段性笔记，因此个别“未读/待继续”描述是当时快照；当前源码覆盖结论以文末 `first-pass-complete`、[coverage](../coverage/01_SafetyBeltViolationGeometry.json) 与上层[设计复盘](01_SafetyBeltViolationGeometry_REVIEW.md)为准：三份提交源码均已连续阅读。原始源码只读，未编译、未执行下载代码、未使用 NPU。不能由公示名次归因某个 trick 的收益。
 
 ## contract
 
@@ -113,6 +115,8 @@ rank3 [StrictSmall:902](../../extracted/SafetyBeltViolationGeometry/rank3_submis
 自写NumPy IEEE32模拟的最小输入候选：B1，boxes=[0,641.1708984375,1,1347.549560546875]，anchor=[0,1206.27392578125]，ratio=float32(.8)，threshold缺省。d=706.378662109375；分步bound=1206.27392578125（0x4496c8c4），将乘加合并为单次舍入bound=1206.2738037109375（0x4496c8c3）。参考GT=0，融合GT=1。y1位0x44204af0、y2位0x44a87196、r位0x3f4ccccd，便于精确重建。此输入全有限且y1<=y2；这是**可检验的条件性反例，不是已证明NPU失败**。所有Axpy路径都需等号/邻ULP测试。ratio1仍保留Sub+Add，避免简单替换y2造成极端消减/溢出语义变化。
 
 ## comparison-and-remaining
+
+> 历史阶段总结（2026-11-08），其中“剩余”部分已由下方 2026-11-09 补读及 `first-pass-complete` 闭合；当前摘要见[设计复盘](01_SafetyBeltViolationGeometry_REVIEW.md)。
 
 rank1：十二类与属性特化、直接内建、32B GM padding、精确key省系统包装；代价是代码膨胀与超题面ABI/分配前提。rank2：结构族/多维计划与原始key位解析最复杂，native快速族与严格ABIgeneric分开，metadata可变解释；代价是模板/生成器/宏复杂度，主体尚未全审。rank3：Strict/Legacy明确分离、8Btiling、容量族、尾核前置、单标量DMA广播、early输入抽列；有完整已读源码支撑，但Axpy精度与硬编码核数/包装替换仍需验证。
 

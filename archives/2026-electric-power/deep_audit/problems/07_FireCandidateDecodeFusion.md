@@ -1,4 +1,4 @@
-# 07 FireCandidateDecodeFusion：逐行审读记录（in_progress）
+# 07 FireCandidateDecodeFusion：逐行审读证据账本（首轮源码覆盖完成；证明义务仍开放）
 
 题面：[原始PDF](../../problems/07_FireCandidateDecodeFusion.pdf)；[题目契约](../SPEC_CONTRACTS.md)。
 
