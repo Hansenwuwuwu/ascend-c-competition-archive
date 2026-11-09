@@ -1,0 +1,441 @@
+{
+  "schema_version": 1,
+  "problem": 8,
+  "operator": "eigh",
+  "status": "first_pass_source_review_complete",
+  "review_date": "2026-11-09",
+  "scope": "Read-only static semantic review. No downloaded program, build or kernel executed. complete means full text read, not correctness proof.",
+  "line_count_encoding": "UTF-8 Get-Content; blank physical lines included.",
+  "pdf_review": {
+    "text_all_pages_read": true,
+    "visual_pages_reviewed": [
+      1,
+      2
+    ],
+    "rendered_prefix": "../specs/rendered/08"
+  },
+  "files": [
+    {
+      "path": "extracted/eigh/rank1_submission_1174206/code/CMakeLists.txt",
+      "sha256": "4d80dfa56e57233720d4ad85e61e7219845153b586f04a9691372bd11f221b96",
+      "total_lines": 21,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 21,
+          "notes": "Full text read with numbered continuous chunks; semantic details in linked report section.",
+          "report_section": "../problems/08_eigh.md#build"
+        }
+      ],
+      "unreviewed_ranges": []
+    },
+    {
+      "path": "extracted/eigh/rank1_submission_1174206/code/README.md",
+      "sha256": "578d4892898556bb70488c563435fa8a8b8a0e20b052da7af330232553acec5b",
+      "total_lines": 12,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 12,
+          "notes": "Full text read with numbered continuous chunks; semantic details in linked report section.",
+          "report_section": "../problems/08_eigh.md#build"
+        }
+      ],
+      "unreviewed_ranges": []
+    },
+    {
+      "path": "extracted/eigh/rank1_submission_1174206/code/op_host/CMakeLists.txt",
+      "sha256": "819ea7ece6e174adb09d90a86287a955ed2284ff81a087132b2584edc25d1885",
+      "total_lines": 25,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 25,
+          "notes": "Full text read with numbered continuous chunks; semantic details in linked report section.",
+          "report_section": "../problems/08_eigh.md#build"
+        }
+      ],
+      "unreviewed_ranges": []
+    },
+    {
+      "path": "extracted/eigh/rank1_submission_1174206/code/op_host/linalg_eigh.cpp",
+      "sha256": "0fa9c2987bdda6c203efa9e7efc41d95c73423bd7ffa6bf76ade19ba59b1530f",
+      "total_lines": 266,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 266,
+          "notes": "Full text read with numbered continuous chunks; semantic details in linked report section.",
+          "report_section": "../problems/08_eigh.md#r1-host"
+        }
+      ],
+      "unreviewed_ranges": []
+    },
+    {
+      "path": "extracted/eigh/rank1_submission_1174206/code/op_kernel/CMakeLists.txt",
+      "sha256": "82aad880f308a3aa660d7035fb6a403de3770e7bd79e858e2e25c7cbe319aa0c",
+      "total_lines": 15,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 15,
+          "notes": "Full text read with numbered continuous chunks; semantic details in linked report section.",
+          "report_section": "../problems/08_eigh.md#build"
+        }
+      ],
+      "unreviewed_ranges": []
+    },
+    {
+      "path": "extracted/eigh/rank1_submission_1174206/code/op_kernel/linalg_eigh.cpp",
+      "sha256": "ecfd60fd2712f2e583de46d3540cbae8e882df7035a4497b51fc3624da5872ec",
+      "total_lines": 8279,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 1540,
+          "notes": "连续逐行实读并在报告记录语义；不是数学全域、SDK同步或性能证明。",
+          "report_section": "../problems/08_eigh.md#r1-kernel-followup"
+        },
+        {
+          "start": 1541,
+          "end": 3880,
+          "notes": "连续逐行实读并在报告记录语义；不是数学全域、SDK同步或性能证明。",
+          "report_section": "../problems/08_eigh.md#r1-kernel-followup"
+        },
+        {
+          "start": 3881,
+          "end": 8279,
+          "notes": "连续逐行实读并在报告记录语义；不是数学全域、SDK同步或性能证明。",
+          "report_section": "../problems/08_eigh.md#r1-kernel-tail"
+        }
+      ],
+      "unreviewed_ranges": []
+    },
+    {
+      "path": "extracted/eigh/rank1_submission_1174206/code/op_kernel/linalg_eigh_tiling.h",
+      "sha256": "e473566faa7735c222fb10f0ed855dc0b75254477ca125ec4b8a30ad49dc9a24",
+      "total_lines": 18,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 18,
+          "notes": "Full text read with numbered continuous chunks; semantic details in linked report section.",
+          "report_section": "../problems/08_eigh.md#r1-host"
+        }
+      ],
+      "unreviewed_ranges": []
+    },
+    {
+      "path": "extracted/eigh/rank1_submission_1174206/code/op_kernel/tiling_key_linalg_eigh.h",
+      "sha256": "9db6a53e41897dbd5b8e37e595d0f1b76464af5eef22ed3ea0b21c4cbb9503ef",
+      "total_lines": 27,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 27,
+          "notes": "Full text read with numbered continuous chunks; semantic details in linked report section.",
+          "report_section": "../problems/08_eigh.md#r1-host"
+        }
+      ],
+      "unreviewed_ranges": []
+    },
+    {
+      "path": "extracted/eigh/rank2_submission_1176362/code/CMakeLists.txt",
+      "sha256": "4d80dfa56e57233720d4ad85e61e7219845153b586f04a9691372bd11f221b96",
+      "total_lines": 21,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 21,
+          "notes": "SHA-256 identical; full semantic reading reused from extracted/eigh/rank1_submission_1174206/code/CMakeLists.txt",
+          "report_section": "../problems/08_eigh.md#build"
+        }
+      ],
+      "unreviewed_ranges": [],
+      "identical_to": "extracted/eigh/rank1_submission_1174206/code/CMakeLists.txt"
+    },
+    {
+      "path": "extracted/eigh/rank2_submission_1176362/code/README.md",
+      "sha256": "578d4892898556bb70488c563435fa8a8b8a0e20b052da7af330232553acec5b",
+      "total_lines": 12,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 12,
+          "notes": "SHA-256 identical; full semantic reading reused from extracted/eigh/rank1_submission_1174206/code/README.md",
+          "report_section": "../problems/08_eigh.md#build"
+        }
+      ],
+      "unreviewed_ranges": [],
+      "identical_to": "extracted/eigh/rank1_submission_1174206/code/README.md"
+    },
+    {
+      "path": "extracted/eigh/rank2_submission_1176362/code/op_host/CMakeLists.txt",
+      "sha256": "819ea7ece6e174adb09d90a86287a955ed2284ff81a087132b2584edc25d1885",
+      "total_lines": 25,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 25,
+          "notes": "SHA-256 identical; full semantic reading reused from extracted/eigh/rank1_submission_1174206/code/op_host/CMakeLists.txt",
+          "report_section": "../problems/08_eigh.md#build"
+        }
+      ],
+      "unreviewed_ranges": [],
+      "identical_to": "extracted/eigh/rank1_submission_1174206/code/op_host/CMakeLists.txt"
+    },
+    {
+      "path": "extracted/eigh/rank2_submission_1176362/code/op_host/linalg_eigh.cpp",
+      "sha256": "c12b9633d863bc7c1f23e6e6c38cf42eec82bbaf3e42b39633aad9f1bc6ef127",
+      "total_lines": 218,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 218,
+          "notes": "Full text read with numbered continuous chunks; semantic details in linked report section.",
+          "report_section": "../problems/08_eigh.md#r2-host"
+        }
+      ],
+      "unreviewed_ranges": []
+    },
+    {
+      "path": "extracted/eigh/rank2_submission_1176362/code/op_kernel/CMakeLists.txt",
+      "sha256": "82aad880f308a3aa660d7035fb6a403de3770e7bd79e858e2e25c7cbe319aa0c",
+      "total_lines": 15,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 15,
+          "notes": "SHA-256 identical; full semantic reading reused from extracted/eigh/rank1_submission_1174206/code/op_kernel/CMakeLists.txt",
+          "report_section": "../problems/08_eigh.md#build"
+        }
+      ],
+      "unreviewed_ranges": [],
+      "identical_to": "extracted/eigh/rank1_submission_1174206/code/op_kernel/CMakeLists.txt"
+    },
+    {
+      "path": "extracted/eigh/rank2_submission_1176362/code/op_kernel/linalg_eigh.cpp",
+      "sha256": "e3171b5bdf9c1f25c6556b4f548da3d6ecfc0166218b7ad1cf129dd7d0fe4fe1",
+      "total_lines": 6602,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 6602,
+          "notes": "连续逐行实读并在报告记录语义；不是数学全域、SDK同步或性能证明。",
+          "report_section": "../problems/08_eigh.md#r2-kernel"
+        }
+      ],
+      "unreviewed_ranges": []
+    },
+    {
+      "path": "extracted/eigh/rank2_submission_1176362/code/op_kernel/linalg_eigh_tiling.h",
+      "sha256": "1f1293243352ba57ceb236a71fb7fc227d2d8716d13d8789e38b938ea152a169",
+      "total_lines": 54,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 54,
+          "notes": "Full text read with numbered continuous chunks; semantic details in linked report section.",
+          "report_section": "../problems/08_eigh.md#r2-host"
+        }
+      ],
+      "unreviewed_ranges": []
+    },
+    {
+      "path": "extracted/eigh/rank2_submission_1176362/code/op_kernel/tiling_key_linalg_eigh.h",
+      "sha256": "a02daa648fbdf23f6026560118a2fbd8ec1a718461af4f35abad5f6eff1d5007",
+      "total_lines": 18,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 18,
+          "notes": "Full text read with numbered continuous chunks; semantic details in linked report section.",
+          "report_section": "../problems/08_eigh.md#r2-host"
+        }
+      ],
+      "unreviewed_ranges": []
+    },
+    {
+      "path": "extracted/eigh/rank3_submission_1177525/code/CMakeLists.txt",
+      "sha256": "4d80dfa56e57233720d4ad85e61e7219845153b586f04a9691372bd11f221b96",
+      "total_lines": 21,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 21,
+          "notes": "SHA-256 identical; full semantic reading reused from extracted/eigh/rank1_submission_1174206/code/CMakeLists.txt",
+          "report_section": "../problems/08_eigh.md#build"
+        }
+      ],
+      "unreviewed_ranges": [],
+      "identical_to": "extracted/eigh/rank1_submission_1174206/code/CMakeLists.txt"
+    },
+    {
+      "path": "extracted/eigh/rank3_submission_1177525/code/README.md",
+      "sha256": "578d4892898556bb70488c563435fa8a8b8a0e20b052da7af330232553acec5b",
+      "total_lines": 12,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 12,
+          "notes": "SHA-256 identical; full semantic reading reused from extracted/eigh/rank1_submission_1174206/code/README.md",
+          "report_section": "../problems/08_eigh.md#build"
+        }
+      ],
+      "unreviewed_ranges": [],
+      "identical_to": "extracted/eigh/rank1_submission_1174206/code/README.md"
+    },
+    {
+      "path": "extracted/eigh/rank3_submission_1177525/code/op_host/CMakeLists.txt",
+      "sha256": "819ea7ece6e174adb09d90a86287a955ed2284ff81a087132b2584edc25d1885",
+      "total_lines": 25,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 25,
+          "notes": "SHA-256 identical; full semantic reading reused from extracted/eigh/rank1_submission_1174206/code/op_host/CMakeLists.txt",
+          "report_section": "../problems/08_eigh.md#build"
+        }
+      ],
+      "unreviewed_ranges": [],
+      "identical_to": "extracted/eigh/rank1_submission_1174206/code/op_host/CMakeLists.txt"
+    },
+    {
+      "path": "extracted/eigh/rank3_submission_1177525/code/op_host/eigh_host_plan.h",
+      "sha256": "69106aa9972ca1c7dae71ac7b8b055331ba5cc3996cebc1bce5da6b2581430e4",
+      "total_lines": 290,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 290,
+          "notes": "Full text read with numbered continuous chunks; semantic details in linked report section.",
+          "report_section": "../problems/08_eigh.md#r3-plan"
+        }
+      ],
+      "unreviewed_ranges": []
+    },
+    {
+      "path": "extracted/eigh/rank3_submission_1177525/code/op_host/linalg_eigh.cpp",
+      "sha256": "b9fad0e054d9b0ee7bff2a635809844be8794b77bdbb2f74844c894b6605b3f5",
+      "total_lines": 100,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 100,
+          "notes": "Full text read with numbered continuous chunks; semantic details in linked report section.",
+          "report_section": "../problems/08_eigh.md#r3-host"
+        }
+      ],
+      "unreviewed_ranges": []
+    },
+    {
+      "path": "extracted/eigh/rank3_submission_1177525/code/op_kernel/CMakeLists.txt",
+      "sha256": "82aad880f308a3aa660d7035fb6a403de3770e7bd79e858e2e25c7cbe319aa0c",
+      "total_lines": 15,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 15,
+          "notes": "SHA-256 identical; full semantic reading reused from extracted/eigh/rank1_submission_1174206/code/op_kernel/CMakeLists.txt",
+          "report_section": "../problems/08_eigh.md#build"
+        }
+      ],
+      "unreviewed_ranges": [],
+      "identical_to": "extracted/eigh/rank1_submission_1174206/code/op_kernel/CMakeLists.txt"
+    },
+    {
+      "path": "extracted/eigh/rank3_submission_1177525/code/op_kernel/eigh_case_traits.h",
+      "sha256": "ae13f0bcc73294ce2b163447e2803e14458783058de79a93e8fac3fe70d25278",
+      "total_lines": 21,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 21,
+          "notes": "Full text read with numbered continuous chunks; semantic details in linked report section.",
+          "report_section": "../problems/08_eigh.md#r3-host"
+        }
+      ],
+      "unreviewed_ranges": []
+    },
+    {
+      "path": "extracted/eigh/rank3_submission_1177525/code/op_kernel/linalg_eigh.cpp",
+      "sha256": "a2b779a21d87b44e725c80fafd59098cac79252762a05e3098cf5670c3c428c4",
+      "total_lines": 8977,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 1270,
+          "notes": "Read complete historical-comment block, utilities, metadata consumer, leaf solver, small solver, and beginning of inactive medium solver.",
+          "report_section": "../problems/08_eigh.md#r3-kernel"
+        },
+        {
+          "start": 8700,
+          "end": 8977,
+          "notes": "Read tail of large output transpose, complete inactive GM fallback, private members and real entry.",
+          "report_section": "../problems/08_eigh.md#r3-kernel"
+        },
+        {
+          "start": 1271,
+          "end": 8699,
+          "notes": "连续逐行实读并在报告记录语义；不是数学全域、SDK同步或性能证明。",
+          "report_section": "../problems/08_eigh.md#r3-kernel-followup"
+        }
+      ],
+      "unreviewed_ranges": []
+    },
+    {
+      "path": "extracted/eigh/rank3_submission_1177525/code/op_kernel/linalg_eigh_tiling.h",
+      "sha256": "19fc049645786c5e3fafc50f27340225065bff38eafe1f4d114ef8ca8d48d720",
+      "total_lines": 15,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 15,
+          "notes": "Full text read with numbered continuous chunks; semantic details in linked report section.",
+          "report_section": "../problems/08_eigh.md#r3-host"
+        }
+      ],
+      "unreviewed_ranges": []
+    },
+    {
+      "path": "extracted/eigh/rank3_submission_1177525/code/op_kernel/tiling_key_linalg_eigh.h",
+      "sha256": "fb55cbf421c6e60b983fe42c97f037f83536a06c341f1aaf08ab6560f7235e5b",
+      "total_lines": 10,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 10,
+          "notes": "Full text read with numbered continuous chunks; semantic details in linked report section.",
+          "report_section": "../problems/08_eigh.md#r3-host"
+        }
+      ],
+      "unreviewed_ranges": []
+    }
+  ]
+}

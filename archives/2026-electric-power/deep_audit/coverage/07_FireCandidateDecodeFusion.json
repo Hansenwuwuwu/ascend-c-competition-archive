@@ -1,0 +1,659 @@
+{
+  "schema_version": 1,
+  "problem": 7,
+  "operator": "FireCandidateDecodeFusion",
+  "status": "complete_first_pass",
+  "review_date": "2026-11-09",
+  "scope": "First-pass continuous semantic reading only; no archived code executed. Hash-identical text may reuse reading.",
+  "files": [
+    {
+      "path": "extracted/FireCandidateDecodeFusion/rank1_submission_1122762/code/CMakeLists.txt",
+      "sha256": "650f11fab6711603bcfeb1af60463db47f060dbcb67de2cddd8398e5c0ebb3df",
+      "total_lines": 20,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 20,
+          "notes": "与已全文审读构建文件SHA256一致，复用语义审读，不作为独立算法证据。",
+          "report_section": "../problems/07_FireCandidateDecodeFusion.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/FireCandidateDecodeFusion/rank1_submission_1122762/code/op_kernel/fire_candidate_decode_fusion_tiling.h",
+      "sha256": "f3f3c0f5b6f56a41c8388ed919c17163201582b091d27d022653e7ec130f4c62",
+      "total_lines": 44,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 44,
+          "notes": "连续全文审读，语义行段见对应题目报告；此记录不是正确性/性能证明。",
+          "report_section": "../problems/07_FireCandidateDecodeFusion.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/FireCandidateDecodeFusion/rank1_submission_1122762/code/op_kernel/tiling_key_fire_candidate_decode_fusion.h",
+      "sha256": "d4c0c3ec9d26ff3c871ffa38403cdba38cdd7c5e954244d013cd0b637f1e7758",
+      "total_lines": 20,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 20,
+          "notes": "连续全文审读，语义行段见对应题目报告；此记录不是正确性/性能证明。",
+          "report_section": "../problems/07_FireCandidateDecodeFusion.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/FireCandidateDecodeFusion/rank1_submission_1122762/code/op_kernel/fire_candidate_decode_fusion.cpp",
+      "sha256": "4693b60ab79d19e3d73fcb245698ef9d1568435ab80e97eb92570cded8cef310",
+      "total_lines": 8774,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 230,
+          "notes": "连续全文审读，语义行段见对应题目报告；此记录不是正确性/性能证明。",
+          "report_section": "../problems/07_FireCandidateDecodeFusion.md"
+        },
+        {
+          "start": 8530,
+          "end": 8774,
+          "notes": "连续全文审读，语义行段见对应题目报告；此记录不是正确性/性能证明。",
+          "report_section": "../problems/07_FireCandidateDecodeFusion.md"
+        },
+        {
+          "start": 231,
+          "end": 1800,
+          "notes": "2026-11-09 ??????231-450/451-800/801-1100/1101-1450/1451-1800???????????????/?????",
+          "report_section": "../problems/07_FireCandidateDecodeFusion.md#rank1-kernel-231-1800"
+        },
+        {
+          "start": 1801,
+          "end": 3000,
+          "notes": "2026-11-09????1801-2200/2201-2600/2601-3000????????????????",
+          "report_section": "../problems/07_FireCandidateDecodeFusion.md#rank1-kernel-1801-3000"
+        },
+        {
+          "start": 3001,
+          "end": 8529,
+          "notes": "2026-11-09 按连续段逐行阅读3001-3100/3101-3200/3201-3300/3301-3400/3401-3600/3601-3800/3801-4000/4001-4200/4201-4400/4401-4600/4601-4800/4801-5000/5001-5200/5201-5400/5401-5600/5601-5800/5801-6000/6001-6300/6301-6600/6601-6900/6901-7200/7201-7500/7501-7800/7801-8100/8101-8400/8401-8700; separately read final dispatch 8701-8774. 首轮源码审阅，不代表数学、SDK、同步或性能证明。",
+          "report_section": "../problems/07_FireCandidateDecodeFusion.md#rank1-kernel-3001-8529"
+        }
+      ],
+      "reviewed_lines": 8774,
+      "remaining_ranges": []
+    },
+    {
+      "path": "extracted/FireCandidateDecodeFusion/rank1_submission_1122762/code/op_kernel/CMakeLists.txt",
+      "sha256": "d05a8a3f067af24667c096c672c869b35f1cc854a201449455f86817929a2b07",
+      "total_lines": 15,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 15,
+          "notes": "与已全文审读构建文件SHA256一致，复用语义审读，不作为独立算法证据。",
+          "report_section": "../problems/07_FireCandidateDecodeFusion.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/FireCandidateDecodeFusion/rank1_submission_1122762/code/op_host/fire_candidate_decode_fusion.cpp",
+      "sha256": "ca1041d87e2e6834d8dccdcb5abeb9bdb75b8233b753cfcad82519121a264f63",
+      "total_lines": 226,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 226,
+          "notes": "连续全文审读，语义行段见对应题目报告；此记录不是正确性/性能证明。",
+          "report_section": "../problems/07_FireCandidateDecodeFusion.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/FireCandidateDecodeFusion/rank1_submission_1122762/code/op_host/CMakeLists.txt",
+      "sha256": "02333c3a83a459059bb0a96df1d3627e2f78f457d2a22d08e56e29439b22ddcf",
+      "total_lines": 24,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 24,
+          "notes": "与已全文审读构建文件SHA256一致，复用语义审读，不作为独立算法证据。",
+          "report_section": "../problems/07_FireCandidateDecodeFusion.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/FireCandidateDecodeFusion/rank2_submission_1176342/code/CMakeLists.txt",
+      "sha256": "650f11fab6711603bcfeb1af60463db47f060dbcb67de2cddd8398e5c0ebb3df",
+      "total_lines": 20,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 20,
+          "notes": "与已全文审读构建文件SHA256一致，复用语义审读，不作为独立算法证据。",
+          "report_section": "../problems/07_FireCandidateDecodeFusion.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/FireCandidateDecodeFusion/rank2_submission_1176342/code/op_kernel/fire_static_metadata.h",
+      "sha256": "9c58bd934b0838fc05b6514d614ed560c27f34b17a02c71a6674c9b6874020c3",
+      "total_lines": 1100,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 1100,
+          "notes": "Continuous full numbered read in four chunks; all 17 tables (4032 u64) independently regenerated from audited Host formula and exactly compared. No archived code execution.",
+          "report_section": "rank2-static-metadata-full"
+        }
+      ],
+      "reviewed_lines": 1100,
+      "remaining_ranges": []
+    },
+    {
+      "path": "extracted/FireCandidateDecodeFusion/rank2_submission_1176342/code/op_kernel/fire_candidate_decode_fusion_tiling.h",
+      "sha256": "41c60ec10f3a26904c38921f9d91a8965a89ca69684825f77e473f2d0f321d42",
+      "total_lines": 53,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 53,
+          "notes": "连续全文审读，语义行段见对应题目报告；此记录不是正确性/性能证明。",
+          "report_section": "../problems/07_FireCandidateDecodeFusion.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/FireCandidateDecodeFusion/rank2_submission_1176342/code/op_kernel/tiling_key_fire_candidate_decode_fusion.h",
+      "sha256": "af4f16ce4865b0f1a656528c1a844f94469facf884e634388dc4b52c79310a7f",
+      "total_lines": 12,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 12,
+          "notes": "连续全文审读，语义行段见对应题目报告；此记录不是正确性/性能证明。",
+          "report_section": "../problems/07_FireCandidateDecodeFusion.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/FireCandidateDecodeFusion/rank2_submission_1176342/code/op_kernel/blocked_transpose.h",
+      "sha256": "7387575ad2f5c6ddf24d734b317e0e314738a2b3294aacb9f214a9868ab64a01",
+      "total_lines": 1933,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 1933,
+          "notes": "Continuous numbered-source read in five chunks, including all repeated hot/cold/dual/guard paths. Full semantic ledger and proofs/SDK gaps in report.",
+          "report_section": "rank2-blocked-transpose-full"
+        }
+      ],
+      "reviewed_lines": 1933,
+      "remaining_ranges": []
+    },
+    {
+      "path": "extracted/FireCandidateDecodeFusion/rank2_submission_1176342/code/op_kernel/fire_candidate_decode_fusion.cpp",
+      "sha256": "e5c444ea25a0b5a9fb751bae2e102409b31c304867f649413868b9f431e1bcdd",
+      "total_lines": 227,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 227,
+          "notes": "连续全文审读，语义行段见对应题目报告；此记录不是正确性/性能证明。",
+          "report_section": "../problems/07_FireCandidateDecodeFusion.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/FireCandidateDecodeFusion/rank2_submission_1176342/code/op_kernel/device_fire.h",
+      "sha256": "7d201791e790ba54a88f6ef3911179e8c177fd7fb4ed55fd7404245f4ab79fe2",
+      "total_lines": 1728,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 1728,
+          "notes": "Continuous full numbered read in five chunks; software math, copies, all small/mask/flat/history/route variants included.",
+          "report_section": "rank2-device-fire-full"
+        }
+      ],
+      "reviewed_lines": 1728,
+      "remaining_ranges": []
+    },
+    {
+      "path": "extracted/FireCandidateDecodeFusion/rank2_submission_1176342/code/op_kernel/CMakeLists.txt",
+      "sha256": "d05a8a3f067af24667c096c672c869b35f1cc854a201449455f86817929a2b07",
+      "total_lines": 15,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 15,
+          "notes": "与已全文审读构建文件SHA256一致，复用语义审读，不作为独立算法证据。",
+          "report_section": "../problems/07_FireCandidateDecodeFusion.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/FireCandidateDecodeFusion/rank2_submission_1176342/code/op_host/fire_candidate_decode_fusion.cpp",
+      "sha256": "9a0154b46c18061cf92c2ce48fcfd310bf02c35c4060f07f90cbf39c93dc706a",
+      "total_lines": 102,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 102,
+          "notes": "连续全文审读，语义行段见对应题目报告；此记录不是正确性/性能证明。",
+          "report_section": "../problems/07_FireCandidateDecodeFusion.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/FireCandidateDecodeFusion/rank2_submission_1176342/code/op_host/fire_host_plan.h",
+      "sha256": "f4612e6bfe1bfdcff44a79067bdd16ef6daee8cd11972cfa617b8c113ad85f45",
+      "total_lines": 253,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 253,
+          "notes": "连续全文审读，语义行段见对应题目报告；此记录不是正确性/性能证明。",
+          "report_section": "../problems/07_FireCandidateDecodeFusion.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/FireCandidateDecodeFusion/rank2_submission_1176342/code/op_host/CMakeLists.txt",
+      "sha256": "02333c3a83a459059bb0a96df1d3627e2f78f457d2a22d08e56e29439b22ddcf",
+      "total_lines": 24,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 24,
+          "notes": "与已全文审读构建文件SHA256一致，复用语义审读，不作为独立算法证据。",
+          "report_section": "../problems/07_FireCandidateDecodeFusion.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/FireCandidateDecodeFusion/rank3_submission_1173427/code/CMakeLists.txt",
+      "sha256": "650f11fab6711603bcfeb1af60463db47f060dbcb67de2cddd8398e5c0ebb3df",
+      "total_lines": 20,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 20,
+          "notes": "与已全文审读构建文件SHA256一致，复用语义审读，不作为独立算法证据。",
+          "report_section": "../problems/07_FireCandidateDecodeFusion.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/FireCandidateDecodeFusion/rank3_submission_1173427/code/op_kernel/historical_paired_candidate_decode.h",
+      "sha256": "9aad4bd9f301c18f8482b812c0232aae689a5e0a4e8af646484715c60c40c7ac",
+      "total_lines": 395,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 395,
+          "notes": "连续全文审读，语义行段见对应题目报告；此记录不是正确性/性能证明。",
+          "report_section": "../problems/07_FireCandidateDecodeFusion.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/FireCandidateDecodeFusion/rank3_submission_1173427/code/op_kernel/contiguous_candidate_decode.h",
+      "sha256": "c1ec21f7501f0aec87a838e68ec94d2f3bd23210ad7da7acc69e37f0d9c61a89",
+      "total_lines": 107,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 107,
+          "notes": "连续全文审读，语义行段见对应题目报告；此记录不是正确性/性能证明。",
+          "report_section": "../problems/07_FireCandidateDecodeFusion.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/FireCandidateDecodeFusion/rank3_submission_1173427/code/op_kernel/candidate_index_ramp.h",
+      "sha256": "9b50afe4e0354150e88a0be9c3305c3f3d0241d1b4d8cd0a5e57669c907bd5c2",
+      "total_lines": 70,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 70,
+          "notes": "连续全文审读，语义行段见对应题目报告；此记录不是正确性/性能证明。",
+          "report_section": "../problems/07_FireCandidateDecodeFusion.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/FireCandidateDecodeFusion/rank3_submission_1173427/code/op_kernel/candidate_native_half_input.h",
+      "sha256": "308c6ac09defb102ec475bc87776472ef5a5285a46d3afa4da0fb30f603ec3fa",
+      "total_lines": 89,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 89,
+          "notes": "连续全文审读，语义行段见对应题目报告；此记录不是正确性/性能证明。",
+          "report_section": "../problems/07_FireCandidateDecodeFusion.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/FireCandidateDecodeFusion/rank3_submission_1173427/code/op_kernel/candidate_native_five_pack.h",
+      "sha256": "74795a69ff0d65df19f9df6b74853ef2296c3eae3e281fdaddd19d8c3308a5a5",
+      "total_lines": 261,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 261,
+          "notes": "连续全文审读，语义行段见对应题目报告；此记录不是正确性/性能证明。",
+          "report_section": "../problems/07_FireCandidateDecodeFusion.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/FireCandidateDecodeFusion/rank3_submission_1173427/code/op_kernel/fire_candidate_decode_fusion_tiling.h",
+      "sha256": "12c19e25cee09cb4946da65b4e0205ae91414bcebe1c1d1cbc81a0902d30bf94",
+      "total_lines": 8,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 8,
+          "notes": "连续全文审读，语义行段见对应题目报告；此记录不是正确性/性能证明。",
+          "report_section": "../problems/07_FireCandidateDecodeFusion.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/FireCandidateDecodeFusion/rank3_submission_1173427/code/op_kernel/small_candidate_decode.h",
+      "sha256": "05ca81bbe19f1acfa5eb90bb27c1478e0ebdf9477b26df3cae6d1b015502fbc9",
+      "total_lines": 365,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 365,
+          "notes": "连续全文审读，语义行段见对应题目报告；此记录不是正确性/性能证明。",
+          "report_section": "../problems/07_FireCandidateDecodeFusion.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/FireCandidateDecodeFusion/rank3_submission_1173427/code/op_kernel/tiling_key_fire_candidate_decode_fusion.h",
+      "sha256": "a6997f23925cd57eef89d45c9e0b72d7899ed146be4b96b6328afac149d620cd",
+      "total_lines": 17,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 17,
+          "notes": "连续全文审读，语义行段见对应题目报告；此记录不是正确性/性能证明。",
+          "report_section": "../problems/07_FireCandidateDecodeFusion.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/FireCandidateDecodeFusion/rank3_submission_1173427/code/op_kernel/grouped_candidate_entry.h",
+      "sha256": "5083fe8a4682b919998e596c0920a361870ddce987f1960cfcb4454a505803aa",
+      "total_lines": 83,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 83,
+          "notes": "连续全文审读，语义行段见对应题目报告；此记录不是正确性/性能证明。",
+          "report_section": "../problems/07_FireCandidateDecodeFusion.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/FireCandidateDecodeFusion/rank3_submission_1173427/code/op_kernel/paired_batch_candidate_decode.h",
+      "sha256": "b7a1ef036d2529c5dfbc01ce72a1ae61e408ba51da434f55d6b628c4c76052b5",
+      "total_lines": 418,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 418,
+          "notes": "连续全文审读，语义行段见对应题目报告；此记录不是正确性/性能证明。",
+          "report_section": "../problems/07_FireCandidateDecodeFusion.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/FireCandidateDecodeFusion/rank3_submission_1173427/code/op_kernel/single_group_medium_candidate_decode.h",
+      "sha256": "666441d0f4e4de5b9035d0e663e903669281edb41782841ae5ba3b2b81b3e941",
+      "total_lines": 83,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 83,
+          "notes": "连续全文审读，语义行段见对应题目报告；此记录不是正确性/性能证明。",
+          "report_section": "../problems/07_FireCandidateDecodeFusion.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/FireCandidateDecodeFusion/rank3_submission_1173427/code/op_kernel/generic_candidate_decode.h",
+      "sha256": "270174b271e2e734dbc41a9e570167df6f40353a4d131ff31344128cc6c8e88d",
+      "total_lines": 256,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 256,
+          "notes": "连续全文审读，语义行段见对应题目报告；此记录不是正确性/性能证明。",
+          "report_section": "../problems/07_FireCandidateDecodeFusion.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/FireCandidateDecodeFusion/rank3_submission_1173427/code/op_kernel/candidate_denominator_geometry.h",
+      "sha256": "dbcb275babd3f9e759ec2ffa2d922b992d64cf5f70a8557173f2784eed69e579",
+      "total_lines": 211,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 211,
+          "notes": "连续全文审读，语义行段见对应题目报告；此记录不是正确性/性能证明。",
+          "report_section": "../problems/07_FireCandidateDecodeFusion.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/FireCandidateDecodeFusion/rank3_submission_1173427/code/op_kernel/fire_candidate_decode_fusion.cpp",
+      "sha256": "efbea46e8db1cbd67f1a2239aeb4d88d6862e5516d3155fdfa63c4c2a39996dd",
+      "total_lines": 197,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 197,
+          "notes": "连续全文审读，语义行段见对应题目报告；此记录不是正确性/性能证明。",
+          "report_section": "../problems/07_FireCandidateDecodeFusion.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/FireCandidateDecodeFusion/rank3_submission_1173427/code/op_kernel/candidate_fixed_small_batch.h",
+      "sha256": "9bedc67b5b260142b3a6e3da3087063416b9420a0780ff93affd72dbd05aa36f",
+      "total_lines": 15,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 15,
+          "notes": "连续全文审读，语义行段见对应题目报告；此记录不是正确性/性能证明。",
+          "report_section": "../problems/07_FireCandidateDecodeFusion.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/FireCandidateDecodeFusion/rank3_submission_1173427/code/op_kernel/historical_medium_candidate_decode.h",
+      "sha256": "d9ce03329eb31c09cb2c49667e1ee1124cbeaf113712bfada8b2512ea99af112",
+      "total_lines": 121,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 121,
+          "notes": "连续全文审读，语义行段见对应题目报告；此记录不是正确性/性能证明。",
+          "report_section": "../problems/07_FireCandidateDecodeFusion.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/FireCandidateDecodeFusion/rank3_submission_1173427/code/op_kernel/candidate_transfer.h",
+      "sha256": "b21ec5a4371c1f6a4f10ac6caf292196a171122dbdd77c36cbaf64259208d639",
+      "total_lines": 85,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 85,
+          "notes": "连续全文审读，语义行段见对应题目报告；此记录不是正确性/性能证明。",
+          "report_section": "../problems/07_FireCandidateDecodeFusion.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/FireCandidateDecodeFusion/rank3_submission_1173427/code/op_kernel/native_small_candidate_decode.h",
+      "sha256": "cbb2c58ee61a8b554be154fd218e1fcf517f50f2a129550aa484e0afe1f9719a",
+      "total_lines": 237,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 237,
+          "notes": "连续全文审读，语义行段见对应题目报告；此记录不是正确性/性能证明。",
+          "report_section": "../problems/07_FireCandidateDecodeFusion.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/FireCandidateDecodeFusion/rank3_submission_1173427/code/op_kernel/paired_small_batch_candidate_decode.h",
+      "sha256": "fc1025ebcf5f1c2b20bd7703df42522872f1affcde047f06bbcf8c761459f3e6",
+      "total_lines": 219,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 219,
+          "notes": "连续全文审读，语义行段见对应题目报告；此记录不是正确性/性能证明。",
+          "report_section": "../problems/07_FireCandidateDecodeFusion.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/FireCandidateDecodeFusion/rank3_submission_1173427/code/op_kernel/candidate_native_prior.h",
+      "sha256": "02fa064b5b6b2958b4d80bd5835db2515892b86b34c18d13f1096d9d547a23bf",
+      "total_lines": 34,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 34,
+          "notes": "连续全文审读，语义行段见对应题目报告；此记录不是正确性/性能证明。",
+          "report_section": "../problems/07_FireCandidateDecodeFusion.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/FireCandidateDecodeFusion/rank3_submission_1173427/code/op_kernel/candidate_native_half_output.h",
+      "sha256": "1a5933abdc352501fb85f46fdeef3dff91b8a6aa328467723aee27b85d69c850",
+      "total_lines": 27,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 27,
+          "notes": "连续全文审读，语义行段见对应题目报告；此记录不是正确性/性能证明。",
+          "report_section": "../problems/07_FireCandidateDecodeFusion.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/FireCandidateDecodeFusion/rank3_submission_1173427/code/op_kernel/CMakeLists.txt",
+      "sha256": "d05a8a3f067af24667c096c672c869b35f1cc854a201449455f86817929a2b07",
+      "total_lines": 15,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 15,
+          "notes": "与已全文审读构建文件SHA256一致，复用语义审读，不作为独立算法证据。",
+          "report_section": "../problems/07_FireCandidateDecodeFusion.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/FireCandidateDecodeFusion/rank3_submission_1173427/code/op_kernel/medium_candidate_decode.h",
+      "sha256": "04e554382df455de4b639c0efbe5283c6a8a7f93b0b276b0fe566de8eee3f742",
+      "total_lines": 143,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 143,
+          "notes": "连续全文审读，语义行段见对应题目报告；此记录不是正确性/性能证明。",
+          "report_section": "../problems/07_FireCandidateDecodeFusion.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/FireCandidateDecodeFusion/rank3_submission_1173427/code/op_host/fire_candidate_decode_fusion.cpp",
+      "sha256": "a096c72ecd5016986f39ae067799b32b6dc24239f337fe4a0f9e02817f2fde3d",
+      "total_lines": 211,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 211,
+          "notes": "连续全文审读，语义行段见对应题目报告；此记录不是正确性/性能证明。",
+          "report_section": "../problems/07_FireCandidateDecodeFusion.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/FireCandidateDecodeFusion/rank3_submission_1173427/code/op_host/CMakeLists.txt",
+      "sha256": "02333c3a83a459059bb0a96df1d3627e2f78f457d2a22d08e56e29439b22ddcf",
+      "total_lines": 24,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 24,
+          "notes": "与已全文审读构建文件SHA256一致，复用语义审读，不作为独立算法证据。",
+          "report_section": "../problems/07_FireCandidateDecodeFusion.md"
+        }
+      ]
+    }
+  ],
+  "date": "2026-11-09"
+}

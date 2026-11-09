@@ -1,0 +1,388 @@
+{
+  "schema_version": 1,
+  "problem": 10,
+  "operator": "TreeLineMinDistance",
+  "status": "first_pass_source_review_complete",
+  "review_date": "2026-11-09",
+  "scope": "First-pass continuous semantic reading only; no archived code executed. Hash-identical text may reuse reading.",
+  "files": [
+    {
+      "path": "extracted/TreeLineMinDistance/rank1_submission_1175341/code/CMakeLists.txt",
+      "sha256": "650f11fab6711603bcfeb1af60463db47f060dbcb67de2cddd8398e5c0ebb3df",
+      "total_lines": 20,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 20,
+          "notes": "与已全文审读构建文件SHA256一致，复用语义审读，不作为独立算法证据。",
+          "report_section": "../problems/10_TreeLineMinDistance.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/TreeLineMinDistance/rank1_submission_1175341/code/op_kernel/tree_short_plan.h",
+      "sha256": "d98cb02e42cf6517eccc604a1e5cc31ce4f7e85238d74c9a5b8a8bb5ccd4e45b",
+      "total_lines": 19,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 19,
+          "notes": "连续全文审读，语义行段见对应题目报告；此记录不是正确性/性能证明。",
+          "report_section": "../problems/10_TreeLineMinDistance.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/TreeLineMinDistance/rank1_submission_1175341/code/op_kernel/tree_short.h",
+      "sha256": "8c96e480d3fa5e1b96e1108f976af5c619951e7c264266c12ce166fe6ce7d9ba",
+      "total_lines": 377,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 377,
+          "notes": "连续全文审读，语义行段见对应题目报告；此记录不是正确性/性能证明。",
+          "report_section": "../problems/10_TreeLineMinDistance.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/TreeLineMinDistance/rank1_submission_1175341/code/op_kernel/tiling_key_tree_line_min_distance.h",
+      "sha256": "0d8f9ced9b452b178e82b5f36c6c0ffb07e805a82e7e69817f26299149c27f22",
+      "total_lines": 16,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 16,
+          "notes": "连续全文审读，语义行段见对应题目报告；此记录不是正确性/性能证明。",
+          "report_section": "../problems/10_TreeLineMinDistance.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/TreeLineMinDistance/rank1_submission_1175341/code/op_kernel/tree_pairs.h",
+      "sha256": "3bb699614c775f2900bf17401f7e232854cd6df8adddf5772a9f6829911664cf",
+      "total_lines": 861,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 861,
+          "notes": "1–217与已全文实读tree_vector.h逐行一致，复用公共头；218至末尾连续实读。",
+          "report_section": "../problems/10_TreeLineMinDistance.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/TreeLineMinDistance/rank1_submission_1175341/code/op_kernel/tree_edges.h",
+      "sha256": "e749963fb5cfce80b0486347ba47b54570fa1e732a3d81be8f45ecabc9782c76",
+      "total_lines": 456,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 456,
+          "notes": "1–217与已全文实读tree_vector.h逐行一致，复用公共头；218至末尾连续实读。",
+          "report_section": "../problems/10_TreeLineMinDistance.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/TreeLineMinDistance/rank1_submission_1175341/code/op_kernel/tree_vector.h",
+      "sha256": "2c9da13057551c4bc7edd602de134113319e2a88db7bdedff67c012942b78498",
+      "total_lines": 313,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 313,
+          "notes": "连续全文审读，语义行段见对应题目报告；此记录不是正确性/性能证明。",
+          "report_section": "../problems/10_TreeLineMinDistance.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/TreeLineMinDistance/rank1_submission_1175341/code/op_kernel/tree_line_min_distance.cpp",
+      "sha256": "ad652b92592fe84acbbe28f16f1ff18e27b7c30c19072d846a09dbf6fa6dcff6",
+      "total_lines": 659,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 659,
+          "notes": "连续全文审读，语义行段见对应题目报告；此记录不是正确性/性能证明。",
+          "report_section": "../problems/10_TreeLineMinDistance.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/TreeLineMinDistance/rank1_submission_1175341/code/op_kernel/tree_line_min_distance_tiling.h",
+      "sha256": "16b59c7818b972542d7f2728adffc9fb7661f159b81e7ad7c9c0d0b512833d6e",
+      "total_lines": 46,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 46,
+          "notes": "连续全文审读，语义行段见对应题目报告；此记录不是正确性/性能证明。",
+          "report_section": "../problems/10_TreeLineMinDistance.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/TreeLineMinDistance/rank1_submission_1175341/code/op_kernel/CMakeLists.txt",
+      "sha256": "d05a8a3f067af24667c096c672c869b35f1cc854a201449455f86817929a2b07",
+      "total_lines": 15,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 15,
+          "notes": "与已全文审读构建文件SHA256一致，复用语义审读，不作为独立算法证据。",
+          "report_section": "../problems/10_TreeLineMinDistance.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/TreeLineMinDistance/rank1_submission_1175341/code/op_kernel/tree_tiny.h",
+      "sha256": "8e42101216ea97c03c20acf19091e3253f168bfb69face691cb70ba5095d517a",
+      "total_lines": 570,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 570,
+          "notes": "1–217与已全文实读tree_vector.h逐行一致，复用公共头；218至末尾连续实读。",
+          "report_section": "../problems/10_TreeLineMinDistance.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/TreeLineMinDistance/rank1_submission_1175341/code/op_host/tree_line_min_distance.cpp",
+      "sha256": "ea4886ab0fe481e36c9bef93c005aa1b204df34efa5486aa7bc8da66a0685d5b",
+      "total_lines": 538,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 538,
+          "notes": "连续全文审读，语义行段见对应题目报告；此记录不是正确性/性能证明。",
+          "report_section": "../problems/10_TreeLineMinDistance.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/TreeLineMinDistance/rank1_submission_1175341/code/op_host/CMakeLists.txt",
+      "sha256": "02333c3a83a459059bb0a96df1d3627e2f78f457d2a22d08e56e29439b22ddcf",
+      "total_lines": 24,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 24,
+          "notes": "与已全文审读构建文件SHA256一致，复用语义审读，不作为独立算法证据。",
+          "report_section": "../problems/10_TreeLineMinDistance.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/TreeLineMinDistance/rank2_submission_1176190/code/CMakeLists.txt",
+      "sha256": "650f11fab6711603bcfeb1af60463db47f060dbcb67de2cddd8398e5c0ebb3df",
+      "total_lines": 20,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 20,
+          "notes": "与已全文审读构建文件SHA256一致，复用语义审读，不作为独立算法证据。",
+          "report_section": "../problems/10_TreeLineMinDistance.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/TreeLineMinDistance/rank2_submission_1176190/code/op_kernel/tiling_key_tree_line_min_distance.h",
+      "sha256": "eb7f4d0d114dc162b95a6318c44d88e902f1de63626fb78a761d34c60f8232b2",
+      "total_lines": 23,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 23,
+          "notes": "2026-11-09 continuous full-text source reading; report G; no runtime proof.",
+          "report_section": "../problems/10_TreeLineMinDistance.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/TreeLineMinDistance/rank2_submission_1176190/code/op_kernel/tree_line_min_distance.cpp",
+      "sha256": "a51c63c8023274b19d3e35d1c713244e1a5d6a0e3c87602d4f4c99cdc8fc0a96",
+      "total_lines": 4038,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 4038,
+          "notes": "2026-11-09 all contiguous source read, report G-H; actual Host/DECL/SEL/entry separated; no runtime proof.",
+          "report_section": "../problems/10_TreeLineMinDistance.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/TreeLineMinDistance/rank2_submission_1176190/code/op_kernel/tree_line_min_distance_tiling.h",
+      "sha256": "96d4d9540f95c20ea8ff763810c6997af162b7e73b737bf9226f68e9e2b5b3b9",
+      "total_lines": 58,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 58,
+          "notes": "2026-11-09 continuous full-text source reading; report G; no runtime proof.",
+          "report_section": "../problems/10_TreeLineMinDistance.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/TreeLineMinDistance/rank2_submission_1176190/code/op_kernel/CMakeLists.txt",
+      "sha256": "d05a8a3f067af24667c096c672c869b35f1cc854a201449455f86817929a2b07",
+      "total_lines": 15,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 15,
+          "notes": "与已全文审读构建文件SHA256一致，复用语义审读，不作为独立算法证据。",
+          "report_section": "../problems/10_TreeLineMinDistance.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/TreeLineMinDistance/rank2_submission_1176190/code/op_host/tree_line_min_distance.cpp",
+      "sha256": "75ddfc879cc83909540739b85bced5521afdb162c33348032f133ad65e9ec9f7",
+      "total_lines": 412,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 412,
+          "notes": "2026-11-09 continuous full-text source reading; report G; no runtime proof.",
+          "report_section": "../problems/10_TreeLineMinDistance.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/TreeLineMinDistance/rank2_submission_1176190/code/op_host/CMakeLists.txt",
+      "sha256": "02333c3a83a459059bb0a96df1d3627e2f78f457d2a22d08e56e29439b22ddcf",
+      "total_lines": 24,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 24,
+          "notes": "与已全文审读构建文件SHA256一致，复用语义审读，不作为独立算法证据。",
+          "report_section": "../problems/10_TreeLineMinDistance.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/TreeLineMinDistance/rank3_submission_1175418/code/CMakeLists.txt",
+      "sha256": "650f11fab6711603bcfeb1af60463db47f060dbcb67de2cddd8398e5c0ebb3df",
+      "total_lines": 20,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 20,
+          "notes": "与已全文审读构建文件SHA256一致，复用语义审读，不作为独立算法证据。",
+          "report_section": "../problems/10_TreeLineMinDistance.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/TreeLineMinDistance/rank3_submission_1175418/code/op_kernel/tiling_key_tree_line_min_distance.h",
+      "sha256": "71049b9894c0314b06ee7fd1cf4b7511f93bfdb72dbdf8ac4b11da75abb94f68",
+      "total_lines": 126,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 126,
+          "notes": "2026-11-09 contiguous full-source read via read_source.py; SHA256 verified; source-only, no math/SDK/runtime/performance proof.",
+          "report_section": "../problems/10_TreeLineMinDistance.md#i"
+        }
+      ]
+    },
+    {
+      "path": "extracted/TreeLineMinDistance/rank3_submission_1175418/code/op_kernel/tree_line_min_distance.cpp",
+      "sha256": "a9d29748754e035577ed3b302590eb305d4f67e0298c85950776f3acef4aec13",
+      "total_lines": 7562,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 7562,
+          "notes": "2026-11-09 contiguous full-source read via read_source.py; SHA256 verified; source-only, no math/SDK/runtime/performance proof.",
+          "report_section": "../problems/10_TreeLineMinDistance.md#i"
+        }
+      ]
+    },
+    {
+      "path": "extracted/TreeLineMinDistance/rank3_submission_1175418/code/op_kernel/tree_line_min_distance_tiling.h",
+      "sha256": "c632673efc0bfc5a31b8fcb74594d9f2cfd42f9822a7f6e0df6e302a5ba4b904",
+      "total_lines": 6230,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 6230,
+          "notes": "2026-11-09 contiguous full-source read via read_source.py; SHA256 verified; source-only, no math/SDK/runtime/performance proof.",
+          "report_section": "../problems/10_TreeLineMinDistance.md#i"
+        }
+      ]
+    },
+    {
+      "path": "extracted/TreeLineMinDistance/rank3_submission_1175418/code/op_kernel/CMakeLists.txt",
+      "sha256": "d05a8a3f067af24667c096c672c869b35f1cc854a201449455f86817929a2b07",
+      "total_lines": 15,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 15,
+          "notes": "与已全文审读构建文件SHA256一致，复用语义审读，不作为独立算法证据。",
+          "report_section": "../problems/10_TreeLineMinDistance.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/TreeLineMinDistance/rank3_submission_1175418/code/op_host/tree_line_min_distance.cpp",
+      "sha256": "008401c08ffd0bf390c046ea306da1017383a2b114e0c90c2bf7969d9b6f7e42",
+      "total_lines": 247,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 247,
+          "notes": "2026-11-09 contiguous full-source read via read_source.py; SHA256 verified; source-only, no math/SDK/runtime/performance proof.",
+          "report_section": "../problems/10_TreeLineMinDistance.md#i"
+        }
+      ]
+    },
+    {
+      "path": "extracted/TreeLineMinDistance/rank3_submission_1175418/code/op_host/CMakeLists.txt",
+      "sha256": "02333c3a83a459059bb0a96df1d3627e2f78f457d2a22d08e56e29439b22ddcf",
+      "total_lines": 24,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 24,
+          "notes": "与已全文审读构建文件SHA256一致，复用语义审读，不作为独立算法证据。",
+          "report_section": "../problems/10_TreeLineMinDistance.md"
+        }
+      ]
+    }
+  ]
+}

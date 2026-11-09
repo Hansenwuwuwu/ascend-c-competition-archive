@@ -1,0 +1,346 @@
+{
+  "schema_version": 1,
+  "problem": 6,
+  "operator": "lstsq",
+  "status": "complete",
+  "review_date": "2026-11-09",
+  "scope": "First-pass continuous semantic reading only; no archived code executed. Hash-identical text may reuse reading.",
+  "files": [
+    {
+      "path": "extracted/lstsq/rank1_submission_1172572/code/CMakeLists.txt",
+      "sha256": "650f11fab6711603bcfeb1af60463db47f060dbcb67de2cddd8398e5c0ebb3df",
+      "total_lines": 20,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 20,
+          "notes": "与已全文审读构建文件SHA256一致，复用语义审读，不作为独立算法证据。",
+          "report_section": "../problems/06_lstsq.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/lstsq/rank1_submission_1172572/code/op_kernel/tiling_key_linalg_lstsq.h",
+      "sha256": "bc1d08347e5fd428fbcea11f5ef31f74c0eeee9df2c13a0617b486d2396ea7fe",
+      "total_lines": 28,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 28,
+          "notes": "连续全文审读，语义行段见对应题目报告；此记录不是正确性/性能证明。",
+          "report_section": "../problems/06_lstsq.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/lstsq/rank1_submission_1172572/code/op_kernel/linalg_lstsq.cpp",
+      "sha256": "0ad75896403c7390a5a6a16bc598fb369fd18608e85fe328dd2d0f3081d372cf",
+      "total_lines": 2762,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 2762,
+          "notes": "Continuous full text read 2026-11-09, semantic report S10-S11; includes actual Host routes and uninstantiated templates; no runtime proof.",
+          "report_section": "../problems/06_lstsq.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/lstsq/rank1_submission_1172572/code/op_kernel/CMakeLists.txt",
+      "sha256": "d05a8a3f067af24667c096c672c869b35f1cc854a201449455f86817929a2b07",
+      "total_lines": 15,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 15,
+          "notes": "与已全文审读构建文件SHA256一致，复用语义审读，不作为独立算法证据。",
+          "report_section": "../problems/06_lstsq.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/lstsq/rank1_submission_1172572/code/op_kernel/linalg_lstsq_tiling.h",
+      "sha256": "5e66de8209a4d144dd94f710b09b455a3aace8cd4c3633cdaf71168d085ee0c1",
+      "total_lines": 12,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 12,
+          "notes": "连续全文审读，语义行段见对应题目报告；此记录不是正确性/性能证明。",
+          "report_section": "../problems/06_lstsq.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/lstsq/rank1_submission_1172572/code/op_host/linalg_lstsq.cpp",
+      "sha256": "963219ecc74a878bf77d333529d522e100a3653a3abff3e38bce5f906b1f0b59",
+      "total_lines": 114,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 114,
+          "notes": "连续全文审读，语义行段见对应题目报告；此记录不是正确性/性能证明。",
+          "report_section": "../problems/06_lstsq.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/lstsq/rank1_submission_1172572/code/op_host/CMakeLists.txt",
+      "sha256": "02333c3a83a459059bb0a96df1d3627e2f78f457d2a22d08e56e29439b22ddcf",
+      "total_lines": 24,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 24,
+          "notes": "与已全文审读构建文件SHA256一致，复用语义审读，不作为独立算法证据。",
+          "report_section": "../problems/06_lstsq.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/lstsq/rank2_submission_1175329/code/CMakeLists.txt",
+      "sha256": "650f11fab6711603bcfeb1af60463db47f060dbcb67de2cddd8398e5c0ebb3df",
+      "total_lines": 20,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 20,
+          "notes": "与已全文审读构建文件SHA256一致，复用语义审读，不作为独立算法证据。",
+          "report_section": "../problems/06_lstsq.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/lstsq/rank2_submission_1175329/code/op_kernel/tiling_key_linalg_lstsq.h",
+      "sha256": "a6e678e278af42b2a980a7df6c9a906000de24543c31bc1457c3806f9a28838b",
+      "total_lines": 10,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 10,
+          "notes": "连续全文审读，语义行段见对应题目报告；此记录不是正确性/性能证明。",
+          "report_section": "../problems/06_lstsq.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/lstsq/rank2_submission_1175329/code/op_kernel/linalg_lstsq.cpp",
+      "sha256": "772d91bb58a687454158fb4a33b671c0d9e8ef4c81edc03f2c4675446e8e2164",
+      "total_lines": 959,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 959,
+          "notes": "连续全文审读，语义行段见对应题目报告；此记录不是正确性/性能证明。",
+          "report_section": "../problems/06_lstsq.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/lstsq/rank2_submission_1175329/code/op_kernel/CMakeLists.txt",
+      "sha256": "d05a8a3f067af24667c096c672c869b35f1cc854a201449455f86817929a2b07",
+      "total_lines": 15,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 15,
+          "notes": "与已全文审读构建文件SHA256一致，复用语义审读，不作为独立算法证据。",
+          "report_section": "../problems/06_lstsq.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/lstsq/rank2_submission_1175329/code/op_kernel/linalg_lstsq_tiling.h",
+      "sha256": "cb712dac8a9167545cbc306d6b9af003da35aa03f2d70ca9547b7570fda552a0",
+      "total_lines": 5,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 5,
+          "notes": "连续全文审读，语义行段见对应题目报告；此记录不是正确性/性能证明。",
+          "report_section": "../problems/06_lstsq.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/lstsq/rank2_submission_1175329/code/op_host/linalg_lstsq.cpp",
+      "sha256": "47ea3d194e6dd3b754305dcf4708e8179e623e969404aac20e4b00dfd72eda33",
+      "total_lines": 78,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 78,
+          "notes": "连续全文审读，语义行段见对应题目报告；此记录不是正确性/性能证明。",
+          "report_section": "../problems/06_lstsq.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/lstsq/rank2_submission_1175329/code/op_host/CMakeLists.txt",
+      "sha256": "02333c3a83a459059bb0a96df1d3627e2f78f457d2a22d08e56e29439b22ddcf",
+      "total_lines": 24,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 24,
+          "notes": "与已全文审读构建文件SHA256一致，复用语义审读，不作为独立算法证据。",
+          "report_section": "../problems/06_lstsq.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/lstsq/rank3_submission_1177490/code/CMakeLists.txt",
+      "sha256": "650f11fab6711603bcfeb1af60463db47f060dbcb67de2cddd8398e5c0ebb3df",
+      "total_lines": 20,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 20,
+          "notes": "与已全文审读构建文件SHA256一致，复用语义审读，不作为独立算法证据。",
+          "report_section": "../problems/06_lstsq.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/lstsq/rank3_submission_1177490/code/op_kernel/lstsq_options.h",
+      "sha256": "2e40b819edcbce8cc6466ec7edcb3521869990d3becb9d79129d8094c474f264",
+      "total_lines": 7,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 7,
+          "notes": "连续全文审读，语义行段见对应题目报告；此记录不是正确性/性能证明。",
+          "report_section": "../problems/06_lstsq.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/lstsq/rank3_submission_1177490/code/op_kernel/tiling_key_linalg_lstsq.h",
+      "sha256": "7db940f96647b5652a6b2c4c876b449fafce6d0440eeb990dfcfec46d7d5eea1",
+      "total_lines": 20,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 20,
+          "notes": "连续全文审读，语义行段见对应题目报告；此记录不是正确性/性能证明。",
+          "report_section": "../problems/06_lstsq.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/lstsq/rank3_submission_1177490/code/op_kernel/linalg_lstsq.cpp",
+      "sha256": "d0fe6c9bd2ce591e8b2c00e2c84ea6332dccd53e2f02065a40cc3c7e91306756",
+      "total_lines": 3355,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 3355,
+          "notes": "Continuous full text kernel read 1-3090 2026-11-09 and prior 3091-3355; report S7/S12; guards and actual routes separated.",
+          "report_section": "../problems/06_lstsq.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/lstsq/rank3_submission_1177490/code/op_kernel/lstsq_fast_square.h",
+      "sha256": "666c2b597724bc6a564f015bfcb02070f94d293fc1c9849b0073e06f2a97dd9a",
+      "total_lines": 3571,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 3571,
+          "notes": "2026-11-09 continuous full-text source reading, report S13, no archived code executed.",
+          "report_section": "../problems/06_lstsq.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/lstsq/rank3_submission_1177490/code/op_kernel/CMakeLists.txt",
+      "sha256": "d05a8a3f067af24667c096c672c869b35f1cc854a201449455f86817929a2b07",
+      "total_lines": 15,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 15,
+          "notes": "与已全文审读构建文件SHA256一致，复用语义审读，不作为独立算法证据。",
+          "report_section": "../problems/06_lstsq.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/lstsq/rank3_submission_1177490/code/op_kernel/linalg_lstsq_tiling.h",
+      "sha256": "e2eee8fc8bcd5bc2327b1f47896679473c7eee048dd8d3020592ff9066f50977",
+      "total_lines": 46,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 46,
+          "notes": "连续全文审读，语义行段见对应题目报告；此记录不是正确性/性能证明。",
+          "report_section": "../problems/06_lstsq.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/lstsq/rank3_submission_1177490/code/op_host/lstsq_plan.h",
+      "sha256": "26933f56302f8a2aae537d9ede9a3b34aa787717e8878dcac51b1d2a269788bb",
+      "total_lines": 720,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 720,
+          "notes": "连续全文审读，语义行段见对应题目报告；此记录不是正确性/性能证明。",
+          "report_section": "../problems/06_lstsq.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/lstsq/rank3_submission_1177490/code/op_host/linalg_lstsq.cpp",
+      "sha256": "02b7c4be68ca3158a544d74f037e6afe1c2f7d75b6d84403bd1795e0bcc64e77",
+      "total_lines": 507,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 507,
+          "notes": "连续全文审读，语义行段见对应题目报告；此记录不是正确性/性能证明。",
+          "report_section": "../problems/06_lstsq.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/lstsq/rank3_submission_1177490/code/op_host/CMakeLists.txt",
+      "sha256": "02333c3a83a459059bb0a96df1d3627e2f78f457d2a22d08e56e29439b22ddcf",
+      "total_lines": 24,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 24,
+          "notes": "与已全文审读构建文件SHA256一致，复用语义审读，不作为独立算法证据。",
+          "report_section": "../problems/06_lstsq.md"
+        }
+      ]
+    }
+  ]
+}

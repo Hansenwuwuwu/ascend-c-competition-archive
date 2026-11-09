@@ -1,0 +1,304 @@
+{
+  "schema_version": 1,
+  "problem": 9,
+  "operator": "solve",
+  "status": "first_pass_source_review_complete",
+  "review_date": "2026-11-09",
+  "scope": "First-pass continuous semantic reading only; no archived code executed. Hash-identical text may reuse reading.",
+  "files": [
+    {
+      "path": "extracted/solve/rank1_submission_1171359/code/CMakeLists.txt",
+      "sha256": "650f11fab6711603bcfeb1af60463db47f060dbcb67de2cddd8398e5c0ebb3df",
+      "total_lines": 20,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 20,
+          "notes": "与已全文审读构建文件SHA256一致，复用语义审读，不作为独立算法证据。",
+          "report_section": "../problems/09_solve.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/solve/rank1_submission_1171359/code/op_kernel/linalg_solve_tiling.h",
+      "sha256": "26aef6e88deef7b3ceaac5833956725c60cc3744a90176400525656fdc8e8efe",
+      "total_lines": 8,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 8,
+          "notes": "连续全文审读，语义行段见对应题目报告；此记录不是正确性/性能证明。",
+          "report_section": "../problems/09_solve.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/solve/rank1_submission_1171359/code/op_kernel/linalg_solve.cpp",
+      "sha256": "ed144429e388ad5ccdcf4c5dbdde26565d4bd0afbeffcccc1dc3151304fcb89b",
+      "total_lines": 2344,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 2344,
+          "notes": "连续实读；S4/S11闭合全部行段，不是API/精度/性能证明。",
+          "report_section": "../problems/09_solve.md#s11"
+        }
+      ]
+    },
+    {
+      "path": "extracted/solve/rank1_submission_1171359/code/op_kernel/tiling_key_linalg_solve.h",
+      "sha256": "29f4322dc294f2b76f3c321cc5c8f6eac30ee4f97139409cf517b350c4cc2e1f",
+      "total_lines": 49,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 49,
+          "notes": "连续全文审读，语义行段见对应题目报告；此记录不是正确性/性能证明。",
+          "report_section": "../problems/09_solve.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/solve/rank1_submission_1171359/code/op_kernel/CMakeLists.txt",
+      "sha256": "d05a8a3f067af24667c096c672c869b35f1cc854a201449455f86817929a2b07",
+      "total_lines": 15,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 15,
+          "notes": "与已全文审读构建文件SHA256一致，复用语义审读，不作为独立算法证据。",
+          "report_section": "../problems/09_solve.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/solve/rank1_submission_1171359/code/op_host/linalg_solve.cpp",
+      "sha256": "5bbfbf280498ed92d87bcab2564ae060c6c3f5f8d04af23849e21f2b941e8a0e",
+      "total_lines": 120,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 120,
+          "notes": "连续全文审读，语义行段见对应题目报告；此记录不是正确性/性能证明。",
+          "report_section": "../problems/09_solve.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/solve/rank1_submission_1171359/code/op_host/CMakeLists.txt",
+      "sha256": "02333c3a83a459059bb0a96df1d3627e2f78f457d2a22d08e56e29439b22ddcf",
+      "total_lines": 24,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 24,
+          "notes": "与已全文审读构建文件SHA256一致，复用语义审读，不作为独立算法证据。",
+          "report_section": "../problems/09_solve.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/solve/rank2_submission_1166976/code/CMakeLists.txt",
+      "sha256": "650f11fab6711603bcfeb1af60463db47f060dbcb67de2cddd8398e5c0ebb3df",
+      "total_lines": 20,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 20,
+          "notes": "与已全文审读构建文件SHA256一致，复用语义审读，不作为独立算法证据。",
+          "report_section": "../problems/09_solve.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/solve/rank2_submission_1166976/code/op_kernel/linalg_solve_tiling.h",
+      "sha256": "7fcea4469844dff5091d3e6acccc55d625f71110fa35809e1eda147d6d509c37",
+      "total_lines": 14,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 14,
+          "notes": "连续全文审读，语义行段见对应题目报告；此记录不是正确性/性能证明。",
+          "report_section": "../problems/09_solve.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/solve/rank2_submission_1166976/code/op_kernel/linalg_solve.cpp",
+      "sha256": "f6af90ebc1b663ce180e97c788e4262b770cedd3b1ca416c0924e2bd514f70a1",
+      "total_lines": 1874,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 1874,
+          "notes": "连续全文审读，语义行段见对应题目报告；此记录不是正确性/性能证明。",
+          "report_section": "../problems/09_solve.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/solve/rank2_submission_1166976/code/op_kernel/tiling_key_linalg_solve.h",
+      "sha256": "663e0049c587a3910fd3f27c8edc7b77776cb3a0666df2ea7899bb9d80f63231",
+      "total_lines": 25,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 25,
+          "notes": "连续全文审读，语义行段见对应题目报告；此记录不是正确性/性能证明。",
+          "report_section": "../problems/09_solve.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/solve/rank2_submission_1166976/code/op_kernel/CMakeLists.txt",
+      "sha256": "d05a8a3f067af24667c096c672c869b35f1cc854a201449455f86817929a2b07",
+      "total_lines": 15,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 15,
+          "notes": "与已全文审读构建文件SHA256一致，复用语义审读，不作为独立算法证据。",
+          "report_section": "../problems/09_solve.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/solve/rank2_submission_1166976/code/op_host/linalg_solve.cpp",
+      "sha256": "cd1e4c78ef7d98f1e118186274d4f2543e54b42ea40cac2990fc30ebc8b6ad03",
+      "total_lines": 146,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 146,
+          "notes": "连续全文审读，语义行段见对应题目报告；此记录不是正确性/性能证明。",
+          "report_section": "../problems/09_solve.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/solve/rank2_submission_1166976/code/op_host/CMakeLists.txt",
+      "sha256": "02333c3a83a459059bb0a96df1d3627e2f78f457d2a22d08e56e29439b22ddcf",
+      "total_lines": 24,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 24,
+          "notes": "与已全文审读构建文件SHA256一致，复用语义审读，不作为独立算法证据。",
+          "report_section": "../problems/09_solve.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/solve/rank3_submission_1177540/code/CMakeLists.txt",
+      "sha256": "650f11fab6711603bcfeb1af60463db47f060dbcb67de2cddd8398e5c0ebb3df",
+      "total_lines": 20,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 20,
+          "notes": "与已全文审读构建文件SHA256一致，复用语义审读，不作为独立算法证据。",
+          "report_section": "../problems/09_solve.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/solve/rank3_submission_1177540/code/op_kernel/linalg_solve_tiling.h",
+      "sha256": "064d8da3a37b2fe9701f8259cf34069886ff7791956230dd9c66e2d50243969b",
+      "total_lines": 18,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 18,
+          "notes": "连续全文审读，语义行段见对应题目报告；此记录不是正确性/性能证明。",
+          "report_section": "../problems/09_solve.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/solve/rank3_submission_1177540/code/op_kernel/linalg_solve.cpp",
+      "sha256": "aa1aabad7ba1cb3b82ebe6555a10cbb1b2f461d609a9539c224ee4b260f1593f",
+      "total_lines": 3988,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 3988,
+          "notes": "连续实读；S10/S12闭合全部行段；非SDK、数值全域或性能证明。",
+          "report_section": "../problems/09_solve.md#s12"
+        }
+      ]
+    },
+    {
+      "path": "extracted/solve/rank3_submission_1177540/code/op_kernel/tiling_key_linalg_solve.h",
+      "sha256": "b289834a43de5c4934fc9e27bc85ecfbd2f1d0f0044a13e589f2a97e5dc10f75",
+      "total_lines": 23,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 23,
+          "notes": "连续全文审读，语义行段见对应题目报告；此记录不是正确性/性能证明。",
+          "report_section": "../problems/09_solve.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/solve/rank3_submission_1177540/code/op_kernel/CMakeLists.txt",
+      "sha256": "d05a8a3f067af24667c096c672c869b35f1cc854a201449455f86817929a2b07",
+      "total_lines": 15,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 15,
+          "notes": "与已全文审读构建文件SHA256一致，复用语义审读，不作为独立算法证据。",
+          "report_section": "../problems/09_solve.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/solve/rank3_submission_1177540/code/op_host/linalg_solve.cpp",
+      "sha256": "b2b936c0ec491b1814b1c29c3df17c20b70e963be0d798fbf7fb112e1e2c7a05",
+      "total_lines": 198,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 198,
+          "notes": "连续全文审读，语义行段见对应题目报告；此记录不是正确性/性能证明。",
+          "report_section": "../problems/09_solve.md"
+        }
+      ]
+    },
+    {
+      "path": "extracted/solve/rank3_submission_1177540/code/op_host/CMakeLists.txt",
+      "sha256": "02333c3a83a459059bb0a96df1d3627e2f78f457d2a22d08e56e29439b22ddcf",
+      "total_lines": 24,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 24,
+          "notes": "与已全文审读构建文件SHA256一致，复用语义审读，不作为独立算法证据。",
+          "report_section": "../problems/09_solve.md"
+        }
+      ]
+    }
+  ]
+}

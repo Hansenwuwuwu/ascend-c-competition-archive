@@ -1,0 +1,187 @@
+
+===== PDF PAGE 1 =====
+2026/10/12 13:23                                                        CANNJudge
+
+
+
+
+   赛事 / 昇腾AI行业创新大赛——2026电力行业算子专场 /
+   目标候选框解码与置信度融合算子 FireCandidateDecodeFusion
+
+
+        目标候选框解码与置信度融合算子 FireCandidateDecodeFusion
+           自定义算子工程
+
+
+            通过率： 71%                  通过人数： 37                   尝试人数： 52           开始答题   提交开源仓
+
+
+             CANNJudge                                                                      hansen277 退出
+   题目内容                提交排名
+
+
+
+        题目内容
+        描述
+
+        赛题背景
+        输电线路是电力系统的“大动脉”，其安全稳定运行直接关系到国计民生。然而，输电通道
+        多穿越山林、荒野等复杂环境，极易受到山火威胁。山火产生的高温、浓烟不仅会直接烧蚀
+        导线、金具，更会严重降低空气绝缘强度，引发线路跳闸、断线甚至大面积停电事故。输电
+        通道山火识别通常由上游视觉模型完成目标特征提取和候选目标预测。模型推理完成后，还
+        需要将网络输出的候选预测量转换为统一的目标框坐标，并融合目标置信度与“山火”类别
+        置信度，才能形成可供后续 NMS、TopK 或风险判断使用的候选结果。
+        在边缘侧部署中，候选框解码、Sigmoid、坐标变换和分数融合往往由多个通用算子串联完
+        成，容易产生中间 Tensor 写回、Global Memory 搬运和 Kernel 启动开销。本题抽取这一
+        段独立、规则固定且可单独评测的计算环节，要求必须使用昇腾 Ascend C 在 NPU 上实现
+        高性能融合算子。
+
+        算子功能
+        任意上游检测模型或自研视觉模型，只要在进入本算子前将其候选预测结果转换为本题规定
+        的标准化候选预测格式，均可使用本算子。该标准化转换由上游模型、图编排模块或前处理
+        模块完成，不属于本题实现范围。
+        本算子仅接收标准化后的 raw_pred 和 priors，并严格按照本题规定的 Sigmoid、坐标解码
+        与置信度融合公式计算输出。
+        固定计算路径为：Sigmoid 激活 → 中心坐标解码 → 宽高解码 → 目标置信度与山火类别置
+        信度融合 → 候选结果写回。NMS、TopK、阈值过滤以及模型前端特征提取均不属于本算
+        子。
+
+        核心定义与约束
+https://cannjudge.cn/public/2026_electronic/firecandidatedecodefusion                                      1/4
+
+
+===== PDF PAGE 2 =====
+2026/10/12 13:23                                                             CANNJudge
+
+        3.1 适用模型与算子边界
+
+        适用上游模型：任意能够输出符合本题标准化候选预测格式的目标检测模型。
+        本算子边界固定为“候选预测量解码 + 山火置信度融合”。上游模型必须完成主干/颈部网
+        络及候选预测生成；下游可继续进行 NMS、TopK 或业务告警，但不属于本题。
+
+        3.2 输入输出与属性总览
+
+              类型              参数          类型          维度          支持数据        数据                        备注
+                                 名                    形状                类型    格式
+
+          INPUT              raw_         tens       [B,N,       float16/f   ND          每候选
+          （必选）               pred         or         6]          loat32                  [tx,ty,tw,th,obj_logit,fire_logit]
+
+          INPUT              prior        tens       [N,5]       float32     ND          每候选
+          （必选）               s            or                                             [gx,gy,stride,anchor_w,anchor
+                                                                                         _h]；gx/gy为网格坐标
+
+          OUTPUT             deco         tens       [B,N,       float16/f   ND          每候选[x,y,w,h,fire_score]；坐
+          （必选）               ded          or         5]          loat32                  标为像素值
+
+
+        3.3 关键输入约束
+
+             B ∈ [1,8]；N ∈ [1,32768]，N可以不是32或64的整数倍，必须正确处理尾块。
+             raw_pred 与 priors 的 N 必须一致，按相同候选索引一一对应，不允许重排。
+             raw_pred 为连续 ND Tensor；priors 为连续 ND Tensor；所有输入为有限实数，不含
+        NaN、+Inf、-Inf。
+             stride > 0；anchor_w > 0；anchor_h > 0；gx、gy为非负网格坐标。
+             本题固定为单一山火类别，因此只保留一个 fire_logit，不引入多类别 TopK 等额外逻
+        辑。
+
+        3.4 数学公式与计算规则
+
+        对 任 意 Batch 索 引 b 和 候 选 索 引 n ， raw_pred[b,n,:] 必 须 且 只 能 使 用 priors[n,:]=
+        [gx,gy,stride,anchor_w,anchor_h] 进行解码。priors 在 Batch 维度共享，不得使用其他候
+        选索引的先验参数，不得重排候选顺序。
+        对 每 个 候 选 ， 定 义 sigmoid(z)=1/(1+exp(-z)) 。 令 sx=sigmoid(tx) 、 sy=sigmoid(ty) 、
+        sw=sigmoid(tw)、sh=sigmoid(th)。
+        中心坐标解码：
+        x=(2×sx-0.5+gx)×stride；y=(2×sy-0.5+gy)×stride
+        宽高解码：
+        w=(2×sw)^2×anchor_w×stride；h=(2×sh)^2×anchor_h×stride
+        这里 anchor_w、anchor_h 定义为网格尺度下的先验宽高，因此最终输出 w、h 为像素单
+        位。
+
+https://cannjudge.cn/public/2026_electronic/firecandidatedecodefusion                                                         2/4
+
+
+===== PDF PAGE 3 =====
+2026/10/12 13:23                                                        CANNJudge
+
+        置信度融合：
+        obj_score=sigmoid(obj_logit)；fire_score_cls=sigmoid(fire_logit)；
+        最终 fire_score=obj_score×fire_score_cls。
+        输出顺序固定为 [x,y,w,h,fire_score]，按 Batch → Candidate 顺序展开。算子不得在内部进
+        行置信度过滤、NMS、TopK、排序或阈值截断。
+
+        3.5 输出要求
+
+             输出形状固定为[B,N,5]，decoded 的数据类型与 raw_pred 一致：raw_pred 为 float16
+        时 decoded 为 float16；raw_pred 为 float32 时 decoded 为 float32。priors 固定为
+        float32。
+             x、y为候选框中心点像素坐标，w、h为像素宽高，fire_score取[0,1]范围。
+             输出候选数量始终保持N，不得因低置信度而删除候选。
+             输出顺序必须与raw_pred中的候选顺序一致。
+
+        规则要求
+
+        4.1 开发与正确性要求
+
+             必须使用昇腾 Ascend C 实现；核心计算必须在 NPU Kernel 中完成，禁止 CPU 回退。
+             可使用 Vector API、Tiling、Local Memory/Buffer、DataCopy 与流水机制实现向量化
+        和数据复用。
+             无论 raw_pred 的输入类型为何，tx、ty、tw、th、obj_logit、fire_logit 和 priors 均必
+        须以 float32 完成 Sigmoid、坐标解码、平方、乘法和置信度融合。
+             当 raw_pred 为 float16 时，参考实现首先将 raw_pred 转换为 float32，完成全部计算
+        后，再将 decoded 的五个元素转换为 float16；float32 输入时 decoded 保持 float32。
+             float32：逐元素与 float32 参考实现比较，坐标和分数 atol<=1e-5、rtol<=1e-5。
+             float16：decoded 与“float32 参考结果转换为 float16 后”的结果比较，atol<=3e-
+        3、rtol<=3e-3；Sigmoid、平方、坐标解码和分数融合均按 float32 中间精度执行。
+             必须准确处理候选数量N非32/64整倍数时的尾块。
+
+        4.2 性能要求
+
+             重点考察 B=1、4、8 与 N=4096、16384、32768 的 Kernel 时延。
+             应尽量在一次加载后完成 Sigmoid、坐标解码和分数融合，减少 Global Memory 中间
+        结果落地。
+             重点关注向量化、片上缓存、尾块安全和多核负载均衡。
+
+        4.3 禁止事项
+
+             禁止调用完整目标检测模型替代本算子。
+             禁止在本算子内部实现 Backbone、Neck、训练、NMS、TopK、阈值过滤或排序。
+
+https://cannjudge.cn/public/2026_electronic/firecandidatedecodefusion               3/4
+
+
+===== PDF PAGE 4 =====
+2026/10/12 13:23                                                             CANNJudge
+
+             禁止修改题目规定的输入格式、解码公式、候选顺序和输出语义。
+             禁止 CPU 回退。
+
+        示例说明
+        以          下      示        例        使        用        B=1        、    N=1        、   float32   ，        priors=
+        [gx=0,gy=0,stride=32,anchor_w=2,anchor_h=2]。
+
+            示例            raw_pred                                      解码关键量                              输出
+
+          1 全零          [0,0,0,0,0,0]          sx=sy=sw=sh=0.5；obj=fire_cls=0.5；                [16,16,64,64,0.25]
+                                               x=y=16，w=h=64
+
+          2 正偏          [2,2,0,0,2,2]          中心向右下偏移；score≈0.7758                             按公式逐元素与参考
+          移                                                                                     实现一致
+
+          3 负偏          [-2,-2,-1,-1,-         中心向左上偏移；w/h缩小；                                   按公式逐元素与参考
+          移             2,-2]                  score≈0.0142                                     实现一致
+
+          4 尾块          B=3，N=33               最后1个候选单独处理，无越界                                   [3,33,5]
+
+
+
+
+        我的提交记录
+
+        暂无提交记录
+
+
+
+
+https://cannjudge.cn/public/2026_electronic/firecandidatedecodefusion                                                     4/4

@@ -1,0 +1,3339 @@
+{
+  "status": "first_pass_source_review_complete",
+  "date": "2026-11-09",
+  "note": "Counts include explicit hash-identical text reuse; full text read does not imply all proof obligations discharged.",
+  "total_files": 271,
+  "complete_files": 271,
+  "total_submissions": 27,
+  "complete_submissions": 27,
+  "reviewed_lines": 139460,
+  "total_lines": 139460,
+  "operators": [
+    {
+      "operator": "SafetyBeltViolationGeometry",
+      "complete_files": 21,
+      "files": 21,
+      "reviewed_lines": 12172,
+      "total_lines": 12172,
+      "ledger": "01_SafetyBeltViolationGeometry.json"
+    },
+    {
+      "operator": "pinv",
+      "complete_files": 41,
+      "files": 41,
+      "reviewed_lines": 19921,
+      "total_lines": 19921,
+      "ledger": "02_pinv.json"
+    },
+    {
+      "operator": "SplineConv",
+      "complete_files": 40,
+      "files": 40,
+      "reviewed_lines": 10607,
+      "total_lines": 10607,
+      "ledger": "03_SplineConv.json"
+    },
+    {
+      "operator": "det",
+      "complete_files": 27,
+      "files": 27,
+      "reviewed_lines": 9262,
+      "total_lines": 9262,
+      "ledger": "04_det.json"
+    },
+    {
+      "operator": "lstsq",
+      "complete_files": 24,
+      "files": 24,
+      "reviewed_lines": 12371,
+      "total_lines": 12371,
+      "ledger": "06_lstsq.json"
+    },
+    {
+      "operator": "FireCandidateDecodeFusion",
+      "complete_files": 44,
+      "files": 44,
+      "reviewed_lines": 18301,
+      "total_lines": 18301,
+      "ledger": "07_FireCandidateDecodeFusion.json"
+    },
+    {
+      "operator": "eigh",
+      "complete_files": 26,
+      "files": 26,
+      "reviewed_lines": 25114,
+      "total_lines": 25114,
+      "ledger": "08_eigh.json"
+    },
+    {
+      "operator": "solve",
+      "complete_files": 21,
+      "files": 21,
+      "reviewed_lines": 8984,
+      "total_lines": 8984,
+      "ledger": "09_solve.json"
+    },
+    {
+      "operator": "TreeLineMinDistance",
+      "complete_files": 27,
+      "files": 27,
+      "reviewed_lines": 22728,
+      "total_lines": 22728,
+      "ledger": "10_TreeLineMinDistance.json"
+    }
+  ],
+  "files": {
+    "extracted/SafetyBeltViolationGeometry/rank3_submission_1177391/code/CMakeLists.txt": {
+      "sha256": "650f11fab6711603bcfeb1af60463db47f060dbcb67de2cddd8398e5c0ebb3df",
+      "reviewed_ranges": [
+        [
+          1,
+          20
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 20,
+      "total_lines": 20
+    },
+    "extracted/SafetyBeltViolationGeometry/rank3_submission_1177391/code/op_host/CMakeLists.txt": {
+      "sha256": "02333c3a83a459059bb0a96df1d3627e2f78f457d2a22d08e56e29439b22ddcf",
+      "reviewed_ranges": [
+        [
+          1,
+          24
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 24,
+      "total_lines": 24
+    },
+    "extracted/SafetyBeltViolationGeometry/rank3_submission_1177391/code/op_host/safety_belt_violation_geometry.cpp": {
+      "sha256": "a7e9cd6d73316e92d8529c3e6d506e9337fbf583d2c31acb7b9d59e3b5293e77",
+      "reviewed_ranges": [
+        [
+          1,
+          199
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 199,
+      "total_lines": 199
+    },
+    "extracted/SafetyBeltViolationGeometry/rank3_submission_1177391/code/op_kernel/CMakeLists.txt": {
+      "sha256": "d05a8a3f067af24667c096c672c869b35f1cc854a201449455f86817929a2b07",
+      "reviewed_ranges": [
+        [
+          1,
+          15
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 15,
+      "total_lines": 15
+    },
+    "extracted/SafetyBeltViolationGeometry/rank3_submission_1177391/code/op_kernel/safety_belt_violation_geometry.cpp": {
+      "sha256": "1db2cf4e425029c96d3d36fcfa66232601fa1c5e497e0fff24c3c59fdd91f3b9",
+      "reviewed_ranges": [
+        [
+          1,
+          1369
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 1369,
+      "total_lines": 1369
+    },
+    "extracted/SafetyBeltViolationGeometry/rank3_submission_1177391/code/op_kernel/safety_belt_violation_geometry_tiling.h": {
+      "sha256": "4c233df38ef782bb6e53fd7e4e66cee1be0e0edf955f9568f9b357e2543dd534",
+      "reviewed_ranges": [
+        [
+          1,
+          16
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 16,
+      "total_lines": 16
+    },
+    "extracted/SafetyBeltViolationGeometry/rank3_submission_1177391/code/op_kernel/tiling_key_safety_belt_violation_geometry.h": {
+      "sha256": "7a94aab2dcd18c94e3af1aece65748ed1ad564aa1ec17b5d6516ea4727ab7d32",
+      "reviewed_ranges": [
+        [
+          1,
+          222
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 222,
+      "total_lines": 222
+    },
+    "extracted/SafetyBeltViolationGeometry/rank2_submission_1175118/code/CMakeLists.txt": {
+      "sha256": "650f11fab6711603bcfeb1af60463db47f060dbcb67de2cddd8398e5c0ebb3df",
+      "reviewed_ranges": [
+        [
+          1,
+          20
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 20,
+      "total_lines": 20
+    },
+    "extracted/SafetyBeltViolationGeometry/rank2_submission_1175118/code/op_host/CMakeLists.txt": {
+      "sha256": "02333c3a83a459059bb0a96df1d3627e2f78f457d2a22d08e56e29439b22ddcf",
+      "reviewed_ranges": [
+        [
+          1,
+          24
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 24,
+      "total_lines": 24
+    },
+    "extracted/SafetyBeltViolationGeometry/rank2_submission_1175118/code/op_host/safety_belt_violation_geometry.cpp": {
+      "sha256": "79e911b2f062d1bfa0bd064a1cb94a739b9d801cf780b093f8334b45eb4876ee",
+      "reviewed_ranges": [
+        [
+          1,
+          265
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 265,
+      "total_lines": 265
+    },
+    "extracted/SafetyBeltViolationGeometry/rank2_submission_1175118/code/op_kernel/CMakeLists.txt": {
+      "sha256": "d05a8a3f067af24667c096c672c869b35f1cc854a201449455f86817929a2b07",
+      "reviewed_ranges": [
+        [
+          1,
+          15
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 15,
+      "total_lines": 15
+    },
+    "extracted/SafetyBeltViolationGeometry/rank2_submission_1175118/code/op_kernel/safety_belt_violation_geometry.cpp": {
+      "sha256": "b3a570f3ef3413cf030d26049d8bbdfd1c9d0f08f839536386ce4f3f475c966e",
+      "reviewed_ranges": [
+        [
+          1,
+          4297
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 4297,
+      "total_lines": 4297
+    },
+    "extracted/SafetyBeltViolationGeometry/rank2_submission_1175118/code/op_kernel/safety_belt_violation_geometry_tiling.h": {
+      "sha256": "857441238a6e300da3f2c1af46e194eee3db62a8ec281fb9337eb4de14af4a13",
+      "reviewed_ranges": [
+        [
+          1,
+          15
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 15,
+      "total_lines": 15
+    },
+    "extracted/SafetyBeltViolationGeometry/rank2_submission_1175118/code/op_kernel/tiling_key_safety_belt_violation_geometry.h": {
+      "sha256": "c625a0532947a3ddc683655ac42babd23cfbee7b91b4d4197503c44d74e8fe3d",
+      "reviewed_ranges": [
+        [
+          1,
+          1184
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 1184,
+      "total_lines": 1184
+    },
+    "extracted/SafetyBeltViolationGeometry/rank1_submission_1120490/code/CMakeLists.txt": {
+      "sha256": "650f11fab6711603bcfeb1af60463db47f060dbcb67de2cddd8398e5c0ebb3df",
+      "reviewed_ranges": [
+        [
+          1,
+          20
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 20,
+      "total_lines": 20
+    },
+    "extracted/SafetyBeltViolationGeometry/rank1_submission_1120490/code/op_host/CMakeLists.txt": {
+      "sha256": "02333c3a83a459059bb0a96df1d3627e2f78f457d2a22d08e56e29439b22ddcf",
+      "reviewed_ranges": [
+        [
+          1,
+          24
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 24,
+      "total_lines": 24
+    },
+    "extracted/SafetyBeltViolationGeometry/rank1_submission_1120490/code/op_host/safety_belt_violation_geometry.cpp": {
+      "sha256": "cd02a905231d5e0f3692359de18cbc66b3267822e8bf91d2146c5ce2b8f28013",
+      "reviewed_ranges": [
+        [
+          1,
+          176
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 176,
+      "total_lines": 176
+    },
+    "extracted/SafetyBeltViolationGeometry/rank1_submission_1120490/code/op_kernel/CMakeLists.txt": {
+      "sha256": "d05a8a3f067af24667c096c672c869b35f1cc854a201449455f86817929a2b07",
+      "reviewed_ranges": [
+        [
+          1,
+          15
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 15,
+      "total_lines": 15
+    },
+    "extracted/SafetyBeltViolationGeometry/rank1_submission_1120490/code/op_kernel/safety_belt_violation_geometry.cpp": {
+      "sha256": "c3d87721888b10e1319447389fd12f20d57c651699a3288cc5a5d28f91d34628",
+      "reviewed_ranges": [
+        [
+          1,
+          4177
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 4177,
+      "total_lines": 4177
+    },
+    "extracted/SafetyBeltViolationGeometry/rank1_submission_1120490/code/op_kernel/safety_belt_violation_geometry_tiling.h": {
+      "sha256": "7a3386f6e078fb42650c24380486fb11be2e4eaead5678ae11b4e76b5da16b49",
+      "reviewed_ranges": [
+        [
+          1,
+          55
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 55,
+      "total_lines": 55
+    },
+    "extracted/SafetyBeltViolationGeometry/rank1_submission_1120490/code/op_kernel/tiling_key_safety_belt_violation_geometry.h": {
+      "sha256": "fb2d029326c361c211bf889a66bafb486589bf3a5f96a6d4e27330030b098104",
+      "reviewed_ranges": [
+        [
+          1,
+          20
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 20,
+      "total_lines": 20
+    },
+    "extracted/pinv/rank1_submission_1060506/code/CMakeLists.txt": {
+      "sha256": "650f11fab6711603bcfeb1af60463db47f060dbcb67de2cddd8398e5c0ebb3df",
+      "reviewed_ranges": [
+        [
+          1,
+          20
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 20,
+      "total_lines": 20
+    },
+    "extracted/pinv/rank1_submission_1060506/code/op_host/CMakeLists.txt": {
+      "sha256": "02333c3a83a459059bb0a96df1d3627e2f78f457d2a22d08e56e29439b22ddcf",
+      "reviewed_ranges": [
+        [
+          1,
+          24
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 24,
+      "total_lines": 24
+    },
+    "extracted/pinv/rank1_submission_1060506/code/op_host/linalg_pinv.cpp": {
+      "sha256": "5317833a91d177f4222946c13ac2ad5c55b101442d9b25e820361ab6f897de25",
+      "reviewed_ranges": [
+        [
+          1,
+          346
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 346,
+      "total_lines": 346
+    },
+    "extracted/pinv/rank1_submission_1060506/code/op_kernel/CMakeLists.txt": {
+      "sha256": "d05a8a3f067af24667c096c672c869b35f1cc854a201449455f86817929a2b07",
+      "reviewed_ranges": [
+        [
+          1,
+          15
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 15,
+      "total_lines": 15
+    },
+    "extracted/pinv/rank1_submission_1060506/code/op_kernel/linalg_pinv.cpp": {
+      "sha256": "75ae4626b932b2aad4601a85790bd97b46420986ebf0f124880f7e3179b5a94f",
+      "reviewed_ranges": [
+        [
+          1,
+          252
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 252,
+      "total_lines": 252
+    },
+    "extracted/pinv/rank1_submission_1060506/code/op_kernel/linalg_pinv_tiling.h": {
+      "sha256": "599bb59d9891767b0e747b79b1a4e5e529abf08da82e3831e78a6fe0f273b41e",
+      "reviewed_ranges": [
+        [
+          1,
+          20
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 20,
+      "total_lines": 20
+    },
+    "extracted/pinv/rank1_submission_1060506/code/op_kernel/pinv_compact.h": {
+      "sha256": "52d30272b09202613872e704735cb7805127bfc7cdff9f1a5d258927d4710857",
+      "reviewed_ranges": [
+        [
+          1,
+          706
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 706,
+      "total_lines": 706
+    },
+    "extracted/pinv/rank1_submission_1060506/code/op_kernel/pinv_contract.h": {
+      "sha256": "0bd9cd1551b2b68d29049e354dd65563454e82a009780aa1d0578086c342a1e0",
+      "reviewed_ranges": [
+        [
+          1,
+          187
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 187,
+      "total_lines": 187
+    },
+    "extracted/pinv/rank1_submission_1060506/code/op_kernel/pinv_cube_residual.h": {
+      "sha256": "d2f22b9a358a4c47c8fe6ee3b2c3d02f8792795aabdaa401387978914134c014",
+      "reviewed_ranges": [
+        [
+          1,
+          223
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 223,
+      "total_lines": 223
+    },
+    "extracted/pinv/rank1_submission_1060506/code/op_kernel/pinv_dsl_block_atomic.h": {
+      "sha256": "ddf261fdc7cfde3a85e02b964a94d82579693bb87b74fda7e1aea3e2d1200dc8",
+      "reviewed_ranges": [
+        [
+          1,
+          549
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 549,
+      "total_lines": 549
+    },
+    "extracted/pinv/rank1_submission_1060506/code/op_kernel/pinv_dsl_block_local.h": {
+      "sha256": "232c3ef43c06c7e0d5c5958ed7d4896571495a94bea64fa2f87dc8b8dcd9a6c2",
+      "reviewed_ranges": [
+        [
+          1,
+          221
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 221,
+      "total_lines": 221
+    },
+    "extracted/pinv/rank1_submission_1060506/code/op_kernel/pinv_dsl_common.h": {
+      "sha256": "00976dc5b8c2e030bcf3571bd34ff56213270e12ce98b3e265a50aee1175aad5",
+      "reviewed_ranges": [
+        [
+          1,
+          2741
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 2741,
+      "total_lines": 2741
+    },
+    "extracted/pinv/rank1_submission_1060506/code/op_kernel/pinv_dsl_compact.h": {
+      "sha256": "1eacf11ffc56e09f909547a61817e5aa43ae0a849f90f532f6ae06e2a96f5f0a",
+      "reviewed_ranges": [
+        [
+          1,
+          1374
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 1374,
+      "total_lines": 1374
+    },
+    "extracted/pinv/rank1_submission_1060506/code/op_kernel/pinv_dsl_half_pipeline.h": {
+      "sha256": "2a467ae404874bb08ebace6632d43d5485eacbaf64ebd240cc17e4a894aed23a",
+      "reviewed_ranges": [
+        [
+          1,
+          759
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 759,
+      "total_lines": 759
+    },
+    "extracted/pinv/rank1_submission_1060506/code/op_kernel/pinv_dsl_local.h": {
+      "sha256": "e2deecfa117210fa400b60bd2f2aacff04ba73fbe80977d4e721146b57d669da",
+      "reviewed_ranges": [
+        [
+          1,
+          507
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 507,
+      "total_lines": 507
+    },
+    "extracted/pinv/rank1_submission_1060506/code/op_kernel/pinv_dsl_peer_rows.h": {
+      "sha256": "940bfe7089dea8a92dd71ef2b5b1628170bae582f83c4c6a40c1c4d8b85d341d",
+      "reviewed_ranges": [
+        [
+          1,
+          263
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 263,
+      "total_lines": 263
+    },
+    "extracted/pinv/rank1_submission_1060506/code/op_kernel/pinv_dsl_peer_tiles.h": {
+      "sha256": "10615bd6410b7d10b62f0f7803d17a366dec54105b2cbea5531af40072016f41",
+      "reviewed_ranges": [
+        [
+          1,
+          572
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 572,
+      "total_lines": 572
+    },
+    "extracted/pinv/rank1_submission_1060506/code/op_kernel/pinv_dsl_window.h": {
+      "sha256": "6afc5fefe71edf995f407ded745c01d956bf78cdf67a7c0f42d1ead76c74fd07",
+      "reviewed_ranges": [
+        [
+          1,
+          2981
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 2981,
+      "total_lines": 2981
+    },
+    "extracted/pinv/rank1_submission_1060506/code/op_kernel/pinv_local.h": {
+      "sha256": "5db463142fa44dea584c8461ccd9918cb5363cd031fbe44383cec8c1d0df2bce",
+      "reviewed_ranges": [
+        [
+          1,
+          545
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 545,
+      "total_lines": 545
+    },
+    "extracted/pinv/rank1_submission_1060506/code/op_kernel/pinv_pipeline.h": {
+      "sha256": "844f217a0f6ef2bf74e99c011e1d0780eac47428888eb9b673fb0c772094e720",
+      "reviewed_ranges": [
+        [
+          1,
+          408
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 408,
+      "total_lines": 408
+    },
+    "extracted/pinv/rank1_submission_1060506/code/op_kernel/pinv_rect.h": {
+      "sha256": "9c6a21e7f8d87abf7bf45f0f9dd221dd6305c3b3a676ebd4b4f5fdd81e98231e",
+      "reviewed_ranges": [
+        [
+          1,
+          404
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 404,
+      "total_lines": 404
+    },
+    "extracted/pinv/rank1_submission_1060506/code/op_kernel/pinv_refinement.h": {
+      "sha256": "a0187cf469ca6c4053fc6a80c0aed78e4487eb4f17d125eaed66bb6cbfa56b9b",
+      "reviewed_ranges": [
+        [
+          1,
+          326
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 326,
+      "total_lines": 326
+    },
+    "extracted/pinv/rank1_submission_1060506/code/op_kernel/pinv_stable.h": {
+      "sha256": "bd91fda3c59dd4397b64e47ace57a814aa9fb04e37e317551bc9e3bdfc517711",
+      "reviewed_ranges": [
+        [
+          1,
+          2034
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 2034,
+      "total_lines": 2034
+    },
+    "extracted/pinv/rank1_submission_1060506/code/op_kernel/pinv_vector_precision.h": {
+      "sha256": "a9b0cf06d124d8c7533b175c9a5c8dcf8253ffc5098b3b3c15642bd3cd953bfc",
+      "reviewed_ranges": [
+        [
+          1,
+          31
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 31,
+      "total_lines": 31
+    },
+    "extracted/pinv/rank1_submission_1060506/code/op_kernel/pinv_wide.h": {
+      "sha256": "42bd969904d9f75d0921ee366c026f350f83715ade7cd90e1a6221580bb5b6fb",
+      "reviewed_ranges": [
+        [
+          1,
+          39
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 39,
+      "total_lines": 39
+    },
+    "extracted/pinv/rank1_submission_1060506/code/op_kernel/pinv_window_pipeline.h": {
+      "sha256": "dcec52148e0d1c472fc2c0e8801597ab2556c69ff85ab43a5defd12b8cf1a441",
+      "reviewed_ranges": [
+        [
+          1,
+          321
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 321,
+      "total_lines": 321
+    },
+    "extracted/pinv/rank1_submission_1060506/code/op_kernel/tiling_key_linalg_pinv.h": {
+      "sha256": "09b11052968c5d405bb69aeb65d43c884604487a50d689478849c2493ea92b73",
+      "reviewed_ranges": [
+        [
+          1,
+          26
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 26,
+      "total_lines": 26
+    },
+    "extracted/pinv/rank2_submission_1049211/code/CMakeLists.txt": {
+      "sha256": "650f11fab6711603bcfeb1af60463db47f060dbcb67de2cddd8398e5c0ebb3df",
+      "reviewed_ranges": [
+        [
+          1,
+          20
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 20,
+      "total_lines": 20
+    },
+    "extracted/pinv/rank2_submission_1049211/code/op_host/CMakeLists.txt": {
+      "sha256": "02333c3a83a459059bb0a96df1d3627e2f78f457d2a22d08e56e29439b22ddcf",
+      "reviewed_ranges": [
+        [
+          1,
+          24
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 24,
+      "total_lines": 24
+    },
+    "extracted/pinv/rank2_submission_1049211/code/op_host/linalg_pinv.cpp": {
+      "sha256": "f81010e716a1a6ef889dafae1d588b3e2e977d931f109ada11eb966717761b04",
+      "reviewed_ranges": [
+        [
+          1,
+          108
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 108,
+      "total_lines": 108
+    },
+    "extracted/pinv/rank2_submission_1049211/code/op_kernel/CMakeLists.txt": {
+      "sha256": "d05a8a3f067af24667c096c672c869b35f1cc854a201449455f86817929a2b07",
+      "reviewed_ranges": [
+        [
+          1,
+          15
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 15,
+      "total_lines": 15
+    },
+    "extracted/pinv/rank2_submission_1049211/code/op_kernel/linalg_pinv.cpp": {
+      "sha256": "bea57608c2adc66ef2e27951a12dfcaa329ecb5d72ed76b8baaeb354fedae6df",
+      "reviewed_ranges": [
+        [
+          1,
+          1968
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 1968,
+      "total_lines": 1968
+    },
+    "extracted/pinv/rank2_submission_1049211/code/op_kernel/linalg_pinv_tiling.h": {
+      "sha256": "d270f8d5a05d186128c0bf712b9c10c379985b474aaa352e32c868090554d2a1",
+      "reviewed_ranges": [
+        [
+          1,
+          35
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 35,
+      "total_lines": 35
+    },
+    "extracted/pinv/rank2_submission_1049211/code/op_kernel/tiling_key_linalg_pinv.h": {
+      "sha256": "383e02a5a6d98e10316444ab84a3b032e8f8ced8300be0aef7402218b1c124cc",
+      "reviewed_ranges": [
+        [
+          1,
+          34
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 34,
+      "total_lines": 34
+    },
+    "extracted/pinv/rank3_submission_1173359/code/CMakeLists.txt": {
+      "sha256": "650f11fab6711603bcfeb1af60463db47f060dbcb67de2cddd8398e5c0ebb3df",
+      "reviewed_ranges": [
+        [
+          1,
+          20
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 20,
+      "total_lines": 20
+    },
+    "extracted/pinv/rank3_submission_1173359/code/op_host/CMakeLists.txt": {
+      "sha256": "02333c3a83a459059bb0a96df1d3627e2f78f457d2a22d08e56e29439b22ddcf",
+      "reviewed_ranges": [
+        [
+          1,
+          24
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 24,
+      "total_lines": 24
+    },
+    "extracted/pinv/rank3_submission_1173359/code/op_host/linalg_pinv.cpp": {
+      "sha256": "27cbd21a965a1339ce972011f0c3d8ff525fe82866b00206f7b89e02c509c68e",
+      "reviewed_ranges": [
+        [
+          1,
+          98
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 98,
+      "total_lines": 98
+    },
+    "extracted/pinv/rank3_submission_1173359/code/op_kernel/CMakeLists.txt": {
+      "sha256": "d05a8a3f067af24667c096c672c869b35f1cc854a201449455f86817929a2b07",
+      "reviewed_ranges": [
+        [
+          1,
+          15
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 15,
+      "total_lines": 15
+    },
+    "extracted/pinv/rank3_submission_1173359/code/op_kernel/linalg_pinv.cpp": {
+      "sha256": "4000e657565d3b719259a554762f7de3b4c4b7c2f4e5eaa427ca8b113371955e",
+      "reviewed_ranges": [
+        [
+          1,
+          1642
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 1642,
+      "total_lines": 1642
+    },
+    "extracted/pinv/rank3_submission_1173359/code/op_kernel/linalg_pinv_tiling.h": {
+      "sha256": "b5d79cb974567213317cf69fd6e42f8254dfd4d66b209542cd8de324a800470b",
+      "reviewed_ranges": [
+        [
+          1,
+          10
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 10,
+      "total_lines": 10
+    },
+    "extracted/pinv/rank3_submission_1173359/code/op_kernel/tiling_key_linalg_pinv.h": {
+      "sha256": "1cac7f65bcd9d9012e990bee66b7bcf38f5b2cb30b3f31795bd59c4ddcd6cf86",
+      "reviewed_ranges": [
+        [
+          1,
+          14
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 14,
+      "total_lines": 14
+    },
+    "extracted/SplineConv/rank1_submission_1174398/code/CMakeLists.txt": {
+      "sha256": "650f11fab6711603bcfeb1af60463db47f060dbcb67de2cddd8398e5c0ebb3df",
+      "reviewed_ranges": [
+        [
+          1,
+          20
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 20,
+      "total_lines": 20
+    },
+    "extracted/SplineConv/rank1_submission_1174398/code/op_kernel/spline_conv_four_owner.h": {
+      "sha256": "6969432c75d8afdbfad3c9295a4a1876d8e8187ddfe64a52f66665bce3fa1fc1",
+      "reviewed_ranges": [
+        [
+          1,
+          91
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 91,
+      "total_lines": 91
+    },
+    "extracted/SplineConv/rank1_submission_1174398/code/op_kernel/spline_conv_single_tail_sector.h": {
+      "sha256": "178cb50e33d31743cb0d5508e1df0fac4b85efdca2e0c856687ff8e96f659b76",
+      "reviewed_ranges": [
+        [
+          1,
+          49
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 49,
+      "total_lines": 49
+    },
+    "extracted/SplineConv/rank1_submission_1174398/code/op_kernel/tiling_key_spline_conv.h": {
+      "sha256": "e36b705722e57d745b1db3fcd1f07b22bbfac43fec686a45e01b02473a3930c2",
+      "reviewed_ranges": [
+        [
+          1,
+          117
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 117,
+      "total_lines": 117
+    },
+    "extracted/SplineConv/rank1_submission_1174398/code/op_kernel/spline_conv_resident.h": {
+      "sha256": "ad10ccced6d08adf981d38039d6ef25b71f09284a7c7283994c1d193a2601328",
+      "reviewed_ranges": [
+        [
+          1,
+          260
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 260,
+      "total_lines": 260
+    },
+    "extracted/SplineConv/rank1_submission_1174398/code/op_kernel/spline_conv_local_weights.h": {
+      "sha256": "5bac87427a9e2b6288228bdcbb0d4c2a3690797db2a5770f86755c50eb7ccb00",
+      "reviewed_ranges": [
+        [
+          1,
+          106
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 106,
+      "total_lines": 106
+    },
+    "extracted/SplineConv/rank1_submission_1174398/code/op_kernel/spline_conv_small.h": {
+      "sha256": "6abd3546bad28264dbaa22dc365387234c8d49a5095eb86a0ddd2b0e10353548",
+      "reviewed_ranges": [
+        [
+          1,
+          94
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 94,
+      "total_lines": 94
+    },
+    "extracted/SplineConv/rank1_submission_1174398/code/op_kernel/spline_conv_edge_owner.h": {
+      "sha256": "cb94a6a41d7ec15deb529008524128795e12f0e31e4b4edfd758079e30be7e1c",
+      "reviewed_ranges": [
+        [
+          1,
+          168
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 168,
+      "total_lines": 168
+    },
+    "extracted/SplineConv/rank1_submission_1174398/code/op_kernel/spline_conv_sparse_output.h": {
+      "sha256": "3982dd6a6cc9cd6e2dc334397f703f5ad481a177e79db154905aeac4d49b9d93",
+      "reviewed_ranges": [
+        [
+          1,
+          32
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 32,
+      "total_lines": 32
+    },
+    "extracted/SplineConv/rank1_submission_1174398/code/op_kernel/spline_conv_streaming.h": {
+      "sha256": "c762697fb2eb99b803f984cded1188fd25fddf9925214f767d724b1edf810c9e",
+      "reviewed_ranges": [
+        [
+          1,
+          107
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 107,
+      "total_lines": 107
+    },
+    "extracted/SplineConv/rank1_submission_1174398/code/op_kernel/spline_conv_tiling.h": {
+      "sha256": "577a0067862be60075cd6efd7862e57ddb7a1e8426e5f293c5848929b041cbe4",
+      "reviewed_ranges": [
+        [
+          1,
+          11
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 11,
+      "total_lines": 11
+    },
+    "extracted/SplineConv/rank1_submission_1174398/code/op_kernel/spline_conv_wide_tile.h": {
+      "sha256": "7914052489761416ee96d683909b8316702e37f4adc8454556d04116b5773dd6",
+      "reviewed_ranges": [
+        [
+          1,
+          41
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 41,
+      "total_lines": 41
+    },
+    "extracted/SplineConv/rank1_submission_1174398/code/op_kernel/spline_conv_clear_mask.h": {
+      "sha256": "7fec7e2c33c25a975d3769f813272f91a230f22af26a2fda902ef9a8250b8f99",
+      "reviewed_ranges": [
+        [
+          1,
+          45
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 45,
+      "total_lines": 45
+    },
+    "extracted/SplineConv/rank1_submission_1174398/code/op_kernel/spline_conv_compact.h": {
+      "sha256": "e5919e0ee59371d454076e0c1866be35f189b9973981aeadf8d383115fefb176",
+      "reviewed_ranges": [
+        [
+          1,
+          292
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 292,
+      "total_lines": 292
+    },
+    "extracted/SplineConv/rank1_submission_1174398/code/op_kernel/spline_conv_clear_owner.h": {
+      "sha256": "61b4e4ddfadb093e33f008a5900e17caf04dd28e02ea76466163d0d2c92c0450",
+      "reviewed_ranges": [
+        [
+          1,
+          32
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 32,
+      "total_lines": 32
+    },
+    "extracted/SplineConv/rank1_submission_1174398/code/op_kernel/spline_conv_encoded_owner.h": {
+      "sha256": "6a3ed33c623295df74a6a772465df75f8981057887fe3645d1269b85eaf31af9",
+      "reviewed_ranges": [
+        [
+          1,
+          10
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 10,
+      "total_lines": 10
+    },
+    "extracted/SplineConv/rank1_submission_1174398/code/op_kernel/spline_conv_four_group.h": {
+      "sha256": "dabb5841300e047edf2c0ca51c31def99c7e2b75bd4e00635d4be6e698aef9a2",
+      "reviewed_ranges": [
+        [
+          1,
+          49
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 49,
+      "total_lines": 49
+    },
+    "extracted/SplineConv/rank1_submission_1174398/code/op_kernel/spline_conv.cpp": {
+      "sha256": "4ac28f6f18ade3e318aa67366e55c4c2660848d9fcbccbba341bd977066a7c52",
+      "reviewed_ranges": [
+        [
+          1,
+          170
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 170,
+      "total_lines": 170
+    },
+    "extracted/SplineConv/rank1_submission_1174398/code/op_kernel/spline_conv_wide_owner.h": {
+      "sha256": "e23a44aa3daabcd742ed213e0792e78da4fcba316db912b79fd75f28fa47df08",
+      "reviewed_ranges": [
+        [
+          1,
+          207
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 207,
+      "total_lines": 207
+    },
+    "extracted/SplineConv/rank1_submission_1174398/code/op_kernel/spline_conv_single_stage.h": {
+      "sha256": "f37e18d7d867361d8cedd89b170c4245b36d0df2939a3639ae1a983d2e370b65",
+      "reviewed_ranges": [
+        [
+          1,
+          49
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 49,
+      "total_lines": 49
+    },
+    "extracted/SplineConv/rank1_submission_1174398/code/op_kernel/spline_conv_single.h": {
+      "sha256": "be99e93bcadd7fce58fe167108f05588e98d6fed55366bf08e4683b89f19bbeb",
+      "reviewed_ranges": [
+        [
+          1,
+          114
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 114,
+      "total_lines": 114
+    },
+    "extracted/SplineConv/rank1_submission_1174398/code/op_kernel/spline_conv_single_interpolate.h": {
+      "sha256": "ad2d04263f39553b0525d054f3f3d3d637de75138b334bed6ed5d6bb50036c29",
+      "reviewed_ranges": [
+        [
+          1,
+          22
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 22,
+      "total_lines": 22
+    },
+    "extracted/SplineConv/rank1_submission_1174398/code/op_kernel/spline_conv_single_bulk_stage.h": {
+      "sha256": "9380b4db2004a5f664f0e25f07b36d53601515114ab53753b37f21d52468d711",
+      "reviewed_ranges": [
+        [
+          1,
+          155
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 155,
+      "total_lines": 155
+    },
+    "extracted/SplineConv/rank1_submission_1174398/code/op_kernel/CMakeLists.txt": {
+      "sha256": "d05a8a3f067af24667c096c672c869b35f1cc854a201449455f86817929a2b07",
+      "reviewed_ranges": [
+        [
+          1,
+          15
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 15,
+      "total_lines": 15
+    },
+    "extracted/SplineConv/rank1_submission_1174398/code/op_host/spline_conv.cpp": {
+      "sha256": "677b9e8d032f66bd4c7d51e052df6a133d444f78d2215f220803cf69681d38d8",
+      "reviewed_ranges": [
+        [
+          1,
+          195
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 195,
+      "total_lines": 195
+    },
+    "extracted/SplineConv/rank1_submission_1174398/code/op_host/CMakeLists.txt": {
+      "sha256": "02333c3a83a459059bb0a96df1d3627e2f78f457d2a22d08e56e29439b22ddcf",
+      "reviewed_ranges": [
+        [
+          1,
+          24
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 24,
+      "total_lines": 24
+    },
+    "extracted/SplineConv/rank2_submission_1176862/code/CMakeLists.txt": {
+      "sha256": "650f11fab6711603bcfeb1af60463db47f060dbcb67de2cddd8398e5c0ebb3df",
+      "reviewed_ranges": [
+        [
+          1,
+          20
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 20,
+      "total_lines": 20
+    },
+    "extracted/SplineConv/rank2_submission_1176862/code/op_kernel/tiling_key_spline_conv.h": {
+      "sha256": "2b82359d01de3267dab1365e73c6fde58f6ccdd519c7ae08d61bcb52ea0a2af6",
+      "reviewed_ranges": [
+        [
+          1,
+          124
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 124,
+      "total_lines": 124
+    },
+    "extracted/SplineConv/rank2_submission_1176862/code/op_kernel/spline_conv_tiling.h": {
+      "sha256": "dcbaec09ca77267c965567a797b8e774c9dde25169b66d8aa398c325d0b7cb62",
+      "reviewed_ranges": [
+        [
+          1,
+          37
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 37,
+      "total_lines": 37
+    },
+    "extracted/SplineConv/rank2_submission_1176862/code/op_kernel/spline_conv.cpp": {
+      "sha256": "273126c644933f608fa2bc479d4cb7e6b77ce13256a2d4e3b09b4ec0b52e93c1",
+      "reviewed_ranges": [
+        [
+          1,
+          2253
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 2253,
+      "total_lines": 2253
+    },
+    "extracted/SplineConv/rank2_submission_1176862/code/op_kernel/CMakeLists.txt": {
+      "sha256": "d05a8a3f067af24667c096c672c869b35f1cc854a201449455f86817929a2b07",
+      "reviewed_ranges": [
+        [
+          1,
+          15
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 15,
+      "total_lines": 15
+    },
+    "extracted/SplineConv/rank2_submission_1176862/code/op_host/spline_conv.cpp": {
+      "sha256": "1eea648bbfa46b607bee6317cf186692c4ed0ec84bc17dbd4cc6f2b5350b718b",
+      "reviewed_ranges": [
+        [
+          1,
+          379
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 379,
+      "total_lines": 379
+    },
+    "extracted/SplineConv/rank2_submission_1176862/code/op_host/CMakeLists.txt": {
+      "sha256": "02333c3a83a459059bb0a96df1d3627e2f78f457d2a22d08e56e29439b22ddcf",
+      "reviewed_ranges": [
+        [
+          1,
+          24
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 24,
+      "total_lines": 24
+    },
+    "extracted/SplineConv/rank3_submission_1177413/code/CMakeLists.txt": {
+      "sha256": "650f11fab6711603bcfeb1af60463db47f060dbcb67de2cddd8398e5c0ebb3df",
+      "reviewed_ranges": [
+        [
+          1,
+          20
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 20,
+      "total_lines": 20
+    },
+    "extracted/SplineConv/rank3_submission_1177413/code/op_kernel/tiling_key_spline_conv.h": {
+      "sha256": "8cae9ea6af701375e564699b5cd6d2c85abacfe60d1a677ca64c9402286c6e67",
+      "reviewed_ranges": [
+        [
+          1,
+          987
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 987,
+      "total_lines": 987
+    },
+    "extracted/SplineConv/rank3_submission_1177413/code/op_kernel/spline_conv_tiling.h": {
+      "sha256": "f24eadff0704ea5674350600f3b384627c12eb7ae9db85cee90b93a491daaf6b",
+      "reviewed_ranges": [
+        [
+          1,
+          139
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 139,
+      "total_lines": 139
+    },
+    "extracted/SplineConv/rank3_submission_1177413/code/op_kernel/spline_conv.cpp": {
+      "sha256": "9c64959e7ff560a2a21886e039238fbfeaba245945a4d735aada555a25a02260",
+      "reviewed_ranges": [
+        [
+          1,
+          3593
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 3593,
+      "total_lines": 3593
+    },
+    "extracted/SplineConv/rank3_submission_1177413/code/op_kernel/CMakeLists.txt": {
+      "sha256": "d05a8a3f067af24667c096c672c869b35f1cc854a201449455f86817929a2b07",
+      "reviewed_ranges": [
+        [
+          1,
+          15
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 15,
+      "total_lines": 15
+    },
+    "extracted/SplineConv/rank3_submission_1177413/code/op_host/spline_conv.cpp": {
+      "sha256": "2d1c5fea9b32553dbc97b77133970de67458f38828c1f70fd5e55bb1c7e65df7",
+      "reviewed_ranges": [
+        [
+          1,
+          502
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 502,
+      "total_lines": 502
+    },
+    "extracted/SplineConv/rank3_submission_1177413/code/op_host/CMakeLists.txt": {
+      "sha256": "02333c3a83a459059bb0a96df1d3627e2f78f457d2a22d08e56e29439b22ddcf",
+      "reviewed_ranges": [
+        [
+          1,
+          24
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 24,
+      "total_lines": 24
+    },
+    "extracted/det/rank1_submission_1177870/code/CMakeLists.txt": {
+      "sha256": "650f11fab6711603bcfeb1af60463db47f060dbcb67de2cddd8398e5c0ebb3df",
+      "reviewed_ranges": [
+        [
+          1,
+          20
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 20,
+      "total_lines": 20
+    },
+    "extracted/det/rank1_submission_1177870/code/op_kernel/linalg_det_tiling.h": {
+      "sha256": "1e89d05480153453fa7472542837c416cf5bd6a06efab98e2e5ad518d603f447",
+      "reviewed_ranges": [
+        [
+          1,
+          6
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 6,
+      "total_lines": 6
+    },
+    "extracted/det/rank1_submission_1177870/code/op_kernel/tiling_key_linalg_det.h": {
+      "sha256": "e7a0d50654b010548b15d9cffb8a94167be70ae14e5b0708eae9dfbc980f557e",
+      "reviewed_ranges": [
+        [
+          1,
+          39
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 39,
+      "total_lines": 39
+    },
+    "extracted/det/rank1_submission_1177870/code/op_kernel/linalg_det.cpp": {
+      "sha256": "a08a3a44b79149d77e26a5c7d3bd85a983918dc379437f6b210b09e562266502",
+      "reviewed_ranges": [
+        [
+          1,
+          1687
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 1687,
+      "total_lines": 1687
+    },
+    "extracted/det/rank1_submission_1177870/code/op_kernel/CMakeLists.txt": {
+      "sha256": "d05a8a3f067af24667c096c672c869b35f1cc854a201449455f86817929a2b07",
+      "reviewed_ranges": [
+        [
+          1,
+          15
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 15,
+      "total_lines": 15
+    },
+    "extracted/det/rank1_submission_1177870/code/op_host/linalg_det.cpp": {
+      "sha256": "d486bde94847d979c897e6f61ad74c8adafefb84450ba6ceaf1d77f9c4e61705",
+      "reviewed_ranges": [
+        [
+          1,
+          84
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 84,
+      "total_lines": 84
+    },
+    "extracted/det/rank1_submission_1177870/code/op_host/CMakeLists.txt": {
+      "sha256": "02333c3a83a459059bb0a96df1d3627e2f78f457d2a22d08e56e29439b22ddcf",
+      "reviewed_ranges": [
+        [
+          1,
+          24
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 24,
+      "total_lines": 24
+    },
+    "extracted/det/rank2_submission_1171264/code/CMakeLists.txt": {
+      "sha256": "650f11fab6711603bcfeb1af60463db47f060dbcb67de2cddd8398e5c0ebb3df",
+      "reviewed_ranges": [
+        [
+          1,
+          20
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 20,
+      "total_lines": 20
+    },
+    "extracted/det/rank2_submission_1171264/code/op_kernel/linalg_det_tiling.h": {
+      "sha256": "06e9304ac9c63b7fccfb58ce0b04551f0512e142fc50c7ddbf4630d17ad0ba7f",
+      "reviewed_ranges": [
+        [
+          1,
+          3
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 3,
+      "total_lines": 3
+    },
+    "extracted/det/rank2_submission_1171264/code/op_kernel/tiling_key_linalg_det.h": {
+      "sha256": "d2abc23f0b50f4a94ce7c66e1f6069ba4266bdb2f3cc16e17a6ba886d5fb65ef",
+      "reviewed_ranges": [
+        [
+          1,
+          18
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 18,
+      "total_lines": 18
+    },
+    "extracted/det/rank2_submission_1171264/code/op_kernel/linalg_det.cpp": {
+      "sha256": "b44c02cf992f58ba0ce5a60ed4d3a4c3e6411450deaad23da0844e7a2d33458b",
+      "reviewed_ranges": [
+        [
+          1,
+          3548
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 3548,
+      "total_lines": 3548
+    },
+    "extracted/det/rank2_submission_1171264/code/op_kernel/CMakeLists.txt": {
+      "sha256": "d05a8a3f067af24667c096c672c869b35f1cc854a201449455f86817929a2b07",
+      "reviewed_ranges": [
+        [
+          1,
+          15
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 15,
+      "total_lines": 15
+    },
+    "extracted/det/rank2_submission_1171264/code/op_host/linalg_det.cpp": {
+      "sha256": "5b2afe25e3d57084d1b9201413989c7d2236ccb62c87c521e380269820a4d7a2",
+      "reviewed_ranges": [
+        [
+          1,
+          57
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 57,
+      "total_lines": 57
+    },
+    "extracted/det/rank2_submission_1171264/code/op_host/CMakeLists.txt": {
+      "sha256": "02333c3a83a459059bb0a96df1d3627e2f78f457d2a22d08e56e29439b22ddcf",
+      "reviewed_ranges": [
+        [
+          1,
+          24
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 24,
+      "total_lines": 24
+    },
+    "extracted/det/rank3_submission_1172438/code/CMakeLists.txt": {
+      "sha256": "650f11fab6711603bcfeb1af60463db47f060dbcb67de2cddd8398e5c0ebb3df",
+      "reviewed_ranges": [
+        [
+          1,
+          20
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 20,
+      "total_lines": 20
+    },
+    "extracted/det/rank3_submission_1172438/code/op_kernel/det_coop64_direct_diag.h": {
+      "sha256": "4888b87a1817ad1ad60ea96ad425d96dccf1b199c08a6d55fb4b68bca3966184",
+      "reviewed_ranges": [
+        [
+          1,
+          323
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 323,
+      "total_lines": 323
+    },
+    "extracted/det/rank3_submission_1172438/code/op_kernel/det_cube_lu.h": {
+      "sha256": "4e111542354e1271bb0a1b011ef557470f68df23dc5dcab1c1d2b4d430bacd06",
+      "reviewed_ranges": [
+        [
+          1,
+          1097
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 1097,
+      "total_lines": 1097
+    },
+    "extracted/det/rank3_submission_1172438/code/op_kernel/det_small.h": {
+      "sha256": "483dd3e734fff5bfbd2637cb2f675eae0a0b4f716208b3caf7fb2f7dd59e7cb8",
+      "reviewed_ranges": [
+        [
+          1,
+          247
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 247,
+      "total_lines": 247
+    },
+    "extracted/det/rank3_submission_1172438/code/op_kernel/det_cube_wide.h": {
+      "sha256": "7a2ca4874786497d4e7f7d4046f9b2379ebd5509e848385ab586f0afe246ed40",
+      "reviewed_ranges": [
+        [
+          1,
+          249
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 249,
+      "total_lines": 249
+    },
+    "extracted/det/rank3_submission_1172438/code/op_kernel/det_cube_static.h": {
+      "sha256": "72f931bc3a665cf144f0f23340569dee8ea5d78b30611ac268bc387860da481c",
+      "reviewed_ranges": [
+        [
+          1,
+          452
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 452,
+      "total_lines": 452
+    },
+    "extracted/det/rank3_submission_1172438/code/op_kernel/linalg_det_tiling.h": {
+      "sha256": "48fab3adde6a1a7875a9b551d3a050c90d65f65a4379b97471c94387bf847d0c",
+      "reviewed_ranges": [
+        [
+          1,
+          33
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 33,
+      "total_lines": 33
+    },
+    "extracted/det/rank3_submission_1172438/code/op_kernel/tiling_key_linalg_det.h": {
+      "sha256": "380db82688cfec991bd89718cf89175faf522865d81ddcf0493854ea959865ed",
+      "reviewed_ranges": [
+        [
+          1,
+          16
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 16,
+      "total_lines": 16
+    },
+    "extracted/det/rank3_submission_1172438/code/op_kernel/linalg_det.cpp": {
+      "sha256": "676d0c7f133f599a492f96803833a5a433f9374d4bb9fb7ad4b918946800ce41",
+      "reviewed_ranges": [
+        [
+          1,
+          724
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 724,
+      "total_lines": 724
+    },
+    "extracted/det/rank3_submission_1172438/code/op_kernel/CMakeLists.txt": {
+      "sha256": "d05a8a3f067af24667c096c672c869b35f1cc854a201449455f86817929a2b07",
+      "reviewed_ranges": [
+        [
+          1,
+          15
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 15,
+      "total_lines": 15
+    },
+    "extracted/det/rank3_submission_1172438/code/op_kernel/det_coop64.h": {
+      "sha256": "1252f2d3eac9af06566f777e4ab1bbd9591df036575c3cf31f37898ae578f12d",
+      "reviewed_ranges": [
+        [
+          1,
+          381
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 381,
+      "total_lines": 381
+    },
+    "extracted/det/rank3_submission_1172438/code/op_host/linalg_det.cpp": {
+      "sha256": "17c4a741a0cd9f46e58e67305b3519a3ca7956f3de713f2de8685134c481f9ae",
+      "reviewed_ranges": [
+        [
+          1,
+          121
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 121,
+      "total_lines": 121
+    },
+    "extracted/det/rank3_submission_1172438/code/op_host/CMakeLists.txt": {
+      "sha256": "02333c3a83a459059bb0a96df1d3627e2f78f457d2a22d08e56e29439b22ddcf",
+      "reviewed_ranges": [
+        [
+          1,
+          24
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 24,
+      "total_lines": 24
+    },
+    "extracted/lstsq/rank1_submission_1172572/code/CMakeLists.txt": {
+      "sha256": "650f11fab6711603bcfeb1af60463db47f060dbcb67de2cddd8398e5c0ebb3df",
+      "reviewed_ranges": [
+        [
+          1,
+          20
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 20,
+      "total_lines": 20
+    },
+    "extracted/lstsq/rank1_submission_1172572/code/op_kernel/tiling_key_linalg_lstsq.h": {
+      "sha256": "bc1d08347e5fd428fbcea11f5ef31f74c0eeee9df2c13a0617b486d2396ea7fe",
+      "reviewed_ranges": [
+        [
+          1,
+          28
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 28,
+      "total_lines": 28
+    },
+    "extracted/lstsq/rank1_submission_1172572/code/op_kernel/linalg_lstsq.cpp": {
+      "sha256": "0ad75896403c7390a5a6a16bc598fb369fd18608e85fe328dd2d0f3081d372cf",
+      "reviewed_ranges": [
+        [
+          1,
+          2762
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 2762,
+      "total_lines": 2762
+    },
+    "extracted/lstsq/rank1_submission_1172572/code/op_kernel/CMakeLists.txt": {
+      "sha256": "d05a8a3f067af24667c096c672c869b35f1cc854a201449455f86817929a2b07",
+      "reviewed_ranges": [
+        [
+          1,
+          15
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 15,
+      "total_lines": 15
+    },
+    "extracted/lstsq/rank1_submission_1172572/code/op_kernel/linalg_lstsq_tiling.h": {
+      "sha256": "5e66de8209a4d144dd94f710b09b455a3aace8cd4c3633cdaf71168d085ee0c1",
+      "reviewed_ranges": [
+        [
+          1,
+          12
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 12,
+      "total_lines": 12
+    },
+    "extracted/lstsq/rank1_submission_1172572/code/op_host/linalg_lstsq.cpp": {
+      "sha256": "963219ecc74a878bf77d333529d522e100a3653a3abff3e38bce5f906b1f0b59",
+      "reviewed_ranges": [
+        [
+          1,
+          114
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 114,
+      "total_lines": 114
+    },
+    "extracted/lstsq/rank1_submission_1172572/code/op_host/CMakeLists.txt": {
+      "sha256": "02333c3a83a459059bb0a96df1d3627e2f78f457d2a22d08e56e29439b22ddcf",
+      "reviewed_ranges": [
+        [
+          1,
+          24
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 24,
+      "total_lines": 24
+    },
+    "extracted/lstsq/rank2_submission_1175329/code/CMakeLists.txt": {
+      "sha256": "650f11fab6711603bcfeb1af60463db47f060dbcb67de2cddd8398e5c0ebb3df",
+      "reviewed_ranges": [
+        [
+          1,
+          20
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 20,
+      "total_lines": 20
+    },
+    "extracted/lstsq/rank2_submission_1175329/code/op_kernel/tiling_key_linalg_lstsq.h": {
+      "sha256": "a6e678e278af42b2a980a7df6c9a906000de24543c31bc1457c3806f9a28838b",
+      "reviewed_ranges": [
+        [
+          1,
+          10
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 10,
+      "total_lines": 10
+    },
+    "extracted/lstsq/rank2_submission_1175329/code/op_kernel/linalg_lstsq.cpp": {
+      "sha256": "772d91bb58a687454158fb4a33b671c0d9e8ef4c81edc03f2c4675446e8e2164",
+      "reviewed_ranges": [
+        [
+          1,
+          959
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 959,
+      "total_lines": 959
+    },
+    "extracted/lstsq/rank2_submission_1175329/code/op_kernel/CMakeLists.txt": {
+      "sha256": "d05a8a3f067af24667c096c672c869b35f1cc854a201449455f86817929a2b07",
+      "reviewed_ranges": [
+        [
+          1,
+          15
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 15,
+      "total_lines": 15
+    },
+    "extracted/lstsq/rank2_submission_1175329/code/op_kernel/linalg_lstsq_tiling.h": {
+      "sha256": "cb712dac8a9167545cbc306d6b9af003da35aa03f2d70ca9547b7570fda552a0",
+      "reviewed_ranges": [
+        [
+          1,
+          5
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 5,
+      "total_lines": 5
+    },
+    "extracted/lstsq/rank2_submission_1175329/code/op_host/linalg_lstsq.cpp": {
+      "sha256": "47ea3d194e6dd3b754305dcf4708e8179e623e969404aac20e4b00dfd72eda33",
+      "reviewed_ranges": [
+        [
+          1,
+          78
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 78,
+      "total_lines": 78
+    },
+    "extracted/lstsq/rank2_submission_1175329/code/op_host/CMakeLists.txt": {
+      "sha256": "02333c3a83a459059bb0a96df1d3627e2f78f457d2a22d08e56e29439b22ddcf",
+      "reviewed_ranges": [
+        [
+          1,
+          24
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 24,
+      "total_lines": 24
+    },
+    "extracted/lstsq/rank3_submission_1177490/code/CMakeLists.txt": {
+      "sha256": "650f11fab6711603bcfeb1af60463db47f060dbcb67de2cddd8398e5c0ebb3df",
+      "reviewed_ranges": [
+        [
+          1,
+          20
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 20,
+      "total_lines": 20
+    },
+    "extracted/lstsq/rank3_submission_1177490/code/op_kernel/lstsq_options.h": {
+      "sha256": "2e40b819edcbce8cc6466ec7edcb3521869990d3becb9d79129d8094c474f264",
+      "reviewed_ranges": [
+        [
+          1,
+          7
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 7,
+      "total_lines": 7
+    },
+    "extracted/lstsq/rank3_submission_1177490/code/op_kernel/tiling_key_linalg_lstsq.h": {
+      "sha256": "7db940f96647b5652a6b2c4c876b449fafce6d0440eeb990dfcfec46d7d5eea1",
+      "reviewed_ranges": [
+        [
+          1,
+          20
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 20,
+      "total_lines": 20
+    },
+    "extracted/lstsq/rank3_submission_1177490/code/op_kernel/linalg_lstsq.cpp": {
+      "sha256": "d0fe6c9bd2ce591e8b2c00e2c84ea6332dccd53e2f02065a40cc3c7e91306756",
+      "reviewed_ranges": [
+        [
+          1,
+          3355
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 3355,
+      "total_lines": 3355
+    },
+    "extracted/lstsq/rank3_submission_1177490/code/op_kernel/lstsq_fast_square.h": {
+      "sha256": "666c2b597724bc6a564f015bfcb02070f94d293fc1c9849b0073e06f2a97dd9a",
+      "reviewed_ranges": [
+        [
+          1,
+          3571
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 3571,
+      "total_lines": 3571
+    },
+    "extracted/lstsq/rank3_submission_1177490/code/op_kernel/CMakeLists.txt": {
+      "sha256": "d05a8a3f067af24667c096c672c869b35f1cc854a201449455f86817929a2b07",
+      "reviewed_ranges": [
+        [
+          1,
+          15
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 15,
+      "total_lines": 15
+    },
+    "extracted/lstsq/rank3_submission_1177490/code/op_kernel/linalg_lstsq_tiling.h": {
+      "sha256": "e2eee8fc8bcd5bc2327b1f47896679473c7eee048dd8d3020592ff9066f50977",
+      "reviewed_ranges": [
+        [
+          1,
+          46
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 46,
+      "total_lines": 46
+    },
+    "extracted/lstsq/rank3_submission_1177490/code/op_host/lstsq_plan.h": {
+      "sha256": "26933f56302f8a2aae537d9ede9a3b34aa787717e8878dcac51b1d2a269788bb",
+      "reviewed_ranges": [
+        [
+          1,
+          720
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 720,
+      "total_lines": 720
+    },
+    "extracted/lstsq/rank3_submission_1177490/code/op_host/linalg_lstsq.cpp": {
+      "sha256": "02b7c4be68ca3158a544d74f037e6afe1c2f7d75b6d84403bd1795e0bcc64e77",
+      "reviewed_ranges": [
+        [
+          1,
+          507
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 507,
+      "total_lines": 507
+    },
+    "extracted/lstsq/rank3_submission_1177490/code/op_host/CMakeLists.txt": {
+      "sha256": "02333c3a83a459059bb0a96df1d3627e2f78f457d2a22d08e56e29439b22ddcf",
+      "reviewed_ranges": [
+        [
+          1,
+          24
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 24,
+      "total_lines": 24
+    },
+    "extracted/FireCandidateDecodeFusion/rank1_submission_1122762/code/CMakeLists.txt": {
+      "sha256": "650f11fab6711603bcfeb1af60463db47f060dbcb67de2cddd8398e5c0ebb3df",
+      "reviewed_ranges": [
+        [
+          1,
+          20
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 20,
+      "total_lines": 20
+    },
+    "extracted/FireCandidateDecodeFusion/rank1_submission_1122762/code/op_kernel/fire_candidate_decode_fusion_tiling.h": {
+      "sha256": "f3f3c0f5b6f56a41c8388ed919c17163201582b091d27d022653e7ec130f4c62",
+      "reviewed_ranges": [
+        [
+          1,
+          44
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 44,
+      "total_lines": 44
+    },
+    "extracted/FireCandidateDecodeFusion/rank1_submission_1122762/code/op_kernel/tiling_key_fire_candidate_decode_fusion.h": {
+      "sha256": "d4c0c3ec9d26ff3c871ffa38403cdba38cdd7c5e954244d013cd0b637f1e7758",
+      "reviewed_ranges": [
+        [
+          1,
+          20
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 20,
+      "total_lines": 20
+    },
+    "extracted/FireCandidateDecodeFusion/rank1_submission_1122762/code/op_kernel/fire_candidate_decode_fusion.cpp": {
+      "sha256": "4693b60ab79d19e3d73fcb245698ef9d1568435ab80e97eb92570cded8cef310",
+      "reviewed_ranges": [
+        [
+          1,
+          8774
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 8774,
+      "total_lines": 8774
+    },
+    "extracted/FireCandidateDecodeFusion/rank1_submission_1122762/code/op_kernel/CMakeLists.txt": {
+      "sha256": "d05a8a3f067af24667c096c672c869b35f1cc854a201449455f86817929a2b07",
+      "reviewed_ranges": [
+        [
+          1,
+          15
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 15,
+      "total_lines": 15
+    },
+    "extracted/FireCandidateDecodeFusion/rank1_submission_1122762/code/op_host/fire_candidate_decode_fusion.cpp": {
+      "sha256": "ca1041d87e2e6834d8dccdcb5abeb9bdb75b8233b753cfcad82519121a264f63",
+      "reviewed_ranges": [
+        [
+          1,
+          226
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 226,
+      "total_lines": 226
+    },
+    "extracted/FireCandidateDecodeFusion/rank1_submission_1122762/code/op_host/CMakeLists.txt": {
+      "sha256": "02333c3a83a459059bb0a96df1d3627e2f78f457d2a22d08e56e29439b22ddcf",
+      "reviewed_ranges": [
+        [
+          1,
+          24
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 24,
+      "total_lines": 24
+    },
+    "extracted/FireCandidateDecodeFusion/rank2_submission_1176342/code/CMakeLists.txt": {
+      "sha256": "650f11fab6711603bcfeb1af60463db47f060dbcb67de2cddd8398e5c0ebb3df",
+      "reviewed_ranges": [
+        [
+          1,
+          20
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 20,
+      "total_lines": 20
+    },
+    "extracted/FireCandidateDecodeFusion/rank2_submission_1176342/code/op_kernel/fire_static_metadata.h": {
+      "sha256": "9c58bd934b0838fc05b6514d614ed560c27f34b17a02c71a6674c9b6874020c3",
+      "reviewed_ranges": [
+        [
+          1,
+          1100
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 1100,
+      "total_lines": 1100
+    },
+    "extracted/FireCandidateDecodeFusion/rank2_submission_1176342/code/op_kernel/fire_candidate_decode_fusion_tiling.h": {
+      "sha256": "41c60ec10f3a26904c38921f9d91a8965a89ca69684825f77e473f2d0f321d42",
+      "reviewed_ranges": [
+        [
+          1,
+          53
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 53,
+      "total_lines": 53
+    },
+    "extracted/FireCandidateDecodeFusion/rank2_submission_1176342/code/op_kernel/tiling_key_fire_candidate_decode_fusion.h": {
+      "sha256": "af4f16ce4865b0f1a656528c1a844f94469facf884e634388dc4b52c79310a7f",
+      "reviewed_ranges": [
+        [
+          1,
+          12
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 12,
+      "total_lines": 12
+    },
+    "extracted/FireCandidateDecodeFusion/rank2_submission_1176342/code/op_kernel/blocked_transpose.h": {
+      "sha256": "7387575ad2f5c6ddf24d734b317e0e314738a2b3294aacb9f214a9868ab64a01",
+      "reviewed_ranges": [
+        [
+          1,
+          1933
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 1933,
+      "total_lines": 1933
+    },
+    "extracted/FireCandidateDecodeFusion/rank2_submission_1176342/code/op_kernel/fire_candidate_decode_fusion.cpp": {
+      "sha256": "e5c444ea25a0b5a9fb751bae2e102409b31c304867f649413868b9f431e1bcdd",
+      "reviewed_ranges": [
+        [
+          1,
+          227
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 227,
+      "total_lines": 227
+    },
+    "extracted/FireCandidateDecodeFusion/rank2_submission_1176342/code/op_kernel/device_fire.h": {
+      "sha256": "7d201791e790ba54a88f6ef3911179e8c177fd7fb4ed55fd7404245f4ab79fe2",
+      "reviewed_ranges": [
+        [
+          1,
+          1728
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 1728,
+      "total_lines": 1728
+    },
+    "extracted/FireCandidateDecodeFusion/rank2_submission_1176342/code/op_kernel/CMakeLists.txt": {
+      "sha256": "d05a8a3f067af24667c096c672c869b35f1cc854a201449455f86817929a2b07",
+      "reviewed_ranges": [
+        [
+          1,
+          15
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 15,
+      "total_lines": 15
+    },
+    "extracted/FireCandidateDecodeFusion/rank2_submission_1176342/code/op_host/fire_candidate_decode_fusion.cpp": {
+      "sha256": "9a0154b46c18061cf92c2ce48fcfd310bf02c35c4060f07f90cbf39c93dc706a",
+      "reviewed_ranges": [
+        [
+          1,
+          102
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 102,
+      "total_lines": 102
+    },
+    "extracted/FireCandidateDecodeFusion/rank2_submission_1176342/code/op_host/fire_host_plan.h": {
+      "sha256": "f4612e6bfe1bfdcff44a79067bdd16ef6daee8cd11972cfa617b8c113ad85f45",
+      "reviewed_ranges": [
+        [
+          1,
+          253
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 253,
+      "total_lines": 253
+    },
+    "extracted/FireCandidateDecodeFusion/rank2_submission_1176342/code/op_host/CMakeLists.txt": {
+      "sha256": "02333c3a83a459059bb0a96df1d3627e2f78f457d2a22d08e56e29439b22ddcf",
+      "reviewed_ranges": [
+        [
+          1,
+          24
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 24,
+      "total_lines": 24
+    },
+    "extracted/FireCandidateDecodeFusion/rank3_submission_1173427/code/CMakeLists.txt": {
+      "sha256": "650f11fab6711603bcfeb1af60463db47f060dbcb67de2cddd8398e5c0ebb3df",
+      "reviewed_ranges": [
+        [
+          1,
+          20
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 20,
+      "total_lines": 20
+    },
+    "extracted/FireCandidateDecodeFusion/rank3_submission_1173427/code/op_kernel/historical_paired_candidate_decode.h": {
+      "sha256": "9aad4bd9f301c18f8482b812c0232aae689a5e0a4e8af646484715c60c40c7ac",
+      "reviewed_ranges": [
+        [
+          1,
+          395
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 395,
+      "total_lines": 395
+    },
+    "extracted/FireCandidateDecodeFusion/rank3_submission_1173427/code/op_kernel/contiguous_candidate_decode.h": {
+      "sha256": "c1ec21f7501f0aec87a838e68ec94d2f3bd23210ad7da7acc69e37f0d9c61a89",
+      "reviewed_ranges": [
+        [
+          1,
+          107
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 107,
+      "total_lines": 107
+    },
+    "extracted/FireCandidateDecodeFusion/rank3_submission_1173427/code/op_kernel/candidate_index_ramp.h": {
+      "sha256": "9b50afe4e0354150e88a0be9c3305c3f3d0241d1b4d8cd0a5e57669c907bd5c2",
+      "reviewed_ranges": [
+        [
+          1,
+          70
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 70,
+      "total_lines": 70
+    },
+    "extracted/FireCandidateDecodeFusion/rank3_submission_1173427/code/op_kernel/candidate_native_half_input.h": {
+      "sha256": "308c6ac09defb102ec475bc87776472ef5a5285a46d3afa4da0fb30f603ec3fa",
+      "reviewed_ranges": [
+        [
+          1,
+          89
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 89,
+      "total_lines": 89
+    },
+    "extracted/FireCandidateDecodeFusion/rank3_submission_1173427/code/op_kernel/candidate_native_five_pack.h": {
+      "sha256": "74795a69ff0d65df19f9df6b74853ef2296c3eae3e281fdaddd19d8c3308a5a5",
+      "reviewed_ranges": [
+        [
+          1,
+          261
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 261,
+      "total_lines": 261
+    },
+    "extracted/FireCandidateDecodeFusion/rank3_submission_1173427/code/op_kernel/fire_candidate_decode_fusion_tiling.h": {
+      "sha256": "12c19e25cee09cb4946da65b4e0205ae91414bcebe1c1d1cbc81a0902d30bf94",
+      "reviewed_ranges": [
+        [
+          1,
+          8
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 8,
+      "total_lines": 8
+    },
+    "extracted/FireCandidateDecodeFusion/rank3_submission_1173427/code/op_kernel/small_candidate_decode.h": {
+      "sha256": "05ca81bbe19f1acfa5eb90bb27c1478e0ebdf9477b26df3cae6d1b015502fbc9",
+      "reviewed_ranges": [
+        [
+          1,
+          365
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 365,
+      "total_lines": 365
+    },
+    "extracted/FireCandidateDecodeFusion/rank3_submission_1173427/code/op_kernel/tiling_key_fire_candidate_decode_fusion.h": {
+      "sha256": "a6997f23925cd57eef89d45c9e0b72d7899ed146be4b96b6328afac149d620cd",
+      "reviewed_ranges": [
+        [
+          1,
+          17
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 17,
+      "total_lines": 17
+    },
+    "extracted/FireCandidateDecodeFusion/rank3_submission_1173427/code/op_kernel/grouped_candidate_entry.h": {
+      "sha256": "5083fe8a4682b919998e596c0920a361870ddce987f1960cfcb4454a505803aa",
+      "reviewed_ranges": [
+        [
+          1,
+          83
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 83,
+      "total_lines": 83
+    },
+    "extracted/FireCandidateDecodeFusion/rank3_submission_1173427/code/op_kernel/paired_batch_candidate_decode.h": {
+      "sha256": "b7a1ef036d2529c5dfbc01ce72a1ae61e408ba51da434f55d6b628c4c76052b5",
+      "reviewed_ranges": [
+        [
+          1,
+          418
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 418,
+      "total_lines": 418
+    },
+    "extracted/FireCandidateDecodeFusion/rank3_submission_1173427/code/op_kernel/single_group_medium_candidate_decode.h": {
+      "sha256": "666441d0f4e4de5b9035d0e663e903669281edb41782841ae5ba3b2b81b3e941",
+      "reviewed_ranges": [
+        [
+          1,
+          83
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 83,
+      "total_lines": 83
+    },
+    "extracted/FireCandidateDecodeFusion/rank3_submission_1173427/code/op_kernel/generic_candidate_decode.h": {
+      "sha256": "270174b271e2e734dbc41a9e570167df6f40353a4d131ff31344128cc6c8e88d",
+      "reviewed_ranges": [
+        [
+          1,
+          256
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 256,
+      "total_lines": 256
+    },
+    "extracted/FireCandidateDecodeFusion/rank3_submission_1173427/code/op_kernel/candidate_denominator_geometry.h": {
+      "sha256": "dbcb275babd3f9e759ec2ffa2d922b992d64cf5f70a8557173f2784eed69e579",
+      "reviewed_ranges": [
+        [
+          1,
+          211
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 211,
+      "total_lines": 211
+    },
+    "extracted/FireCandidateDecodeFusion/rank3_submission_1173427/code/op_kernel/fire_candidate_decode_fusion.cpp": {
+      "sha256": "efbea46e8db1cbd67f1a2239aeb4d88d6862e5516d3155fdfa63c4c2a39996dd",
+      "reviewed_ranges": [
+        [
+          1,
+          197
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 197,
+      "total_lines": 197
+    },
+    "extracted/FireCandidateDecodeFusion/rank3_submission_1173427/code/op_kernel/candidate_fixed_small_batch.h": {
+      "sha256": "9bedc67b5b260142b3a6e3da3087063416b9420a0780ff93affd72dbd05aa36f",
+      "reviewed_ranges": [
+        [
+          1,
+          15
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 15,
+      "total_lines": 15
+    },
+    "extracted/FireCandidateDecodeFusion/rank3_submission_1173427/code/op_kernel/historical_medium_candidate_decode.h": {
+      "sha256": "d9ce03329eb31c09cb2c49667e1ee1124cbeaf113712bfada8b2512ea99af112",
+      "reviewed_ranges": [
+        [
+          1,
+          121
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 121,
+      "total_lines": 121
+    },
+    "extracted/FireCandidateDecodeFusion/rank3_submission_1173427/code/op_kernel/candidate_transfer.h": {
+      "sha256": "b21ec5a4371c1f6a4f10ac6caf292196a171122dbdd77c36cbaf64259208d639",
+      "reviewed_ranges": [
+        [
+          1,
+          85
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 85,
+      "total_lines": 85
+    },
+    "extracted/FireCandidateDecodeFusion/rank3_submission_1173427/code/op_kernel/native_small_candidate_decode.h": {
+      "sha256": "cbb2c58ee61a8b554be154fd218e1fcf517f50f2a129550aa484e0afe1f9719a",
+      "reviewed_ranges": [
+        [
+          1,
+          237
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 237,
+      "total_lines": 237
+    },
+    "extracted/FireCandidateDecodeFusion/rank3_submission_1173427/code/op_kernel/paired_small_batch_candidate_decode.h": {
+      "sha256": "fc1025ebcf5f1c2b20bd7703df42522872f1affcde047f06bbcf8c761459f3e6",
+      "reviewed_ranges": [
+        [
+          1,
+          219
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 219,
+      "total_lines": 219
+    },
+    "extracted/FireCandidateDecodeFusion/rank3_submission_1173427/code/op_kernel/candidate_native_prior.h": {
+      "sha256": "02fa064b5b6b2958b4d80bd5835db2515892b86b34c18d13f1096d9d547a23bf",
+      "reviewed_ranges": [
+        [
+          1,
+          34
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 34,
+      "total_lines": 34
+    },
+    "extracted/FireCandidateDecodeFusion/rank3_submission_1173427/code/op_kernel/candidate_native_half_output.h": {
+      "sha256": "1a5933abdc352501fb85f46fdeef3dff91b8a6aa328467723aee27b85d69c850",
+      "reviewed_ranges": [
+        [
+          1,
+          27
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 27,
+      "total_lines": 27
+    },
+    "extracted/FireCandidateDecodeFusion/rank3_submission_1173427/code/op_kernel/CMakeLists.txt": {
+      "sha256": "d05a8a3f067af24667c096c672c869b35f1cc854a201449455f86817929a2b07",
+      "reviewed_ranges": [
+        [
+          1,
+          15
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 15,
+      "total_lines": 15
+    },
+    "extracted/FireCandidateDecodeFusion/rank3_submission_1173427/code/op_kernel/medium_candidate_decode.h": {
+      "sha256": "04e554382df455de4b639c0efbe5283c6a8a7f93b0b276b0fe566de8eee3f742",
+      "reviewed_ranges": [
+        [
+          1,
+          143
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 143,
+      "total_lines": 143
+    },
+    "extracted/FireCandidateDecodeFusion/rank3_submission_1173427/code/op_host/fire_candidate_decode_fusion.cpp": {
+      "sha256": "a096c72ecd5016986f39ae067799b32b6dc24239f337fe4a0f9e02817f2fde3d",
+      "reviewed_ranges": [
+        [
+          1,
+          211
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 211,
+      "total_lines": 211
+    },
+    "extracted/FireCandidateDecodeFusion/rank3_submission_1173427/code/op_host/CMakeLists.txt": {
+      "sha256": "02333c3a83a459059bb0a96df1d3627e2f78f457d2a22d08e56e29439b22ddcf",
+      "reviewed_ranges": [
+        [
+          1,
+          24
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 24,
+      "total_lines": 24
+    },
+    "extracted/eigh/rank1_submission_1174206/code/CMakeLists.txt": {
+      "sha256": "4d80dfa56e57233720d4ad85e61e7219845153b586f04a9691372bd11f221b96",
+      "reviewed_ranges": [
+        [
+          1,
+          21
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 21,
+      "total_lines": 21
+    },
+    "extracted/eigh/rank1_submission_1174206/code/README.md": {
+      "sha256": "578d4892898556bb70488c563435fa8a8b8a0e20b052da7af330232553acec5b",
+      "reviewed_ranges": [
+        [
+          1,
+          12
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 12,
+      "total_lines": 12
+    },
+    "extracted/eigh/rank1_submission_1174206/code/op_host/CMakeLists.txt": {
+      "sha256": "819ea7ece6e174adb09d90a86287a955ed2284ff81a087132b2584edc25d1885",
+      "reviewed_ranges": [
+        [
+          1,
+          25
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 25,
+      "total_lines": 25
+    },
+    "extracted/eigh/rank1_submission_1174206/code/op_host/linalg_eigh.cpp": {
+      "sha256": "0fa9c2987bdda6c203efa9e7efc41d95c73423bd7ffa6bf76ade19ba59b1530f",
+      "reviewed_ranges": [
+        [
+          1,
+          266
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 266,
+      "total_lines": 266
+    },
+    "extracted/eigh/rank1_submission_1174206/code/op_kernel/CMakeLists.txt": {
+      "sha256": "82aad880f308a3aa660d7035fb6a403de3770e7bd79e858e2e25c7cbe319aa0c",
+      "reviewed_ranges": [
+        [
+          1,
+          15
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 15,
+      "total_lines": 15
+    },
+    "extracted/eigh/rank1_submission_1174206/code/op_kernel/linalg_eigh.cpp": {
+      "sha256": "ecfd60fd2712f2e583de46d3540cbae8e882df7035a4497b51fc3624da5872ec",
+      "reviewed_ranges": [
+        [
+          1,
+          8279
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 8279,
+      "total_lines": 8279
+    },
+    "extracted/eigh/rank1_submission_1174206/code/op_kernel/linalg_eigh_tiling.h": {
+      "sha256": "e473566faa7735c222fb10f0ed855dc0b75254477ca125ec4b8a30ad49dc9a24",
+      "reviewed_ranges": [
+        [
+          1,
+          18
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 18,
+      "total_lines": 18
+    },
+    "extracted/eigh/rank1_submission_1174206/code/op_kernel/tiling_key_linalg_eigh.h": {
+      "sha256": "9db6a53e41897dbd5b8e37e595d0f1b76464af5eef22ed3ea0b21c4cbb9503ef",
+      "reviewed_ranges": [
+        [
+          1,
+          27
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 27,
+      "total_lines": 27
+    },
+    "extracted/eigh/rank2_submission_1176362/code/CMakeLists.txt": {
+      "sha256": "4d80dfa56e57233720d4ad85e61e7219845153b586f04a9691372bd11f221b96",
+      "reviewed_ranges": [
+        [
+          1,
+          21
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 21,
+      "total_lines": 21
+    },
+    "extracted/eigh/rank2_submission_1176362/code/README.md": {
+      "sha256": "578d4892898556bb70488c563435fa8a8b8a0e20b052da7af330232553acec5b",
+      "reviewed_ranges": [
+        [
+          1,
+          12
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 12,
+      "total_lines": 12
+    },
+    "extracted/eigh/rank2_submission_1176362/code/op_host/CMakeLists.txt": {
+      "sha256": "819ea7ece6e174adb09d90a86287a955ed2284ff81a087132b2584edc25d1885",
+      "reviewed_ranges": [
+        [
+          1,
+          25
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 25,
+      "total_lines": 25
+    },
+    "extracted/eigh/rank2_submission_1176362/code/op_host/linalg_eigh.cpp": {
+      "sha256": "c12b9633d863bc7c1f23e6e6c38cf42eec82bbaf3e42b39633aad9f1bc6ef127",
+      "reviewed_ranges": [
+        [
+          1,
+          218
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 218,
+      "total_lines": 218
+    },
+    "extracted/eigh/rank2_submission_1176362/code/op_kernel/CMakeLists.txt": {
+      "sha256": "82aad880f308a3aa660d7035fb6a403de3770e7bd79e858e2e25c7cbe319aa0c",
+      "reviewed_ranges": [
+        [
+          1,
+          15
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 15,
+      "total_lines": 15
+    },
+    "extracted/eigh/rank2_submission_1176362/code/op_kernel/linalg_eigh.cpp": {
+      "sha256": "e3171b5bdf9c1f25c6556b4f548da3d6ecfc0166218b7ad1cf129dd7d0fe4fe1",
+      "reviewed_ranges": [
+        [
+          1,
+          6602
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 6602,
+      "total_lines": 6602
+    },
+    "extracted/eigh/rank2_submission_1176362/code/op_kernel/linalg_eigh_tiling.h": {
+      "sha256": "1f1293243352ba57ceb236a71fb7fc227d2d8716d13d8789e38b938ea152a169",
+      "reviewed_ranges": [
+        [
+          1,
+          54
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 54,
+      "total_lines": 54
+    },
+    "extracted/eigh/rank2_submission_1176362/code/op_kernel/tiling_key_linalg_eigh.h": {
+      "sha256": "a02daa648fbdf23f6026560118a2fbd8ec1a718461af4f35abad5f6eff1d5007",
+      "reviewed_ranges": [
+        [
+          1,
+          18
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 18,
+      "total_lines": 18
+    },
+    "extracted/eigh/rank3_submission_1177525/code/CMakeLists.txt": {
+      "sha256": "4d80dfa56e57233720d4ad85e61e7219845153b586f04a9691372bd11f221b96",
+      "reviewed_ranges": [
+        [
+          1,
+          21
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 21,
+      "total_lines": 21
+    },
+    "extracted/eigh/rank3_submission_1177525/code/README.md": {
+      "sha256": "578d4892898556bb70488c563435fa8a8b8a0e20b052da7af330232553acec5b",
+      "reviewed_ranges": [
+        [
+          1,
+          12
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 12,
+      "total_lines": 12
+    },
+    "extracted/eigh/rank3_submission_1177525/code/op_host/CMakeLists.txt": {
+      "sha256": "819ea7ece6e174adb09d90a86287a955ed2284ff81a087132b2584edc25d1885",
+      "reviewed_ranges": [
+        [
+          1,
+          25
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 25,
+      "total_lines": 25
+    },
+    "extracted/eigh/rank3_submission_1177525/code/op_host/eigh_host_plan.h": {
+      "sha256": "69106aa9972ca1c7dae71ac7b8b055331ba5cc3996cebc1bce5da6b2581430e4",
+      "reviewed_ranges": [
+        [
+          1,
+          290
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 290,
+      "total_lines": 290
+    },
+    "extracted/eigh/rank3_submission_1177525/code/op_host/linalg_eigh.cpp": {
+      "sha256": "b9fad0e054d9b0ee7bff2a635809844be8794b77bdbb2f74844c894b6605b3f5",
+      "reviewed_ranges": [
+        [
+          1,
+          100
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 100,
+      "total_lines": 100
+    },
+    "extracted/eigh/rank3_submission_1177525/code/op_kernel/CMakeLists.txt": {
+      "sha256": "82aad880f308a3aa660d7035fb6a403de3770e7bd79e858e2e25c7cbe319aa0c",
+      "reviewed_ranges": [
+        [
+          1,
+          15
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 15,
+      "total_lines": 15
+    },
+    "extracted/eigh/rank3_submission_1177525/code/op_kernel/eigh_case_traits.h": {
+      "sha256": "ae13f0bcc73294ce2b163447e2803e14458783058de79a93e8fac3fe70d25278",
+      "reviewed_ranges": [
+        [
+          1,
+          21
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 21,
+      "total_lines": 21
+    },
+    "extracted/eigh/rank3_submission_1177525/code/op_kernel/linalg_eigh.cpp": {
+      "sha256": "a2b779a21d87b44e725c80fafd59098cac79252762a05e3098cf5670c3c428c4",
+      "reviewed_ranges": [
+        [
+          1,
+          8977
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 8977,
+      "total_lines": 8977
+    },
+    "extracted/eigh/rank3_submission_1177525/code/op_kernel/linalg_eigh_tiling.h": {
+      "sha256": "19fc049645786c5e3fafc50f27340225065bff38eafe1f4d114ef8ca8d48d720",
+      "reviewed_ranges": [
+        [
+          1,
+          15
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 15,
+      "total_lines": 15
+    },
+    "extracted/eigh/rank3_submission_1177525/code/op_kernel/tiling_key_linalg_eigh.h": {
+      "sha256": "fb55cbf421c6e60b983fe42c97f037f83536a06c341f1aaf08ab6560f7235e5b",
+      "reviewed_ranges": [
+        [
+          1,
+          10
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 10,
+      "total_lines": 10
+    },
+    "extracted/solve/rank1_submission_1171359/code/CMakeLists.txt": {
+      "sha256": "650f11fab6711603bcfeb1af60463db47f060dbcb67de2cddd8398e5c0ebb3df",
+      "reviewed_ranges": [
+        [
+          1,
+          20
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 20,
+      "total_lines": 20
+    },
+    "extracted/solve/rank1_submission_1171359/code/op_kernel/linalg_solve_tiling.h": {
+      "sha256": "26aef6e88deef7b3ceaac5833956725c60cc3744a90176400525656fdc8e8efe",
+      "reviewed_ranges": [
+        [
+          1,
+          8
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 8,
+      "total_lines": 8
+    },
+    "extracted/solve/rank1_submission_1171359/code/op_kernel/linalg_solve.cpp": {
+      "sha256": "ed144429e388ad5ccdcf4c5dbdde26565d4bd0afbeffcccc1dc3151304fcb89b",
+      "reviewed_ranges": [
+        [
+          1,
+          2344
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 2344,
+      "total_lines": 2344
+    },
+    "extracted/solve/rank1_submission_1171359/code/op_kernel/tiling_key_linalg_solve.h": {
+      "sha256": "29f4322dc294f2b76f3c321cc5c8f6eac30ee4f97139409cf517b350c4cc2e1f",
+      "reviewed_ranges": [
+        [
+          1,
+          49
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 49,
+      "total_lines": 49
+    },
+    "extracted/solve/rank1_submission_1171359/code/op_kernel/CMakeLists.txt": {
+      "sha256": "d05a8a3f067af24667c096c672c869b35f1cc854a201449455f86817929a2b07",
+      "reviewed_ranges": [
+        [
+          1,
+          15
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 15,
+      "total_lines": 15
+    },
+    "extracted/solve/rank1_submission_1171359/code/op_host/linalg_solve.cpp": {
+      "sha256": "5bbfbf280498ed92d87bcab2564ae060c6c3f5f8d04af23849e21f2b941e8a0e",
+      "reviewed_ranges": [
+        [
+          1,
+          120
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 120,
+      "total_lines": 120
+    },
+    "extracted/solve/rank1_submission_1171359/code/op_host/CMakeLists.txt": {
+      "sha256": "02333c3a83a459059bb0a96df1d3627e2f78f457d2a22d08e56e29439b22ddcf",
+      "reviewed_ranges": [
+        [
+          1,
+          24
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 24,
+      "total_lines": 24
+    },
+    "extracted/solve/rank2_submission_1166976/code/CMakeLists.txt": {
+      "sha256": "650f11fab6711603bcfeb1af60463db47f060dbcb67de2cddd8398e5c0ebb3df",
+      "reviewed_ranges": [
+        [
+          1,
+          20
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 20,
+      "total_lines": 20
+    },
+    "extracted/solve/rank2_submission_1166976/code/op_kernel/linalg_solve_tiling.h": {
+      "sha256": "7fcea4469844dff5091d3e6acccc55d625f71110fa35809e1eda147d6d509c37",
+      "reviewed_ranges": [
+        [
+          1,
+          14
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 14,
+      "total_lines": 14
+    },
+    "extracted/solve/rank2_submission_1166976/code/op_kernel/linalg_solve.cpp": {
+      "sha256": "f6af90ebc1b663ce180e97c788e4262b770cedd3b1ca416c0924e2bd514f70a1",
+      "reviewed_ranges": [
+        [
+          1,
+          1874
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 1874,
+      "total_lines": 1874
+    },
+    "extracted/solve/rank2_submission_1166976/code/op_kernel/tiling_key_linalg_solve.h": {
+      "sha256": "663e0049c587a3910fd3f27c8edc7b77776cb3a0666df2ea7899bb9d80f63231",
+      "reviewed_ranges": [
+        [
+          1,
+          25
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 25,
+      "total_lines": 25
+    },
+    "extracted/solve/rank2_submission_1166976/code/op_kernel/CMakeLists.txt": {
+      "sha256": "d05a8a3f067af24667c096c672c869b35f1cc854a201449455f86817929a2b07",
+      "reviewed_ranges": [
+        [
+          1,
+          15
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 15,
+      "total_lines": 15
+    },
+    "extracted/solve/rank2_submission_1166976/code/op_host/linalg_solve.cpp": {
+      "sha256": "cd1e4c78ef7d98f1e118186274d4f2543e54b42ea40cac2990fc30ebc8b6ad03",
+      "reviewed_ranges": [
+        [
+          1,
+          146
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 146,
+      "total_lines": 146
+    },
+    "extracted/solve/rank2_submission_1166976/code/op_host/CMakeLists.txt": {
+      "sha256": "02333c3a83a459059bb0a96df1d3627e2f78f457d2a22d08e56e29439b22ddcf",
+      "reviewed_ranges": [
+        [
+          1,
+          24
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 24,
+      "total_lines": 24
+    },
+    "extracted/solve/rank3_submission_1177540/code/CMakeLists.txt": {
+      "sha256": "650f11fab6711603bcfeb1af60463db47f060dbcb67de2cddd8398e5c0ebb3df",
+      "reviewed_ranges": [
+        [
+          1,
+          20
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 20,
+      "total_lines": 20
+    },
+    "extracted/solve/rank3_submission_1177540/code/op_kernel/linalg_solve_tiling.h": {
+      "sha256": "064d8da3a37b2fe9701f8259cf34069886ff7791956230dd9c66e2d50243969b",
+      "reviewed_ranges": [
+        [
+          1,
+          18
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 18,
+      "total_lines": 18
+    },
+    "extracted/solve/rank3_submission_1177540/code/op_kernel/linalg_solve.cpp": {
+      "sha256": "aa1aabad7ba1cb3b82ebe6555a10cbb1b2f461d609a9539c224ee4b260f1593f",
+      "reviewed_ranges": [
+        [
+          1,
+          3988
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 3988,
+      "total_lines": 3988
+    },
+    "extracted/solve/rank3_submission_1177540/code/op_kernel/tiling_key_linalg_solve.h": {
+      "sha256": "b289834a43de5c4934fc9e27bc85ecfbd2f1d0f0044a13e589f2a97e5dc10f75",
+      "reviewed_ranges": [
+        [
+          1,
+          23
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 23,
+      "total_lines": 23
+    },
+    "extracted/solve/rank3_submission_1177540/code/op_kernel/CMakeLists.txt": {
+      "sha256": "d05a8a3f067af24667c096c672c869b35f1cc854a201449455f86817929a2b07",
+      "reviewed_ranges": [
+        [
+          1,
+          15
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 15,
+      "total_lines": 15
+    },
+    "extracted/solve/rank3_submission_1177540/code/op_host/linalg_solve.cpp": {
+      "sha256": "b2b936c0ec491b1814b1c29c3df17c20b70e963be0d798fbf7fb112e1e2c7a05",
+      "reviewed_ranges": [
+        [
+          1,
+          198
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 198,
+      "total_lines": 198
+    },
+    "extracted/solve/rank3_submission_1177540/code/op_host/CMakeLists.txt": {
+      "sha256": "02333c3a83a459059bb0a96df1d3627e2f78f457d2a22d08e56e29439b22ddcf",
+      "reviewed_ranges": [
+        [
+          1,
+          24
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 24,
+      "total_lines": 24
+    },
+    "extracted/TreeLineMinDistance/rank1_submission_1175341/code/CMakeLists.txt": {
+      "sha256": "650f11fab6711603bcfeb1af60463db47f060dbcb67de2cddd8398e5c0ebb3df",
+      "reviewed_ranges": [
+        [
+          1,
+          20
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 20,
+      "total_lines": 20
+    },
+    "extracted/TreeLineMinDistance/rank1_submission_1175341/code/op_kernel/tree_short_plan.h": {
+      "sha256": "d98cb02e42cf6517eccc604a1e5cc31ce4f7e85238d74c9a5b8a8bb5ccd4e45b",
+      "reviewed_ranges": [
+        [
+          1,
+          19
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 19,
+      "total_lines": 19
+    },
+    "extracted/TreeLineMinDistance/rank1_submission_1175341/code/op_kernel/tree_short.h": {
+      "sha256": "8c96e480d3fa5e1b96e1108f976af5c619951e7c264266c12ce166fe6ce7d9ba",
+      "reviewed_ranges": [
+        [
+          1,
+          377
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 377,
+      "total_lines": 377
+    },
+    "extracted/TreeLineMinDistance/rank1_submission_1175341/code/op_kernel/tiling_key_tree_line_min_distance.h": {
+      "sha256": "0d8f9ced9b452b178e82b5f36c6c0ffb07e805a82e7e69817f26299149c27f22",
+      "reviewed_ranges": [
+        [
+          1,
+          16
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 16,
+      "total_lines": 16
+    },
+    "extracted/TreeLineMinDistance/rank1_submission_1175341/code/op_kernel/tree_pairs.h": {
+      "sha256": "3bb699614c775f2900bf17401f7e232854cd6df8adddf5772a9f6829911664cf",
+      "reviewed_ranges": [
+        [
+          1,
+          861
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 861,
+      "total_lines": 861
+    },
+    "extracted/TreeLineMinDistance/rank1_submission_1175341/code/op_kernel/tree_edges.h": {
+      "sha256": "e749963fb5cfce80b0486347ba47b54570fa1e732a3d81be8f45ecabc9782c76",
+      "reviewed_ranges": [
+        [
+          1,
+          456
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 456,
+      "total_lines": 456
+    },
+    "extracted/TreeLineMinDistance/rank1_submission_1175341/code/op_kernel/tree_vector.h": {
+      "sha256": "2c9da13057551c4bc7edd602de134113319e2a88db7bdedff67c012942b78498",
+      "reviewed_ranges": [
+        [
+          1,
+          313
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 313,
+      "total_lines": 313
+    },
+    "extracted/TreeLineMinDistance/rank1_submission_1175341/code/op_kernel/tree_line_min_distance.cpp": {
+      "sha256": "ad652b92592fe84acbbe28f16f1ff18e27b7c30c19072d846a09dbf6fa6dcff6",
+      "reviewed_ranges": [
+        [
+          1,
+          659
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 659,
+      "total_lines": 659
+    },
+    "extracted/TreeLineMinDistance/rank1_submission_1175341/code/op_kernel/tree_line_min_distance_tiling.h": {
+      "sha256": "16b59c7818b972542d7f2728adffc9fb7661f159b81e7ad7c9c0d0b512833d6e",
+      "reviewed_ranges": [
+        [
+          1,
+          46
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 46,
+      "total_lines": 46
+    },
+    "extracted/TreeLineMinDistance/rank1_submission_1175341/code/op_kernel/CMakeLists.txt": {
+      "sha256": "d05a8a3f067af24667c096c672c869b35f1cc854a201449455f86817929a2b07",
+      "reviewed_ranges": [
+        [
+          1,
+          15
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 15,
+      "total_lines": 15
+    },
+    "extracted/TreeLineMinDistance/rank1_submission_1175341/code/op_kernel/tree_tiny.h": {
+      "sha256": "8e42101216ea97c03c20acf19091e3253f168bfb69face691cb70ba5095d517a",
+      "reviewed_ranges": [
+        [
+          1,
+          570
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 570,
+      "total_lines": 570
+    },
+    "extracted/TreeLineMinDistance/rank1_submission_1175341/code/op_host/tree_line_min_distance.cpp": {
+      "sha256": "ea4886ab0fe481e36c9bef93c005aa1b204df34efa5486aa7bc8da66a0685d5b",
+      "reviewed_ranges": [
+        [
+          1,
+          538
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 538,
+      "total_lines": 538
+    },
+    "extracted/TreeLineMinDistance/rank1_submission_1175341/code/op_host/CMakeLists.txt": {
+      "sha256": "02333c3a83a459059bb0a96df1d3627e2f78f457d2a22d08e56e29439b22ddcf",
+      "reviewed_ranges": [
+        [
+          1,
+          24
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 24,
+      "total_lines": 24
+    },
+    "extracted/TreeLineMinDistance/rank2_submission_1176190/code/CMakeLists.txt": {
+      "sha256": "650f11fab6711603bcfeb1af60463db47f060dbcb67de2cddd8398e5c0ebb3df",
+      "reviewed_ranges": [
+        [
+          1,
+          20
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 20,
+      "total_lines": 20
+    },
+    "extracted/TreeLineMinDistance/rank2_submission_1176190/code/op_kernel/tiling_key_tree_line_min_distance.h": {
+      "sha256": "eb7f4d0d114dc162b95a6318c44d88e902f1de63626fb78a761d34c60f8232b2",
+      "reviewed_ranges": [
+        [
+          1,
+          23
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 23,
+      "total_lines": 23
+    },
+    "extracted/TreeLineMinDistance/rank2_submission_1176190/code/op_kernel/tree_line_min_distance.cpp": {
+      "sha256": "a51c63c8023274b19d3e35d1c713244e1a5d6a0e3c87602d4f4c99cdc8fc0a96",
+      "reviewed_ranges": [
+        [
+          1,
+          4038
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 4038,
+      "total_lines": 4038
+    },
+    "extracted/TreeLineMinDistance/rank2_submission_1176190/code/op_kernel/tree_line_min_distance_tiling.h": {
+      "sha256": "96d4d9540f95c20ea8ff763810c6997af162b7e73b737bf9226f68e9e2b5b3b9",
+      "reviewed_ranges": [
+        [
+          1,
+          58
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 58,
+      "total_lines": 58
+    },
+    "extracted/TreeLineMinDistance/rank2_submission_1176190/code/op_kernel/CMakeLists.txt": {
+      "sha256": "d05a8a3f067af24667c096c672c869b35f1cc854a201449455f86817929a2b07",
+      "reviewed_ranges": [
+        [
+          1,
+          15
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 15,
+      "total_lines": 15
+    },
+    "extracted/TreeLineMinDistance/rank2_submission_1176190/code/op_host/tree_line_min_distance.cpp": {
+      "sha256": "75ddfc879cc83909540739b85bced5521afdb162c33348032f133ad65e9ec9f7",
+      "reviewed_ranges": [
+        [
+          1,
+          412
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 412,
+      "total_lines": 412
+    },
+    "extracted/TreeLineMinDistance/rank2_submission_1176190/code/op_host/CMakeLists.txt": {
+      "sha256": "02333c3a83a459059bb0a96df1d3627e2f78f457d2a22d08e56e29439b22ddcf",
+      "reviewed_ranges": [
+        [
+          1,
+          24
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 24,
+      "total_lines": 24
+    },
+    "extracted/TreeLineMinDistance/rank3_submission_1175418/code/CMakeLists.txt": {
+      "sha256": "650f11fab6711603bcfeb1af60463db47f060dbcb67de2cddd8398e5c0ebb3df",
+      "reviewed_ranges": [
+        [
+          1,
+          20
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 20,
+      "total_lines": 20
+    },
+    "extracted/TreeLineMinDistance/rank3_submission_1175418/code/op_kernel/tiling_key_tree_line_min_distance.h": {
+      "sha256": "71049b9894c0314b06ee7fd1cf4b7511f93bfdb72dbdf8ac4b11da75abb94f68",
+      "reviewed_ranges": [
+        [
+          1,
+          126
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 126,
+      "total_lines": 126
+    },
+    "extracted/TreeLineMinDistance/rank3_submission_1175418/code/op_kernel/tree_line_min_distance.cpp": {
+      "sha256": "a9d29748754e035577ed3b302590eb305d4f67e0298c85950776f3acef4aec13",
+      "reviewed_ranges": [
+        [
+          1,
+          7562
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 7562,
+      "total_lines": 7562
+    },
+    "extracted/TreeLineMinDistance/rank3_submission_1175418/code/op_kernel/tree_line_min_distance_tiling.h": {
+      "sha256": "c632673efc0bfc5a31b8fcb74594d9f2cfd42f9822a7f6e0df6e302a5ba4b904",
+      "reviewed_ranges": [
+        [
+          1,
+          6230
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 6230,
+      "total_lines": 6230
+    },
+    "extracted/TreeLineMinDistance/rank3_submission_1175418/code/op_kernel/CMakeLists.txt": {
+      "sha256": "d05a8a3f067af24667c096c672c869b35f1cc854a201449455f86817929a2b07",
+      "reviewed_ranges": [
+        [
+          1,
+          15
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 15,
+      "total_lines": 15
+    },
+    "extracted/TreeLineMinDistance/rank3_submission_1175418/code/op_host/tree_line_min_distance.cpp": {
+      "sha256": "008401c08ffd0bf390c046ea306da1017383a2b114e0c90c2bf7969d9b6f7e42",
+      "reviewed_ranges": [
+        [
+          1,
+          247
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 247,
+      "total_lines": 247
+    },
+    "extracted/TreeLineMinDistance/rank3_submission_1175418/code/op_host/CMakeLists.txt": {
+      "sha256": "02333c3a83a459059bb0a96df1d3627e2f78f457d2a22d08e56e29439b22ddcf",
+      "reviewed_ranges": [
+        [
+          1,
+          24
+        ]
+      ],
+      "unreviewed_ranges": [],
+      "reviewed_lines": 24,
+      "total_lines": 24
+    }
+  }
+}

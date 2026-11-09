@@ -1,0 +1,124 @@
+
+===== PDF PAGE 1 =====
+2026/10/12 13:23                                                       CANNJudge
+
+
+
+
+   赛事 / 昇腾AI行业创新大赛——2026电力行业算子专场 / 多工况潮流数据分析算子 lstsq
+
+
+
+                                 多工况潮流数据分析算子 lstsq                                  自定义算子工程
+
+
+            通过率： 18%                   通过人数： 11             尝试人数： 61               开始答题       提交开源仓
+
+
+
+   题目内容                提交排名
+
+               CANNJudge                                                                       hansen277 退出
+
+        题目内容
+        描述
+
+        算子说明
+
+        算子功能
+
+        电力系统多工况潮流数据（例如不同负荷水平下的注入功率与电压、相角响应）在局部可以
+        近似为线性关系。当工况数多于待定参数时， A X ≈ B 一般没有精确解，需要在最小二乘意
+        义下拟合该线性关系。
+
+        本算子接收高瘦矩阵 A （m ≥ n）与观测矩阵 B ，输出使残差 Frobenius 范数最小的解，
+        以及各右端项的残差平方和。
+
+        计算规则：
+
+
+           min_X ‖A X − B‖_F                            A ∈ R^{m×n}, B ∈ R^{m×k}, m ≥ n
+
+           residuals[:, j] = ‖A X[:, j] − B[:, j]‖₂²                   （m > n 时输出）
+
+
+
+         A 列满秩时最小二乘解唯一。
+
+        输入输出规格
+
+               张量                形状           数据类                                  含义
+                                                    型
+
+           A                [\*, m,          float32     系数矩阵（ * 为零个或多个 batch 维）
+                            n]
+
+           B                [\*, m,          float32     右端项（观测）
+                            k]
+
+           solution         [\*, n, k]       float32     最小二乘解
+
+https://cannjudge.cn/public/2026_electronic/lstsq                                                             1/3
+
+
+===== PDF PAGE 2 =====
+2026/10/12 13:23                                                       CANNJudge
+
+
+               张量              形状             数据类                                  含义
+                                                    型
+
+           residual         [\*, k]          float32         残差平方和 ‖AX − B‖₂² ，m > n 时输出，m = n 时为空
+           s                                                 张量
+
+
+        维度约束：m ∈ [1, 1024]，n ∈ [1, min(m, 512)]，k ∈ [1, 64]，batch 维大小 ∈ [1,
+        32]，且始终 m ≥ n。输入数据保证 A 列满秩，条件数有界（ cond₂(A) ≤ 1e3 ）。
+
+        支持范围：固定 driver='gels' ，不支持 'gelsy' / 'gelsd' / 'gelss' ；只覆盖列满秩输
+        入，秩亏缺输入不作为考核内容；不覆盖 m < n 的欠定情形。
+
+        属性参数
+
+               参数              类型                   默认值                            含义
+
+           driver        str                        'gels'   后端算法，本题固定为 'gels'
+
+           rcond         float / None               None     有效秩判定阈值；本题固定 'gels'，该参数不参与计算
+
+
+        功能示例
+
+        精确可解系统：取 A 列满秩、 X₀ 任意、令 B = A X₀ ，则输出 solution = X₀ ，
+         residuals 为全 0（数值误差量级）。方阵退化：当 m = n 且 A 可逆时， solution =
+        A⁻¹B ，此时官方不返回 residuals （空张量）。该示例用于确认解与残差的定义正确。
+
+        任务要求
+
+        针对不同 shape 规模和右端数量，设计算子逻辑，保证算子精度正确： solution 与（非空
+        的） residuals 均按 atol ≤ 1e-4、rtol ≤ 1e-4 逐元素比较。
+
+        在保证正确性的前提下，充分发挥系统的计算能力和数据搬运能力，优化算子效率。
+
+        禁止事项：禁止调用完整的最小二乘求解实现、CPU回退、对残差开方。
+
+
+
+
+        我的提交记录
+
+        暂无提交记录
+
+
+
+
+https://cannjudge.cn/public/2026_electronic/lstsq                                                    2/3
+
+
+===== PDF PAGE 3 =====
+2026/10/12 13:23                                    CANNJudge
+
+
+
+
+https://cannjudge.cn/public/2026_electronic/lstsq               3/3

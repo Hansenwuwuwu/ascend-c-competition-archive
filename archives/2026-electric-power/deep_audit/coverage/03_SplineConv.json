@@ -1,0 +1,566 @@
+{
+  "operator": "SplineConv",
+  "status": "first_pass_text_complete_proof_open",
+  "files": [
+    {
+      "path": "extracted/SplineConv/rank1_submission_1174398/code/CMakeLists.txt",
+      "sha256": "650f11fab6711603bcfeb1af60463db47f060dbcb67de2cddd8398e5c0ebb3df",
+      "total_lines": 20,
+      "status": "reviewed",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 20,
+          "notes": "连续全文人工实读；按报告B/D表的语义段解释，含pragma/空白/成员/构建配置。",
+          "report_section": "03_SplineConv.md#B/D"
+        }
+      ]
+    },
+    {
+      "path": "extracted/SplineConv/rank1_submission_1174398/code/op_kernel/spline_conv_four_owner.h",
+      "sha256": "6969432c75d8afdbfad3c9295a4a1876d8e8187ddfe64a52f66665bce3fa1fc1",
+      "total_lines": 91,
+      "status": "reviewed",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 91,
+          "notes": "连续全文人工实读；按报告B/D表的语义段解释，含pragma/空白/成员/构建配置。",
+          "report_section": "03_SplineConv.md#B/D"
+        }
+      ]
+    },
+    {
+      "path": "extracted/SplineConv/rank1_submission_1174398/code/op_kernel/spline_conv_single_tail_sector.h",
+      "sha256": "178cb50e33d31743cb0d5508e1df0fac4b85efdca2e0c856687ff8e96f659b76",
+      "total_lines": 49,
+      "status": "reviewed",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 49,
+          "notes": "连续全文人工实读；按报告B/D表的语义段解释，含pragma/空白/成员/构建配置。",
+          "report_section": "03_SplineConv.md#B/D"
+        }
+      ]
+    },
+    {
+      "path": "extracted/SplineConv/rank1_submission_1174398/code/op_kernel/tiling_key_spline_conv.h",
+      "sha256": "e36b705722e57d745b1db3fcd1f07b22bbfac43fec686a45e01b02473a3930c2",
+      "total_lines": 117,
+      "status": "reviewed",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 117,
+          "notes": "连续全文人工实读；按报告B/D表的语义段解释，含pragma/空白/成员/构建配置。",
+          "report_section": "03_SplineConv.md#B/D"
+        }
+      ]
+    },
+    {
+      "path": "extracted/SplineConv/rank1_submission_1174398/code/op_kernel/spline_conv_resident.h",
+      "sha256": "ad10ccced6d08adf981d38039d6ef25b71f09284a7c7283994c1d193a2601328",
+      "total_lines": 260,
+      "status": "reviewed",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 260,
+          "notes": "连续全文人工实读；按报告B/D表的语义段解释，含pragma/空白/成员/构建配置。",
+          "report_section": "03_SplineConv.md#B/D"
+        }
+      ]
+    },
+    {
+      "path": "extracted/SplineConv/rank1_submission_1174398/code/op_kernel/spline_conv_local_weights.h",
+      "sha256": "5bac87427a9e2b6288228bdcbb0d4c2a3690797db2a5770f86755c50eb7ccb00",
+      "total_lines": 106,
+      "status": "reviewed",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 106,
+          "notes": "连续全文人工实读；按报告B/D表的语义段解释，含pragma/空白/成员/构建配置。",
+          "report_section": "03_SplineConv.md#B/D"
+        }
+      ]
+    },
+    {
+      "path": "extracted/SplineConv/rank1_submission_1174398/code/op_kernel/spline_conv_small.h",
+      "sha256": "6abd3546bad28264dbaa22dc365387234c8d49a5095eb86a0ddd2b0e10353548",
+      "total_lines": 94,
+      "status": "reviewed",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 94,
+          "notes": "连续全文人工实读；按报告B/D表的语义段解释，含pragma/空白/成员/构建配置。",
+          "report_section": "03_SplineConv.md#B/D"
+        }
+      ]
+    },
+    {
+      "path": "extracted/SplineConv/rank1_submission_1174398/code/op_kernel/spline_conv_edge_owner.h",
+      "sha256": "cb94a6a41d7ec15deb529008524128795e12f0e31e4b4edfd758079e30be7e1c",
+      "total_lines": 168,
+      "status": "reviewed",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 168,
+          "notes": "连续全文人工实读；按报告B/D表的语义段解释，含pragma/空白/成员/构建配置。",
+          "report_section": "03_SplineConv.md#B/D"
+        }
+      ]
+    },
+    {
+      "path": "extracted/SplineConv/rank1_submission_1174398/code/op_kernel/spline_conv_sparse_output.h",
+      "sha256": "3982dd6a6cc9cd6e2dc334397f703f5ad481a177e79db154905aeac4d49b9d93",
+      "total_lines": 32,
+      "status": "reviewed",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 32,
+          "notes": "连续全文人工实读；按报告B/D表的语义段解释，含pragma/空白/成员/构建配置。",
+          "report_section": "03_SplineConv.md#B/D"
+        }
+      ]
+    },
+    {
+      "path": "extracted/SplineConv/rank1_submission_1174398/code/op_kernel/spline_conv_streaming.h",
+      "sha256": "c762697fb2eb99b803f984cded1188fd25fddf9925214f767d724b1edf810c9e",
+      "total_lines": 107,
+      "status": "reviewed",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 107,
+          "notes": "连续全文人工实读；按报告B/D表的语义段解释，含pragma/空白/成员/构建配置。",
+          "report_section": "03_SplineConv.md#B/D"
+        }
+      ]
+    },
+    {
+      "path": "extracted/SplineConv/rank1_submission_1174398/code/op_kernel/spline_conv_tiling.h",
+      "sha256": "577a0067862be60075cd6efd7862e57ddb7a1e8426e5f293c5848929b041cbe4",
+      "total_lines": 11,
+      "status": "reviewed",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 11,
+          "notes": "连续全文人工实读；按报告B/D表的语义段解释，含pragma/空白/成员/构建配置。",
+          "report_section": "03_SplineConv.md#B/D"
+        }
+      ]
+    },
+    {
+      "path": "extracted/SplineConv/rank1_submission_1174398/code/op_kernel/spline_conv_wide_tile.h",
+      "sha256": "7914052489761416ee96d683909b8316702e37f4adc8454556d04116b5773dd6",
+      "total_lines": 41,
+      "status": "reviewed",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 41,
+          "notes": "连续全文人工实读；按报告B/D表的语义段解释，含pragma/空白/成员/构建配置。",
+          "report_section": "03_SplineConv.md#B/D"
+        }
+      ]
+    },
+    {
+      "path": "extracted/SplineConv/rank1_submission_1174398/code/op_kernel/spline_conv_clear_mask.h",
+      "sha256": "7fec7e2c33c25a975d3769f813272f91a230f22af26a2fda902ef9a8250b8f99",
+      "total_lines": 45,
+      "status": "reviewed",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 45,
+          "notes": "连续全文人工实读；按报告B/D表的语义段解释，含pragma/空白/成员/构建配置。",
+          "report_section": "03_SplineConv.md#B/D"
+        }
+      ]
+    },
+    {
+      "path": "extracted/SplineConv/rank1_submission_1174398/code/op_kernel/spline_conv_compact.h",
+      "sha256": "e5919e0ee59371d454076e0c1866be35f189b9973981aeadf8d383115fefb176",
+      "total_lines": 292,
+      "status": "reviewed",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 292,
+          "notes": "连续全文人工实读；按报告B/D表的语义段解释，含pragma/空白/成员/构建配置。",
+          "report_section": "03_SplineConv.md#B/D"
+        }
+      ]
+    },
+    {
+      "path": "extracted/SplineConv/rank1_submission_1174398/code/op_kernel/spline_conv_clear_owner.h",
+      "sha256": "61b4e4ddfadb093e33f008a5900e17caf04dd28e02ea76466163d0d2c92c0450",
+      "total_lines": 32,
+      "status": "reviewed",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 32,
+          "notes": "连续全文人工实读；按报告B/D表的语义段解释，含pragma/空白/成员/构建配置。",
+          "report_section": "03_SplineConv.md#B/D"
+        }
+      ]
+    },
+    {
+      "path": "extracted/SplineConv/rank1_submission_1174398/code/op_kernel/spline_conv_encoded_owner.h",
+      "sha256": "6a3ed33c623295df74a6a772465df75f8981057887fe3645d1269b85eaf31af9",
+      "total_lines": 10,
+      "status": "reviewed",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 10,
+          "notes": "连续全文人工实读；按报告B/D表的语义段解释，含pragma/空白/成员/构建配置。",
+          "report_section": "03_SplineConv.md#B/D"
+        }
+      ]
+    },
+    {
+      "path": "extracted/SplineConv/rank1_submission_1174398/code/op_kernel/spline_conv_four_group.h",
+      "sha256": "dabb5841300e047edf2c0ca51c31def99c7e2b75bd4e00635d4be6e698aef9a2",
+      "total_lines": 49,
+      "status": "reviewed",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 49,
+          "notes": "连续全文人工实读；按报告B/D表的语义段解释，含pragma/空白/成员/构建配置。",
+          "report_section": "03_SplineConv.md#B/D"
+        }
+      ]
+    },
+    {
+      "path": "extracted/SplineConv/rank1_submission_1174398/code/op_kernel/spline_conv.cpp",
+      "sha256": "4ac28f6f18ade3e318aa67366e55c4c2660848d9fcbccbba341bd977066a7c52",
+      "total_lines": 170,
+      "status": "reviewed",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 170,
+          "notes": "连续全文人工实读；按报告B/D表的语义段解释，含pragma/空白/成员/构建配置。",
+          "report_section": "03_SplineConv.md#B/D"
+        }
+      ]
+    },
+    {
+      "path": "extracted/SplineConv/rank1_submission_1174398/code/op_kernel/spline_conv_wide_owner.h",
+      "sha256": "e23a44aa3daabcd742ed213e0792e78da4fcba316db912b79fd75f28fa47df08",
+      "total_lines": 207,
+      "status": "reviewed",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 207,
+          "notes": "连续全文人工实读；按报告B/D表的语义段解释，含pragma/空白/成员/构建配置。",
+          "report_section": "03_SplineConv.md#B/D"
+        }
+      ]
+    },
+    {
+      "path": "extracted/SplineConv/rank1_submission_1174398/code/op_kernel/spline_conv_single_stage.h",
+      "sha256": "f37e18d7d867361d8cedd89b170c4245b36d0df2939a3639ae1a983d2e370b65",
+      "total_lines": 49,
+      "status": "reviewed",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 49,
+          "notes": "连续全文人工实读；按报告B/D表的语义段解释，含pragma/空白/成员/构建配置。",
+          "report_section": "03_SplineConv.md#B/D"
+        }
+      ]
+    },
+    {
+      "path": "extracted/SplineConv/rank1_submission_1174398/code/op_kernel/spline_conv_single.h",
+      "sha256": "be99e93bcadd7fce58fe167108f05588e98d6fed55366bf08e4683b89f19bbeb",
+      "total_lines": 114,
+      "status": "reviewed",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 114,
+          "notes": "连续全文人工实读；按报告B/D表的语义段解释，含pragma/空白/成员/构建配置。",
+          "report_section": "03_SplineConv.md#B/D"
+        }
+      ]
+    },
+    {
+      "path": "extracted/SplineConv/rank1_submission_1174398/code/op_kernel/spline_conv_single_interpolate.h",
+      "sha256": "ad2d04263f39553b0525d054f3f3d3d637de75138b334bed6ed5d6bb50036c29",
+      "total_lines": 22,
+      "status": "reviewed",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 22,
+          "notes": "连续全文人工实读；按报告B/D表的语义段解释，含pragma/空白/成员/构建配置。",
+          "report_section": "03_SplineConv.md#B/D"
+        }
+      ]
+    },
+    {
+      "path": "extracted/SplineConv/rank1_submission_1174398/code/op_kernel/spline_conv_single_bulk_stage.h",
+      "sha256": "9380b4db2004a5f664f0e25f07b36d53601515114ab53753b37f21d52468d711",
+      "total_lines": 155,
+      "status": "reviewed",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 155,
+          "notes": "连续全文人工实读；按报告B/D表的语义段解释，含pragma/空白/成员/构建配置。",
+          "report_section": "03_SplineConv.md#B/D"
+        }
+      ]
+    },
+    {
+      "path": "extracted/SplineConv/rank1_submission_1174398/code/op_kernel/CMakeLists.txt",
+      "sha256": "d05a8a3f067af24667c096c672c869b35f1cc854a201449455f86817929a2b07",
+      "total_lines": 15,
+      "status": "reviewed",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 15,
+          "notes": "连续全文人工实读；按报告B/D表的语义段解释，含pragma/空白/成员/构建配置。",
+          "report_section": "03_SplineConv.md#B/D"
+        }
+      ]
+    },
+    {
+      "path": "extracted/SplineConv/rank1_submission_1174398/code/op_host/spline_conv.cpp",
+      "sha256": "677b9e8d032f66bd4c7d51e052df6a133d444f78d2215f220803cf69681d38d8",
+      "total_lines": 195,
+      "status": "reviewed",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 195,
+          "notes": "连续全文人工实读；按报告B/D表的语义段解释，含pragma/空白/成员/构建配置。",
+          "report_section": "03_SplineConv.md#B/D"
+        }
+      ]
+    },
+    {
+      "path": "extracted/SplineConv/rank1_submission_1174398/code/op_host/CMakeLists.txt",
+      "sha256": "02333c3a83a459059bb0a96df1d3627e2f78f457d2a22d08e56e29439b22ddcf",
+      "total_lines": 24,
+      "status": "reviewed",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 24,
+          "notes": "连续全文人工实读；按报告B/D表的语义段解释，含pragma/空白/成员/构建配置。",
+          "report_section": "03_SplineConv.md#B/D"
+        }
+      ]
+    },
+    {
+      "path": "extracted/SplineConv/rank2_submission_1176862/code/CMakeLists.txt",
+      "sha256": "650f11fab6711603bcfeb1af60463db47f060dbcb67de2cddd8398e5c0ebb3df",
+      "total_lines": 20,
+      "status": "reviewed",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 20,
+          "notes": "SHA256逐字节一致，复用顺序1已全文实读的构建文件：extracted/SplineConv/rank1_submission_1174398/code/CMakeLists.txt",
+          "report_section": "03_SplineConv.md#F"
+        }
+      ]
+    },
+    {
+      "path": "extracted/SplineConv/rank2_submission_1176862/code/op_kernel/tiling_key_spline_conv.h",
+      "sha256": "2b82359d01de3267dab1365e73c6fde58f6ccdd519c7ae08d61bcb52ea0a2af6",
+      "total_lines": 124,
+      "status": "reviewed",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 124,
+          "notes": "连续全文人工实读，见F；完整kernel仍待续。",
+          "report_section": "03_SplineConv.md#F"
+        }
+      ]
+    },
+    {
+      "path": "extracted/SplineConv/rank2_submission_1176862/code/op_kernel/spline_conv_tiling.h",
+      "sha256": "dcbaec09ca77267c965567a797b8e774c9dde25169b66d8aa398c325d0b7cb62",
+      "total_lines": 37,
+      "status": "reviewed",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 37,
+          "notes": "连续全文人工实读，见F；完整kernel仍待续。",
+          "report_section": "03_SplineConv.md#F"
+        }
+      ]
+    },
+    {
+      "path": "extracted/SplineConv/rank2_submission_1176862/code/op_kernel/spline_conv.cpp",
+      "sha256": "273126c644933f608fa2bc479d4cb7e6b77ce13256a2d4e3b09b4ec0b52e93c1",
+      "total_lines": 2253,
+      "status": "reviewed",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 2253,
+          "notes": "连续全文实读；包含single、edge owner、resident、general fallback、入口与wrapper宏，见F。",
+          "report_section": "03_SplineConv.md#F"
+        }
+      ]
+    },
+    {
+      "path": "extracted/SplineConv/rank2_submission_1176862/code/op_kernel/CMakeLists.txt",
+      "sha256": "d05a8a3f067af24667c096c672c869b35f1cc854a201449455f86817929a2b07",
+      "total_lines": 15,
+      "status": "reviewed",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 15,
+          "notes": "SHA256逐字节一致，复用顺序1已全文实读的构建文件：extracted/SplineConv/rank1_submission_1174398/code/op_kernel/CMakeLists.txt",
+          "report_section": "03_SplineConv.md#F"
+        }
+      ]
+    },
+    {
+      "path": "extracted/SplineConv/rank2_submission_1176862/code/op_host/spline_conv.cpp",
+      "sha256": "1eea648bbfa46b607bee6317cf186692c4ed0ec84bc17dbd4cc6f2b5350b718b",
+      "total_lines": 379,
+      "status": "reviewed",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 379,
+          "notes": "连续全文人工实读，见F；完整kernel仍待续。",
+          "report_section": "03_SplineConv.md#F"
+        }
+      ]
+    },
+    {
+      "path": "extracted/SplineConv/rank2_submission_1176862/code/op_host/CMakeLists.txt",
+      "sha256": "02333c3a83a459059bb0a96df1d3627e2f78f457d2a22d08e56e29439b22ddcf",
+      "total_lines": 24,
+      "status": "reviewed",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 24,
+          "notes": "SHA256逐字节一致，复用顺序1已全文实读的构建文件：extracted/SplineConv/rank1_submission_1174398/code/op_host/CMakeLists.txt",
+          "report_section": "03_SplineConv.md#F"
+        }
+      ]
+    },
+    {
+      "path": "extracted/SplineConv/rank3_submission_1177413/code/CMakeLists.txt",
+      "sha256": "650f11fab6711603bcfeb1af60463db47f060dbcb67de2cddd8398e5c0ebb3df",
+      "total_lines": 20,
+      "status": "reviewed",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 20,
+          "notes": "SHA256逐字节一致，复用顺序1已全文实读的构建文件：extracted/SplineConv/rank1_submission_1174398/code/CMakeLists.txt",
+          "report_section": "03_SplineConv.md#F"
+        }
+      ]
+    },
+    {
+      "path": "extracted/SplineConv/rank3_submission_1177413/code/op_kernel/tiling_key_spline_conv.h",
+      "sha256": "8cae9ea6af701375e564699b5cd6d2c85abacfe60d1a677ca64c9402286c6e67",
+      "total_lines": 987,
+      "status": "reviewed",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 987,
+          "notes": "连续全文人工实读；按报告B/D表的语义段解释，含pragma/空白/成员/构建配置。",
+          "report_section": "03_SplineConv.md#B/D"
+        }
+      ]
+    },
+    {
+      "path": "extracted/SplineConv/rank3_submission_1177413/code/op_kernel/spline_conv_tiling.h",
+      "sha256": "f24eadff0704ea5674350600f3b384627c12eb7ae9db85cee90b93a491daaf6b",
+      "total_lines": 139,
+      "status": "reviewed",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 139,
+          "notes": "连续全文人工实读；按报告B/D表的语义段解释，含pragma/空白/成员/构建配置。",
+          "report_section": "03_SplineConv.md#B/D"
+        }
+      ]
+    },
+    {
+      "path": "extracted/SplineConv/rank3_submission_1177413/code/op_kernel/spline_conv.cpp",
+      "sha256": "9c64959e7ff560a2a21886e039238fbfeaba245945a4d735aada555a25a02260",
+      "total_lines": 3593,
+      "status": "reviewed",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 3593,
+          "notes": "连续全文人工实读；按报告B/D表的语义段解释，含pragma/空白/成员/构建配置。",
+          "report_section": "03_SplineConv.md#B/D"
+        }
+      ]
+    },
+    {
+      "path": "extracted/SplineConv/rank3_submission_1177413/code/op_kernel/CMakeLists.txt",
+      "sha256": "d05a8a3f067af24667c096c672c869b35f1cc854a201449455f86817929a2b07",
+      "total_lines": 15,
+      "status": "reviewed",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 15,
+          "notes": "SHA256逐字节一致，复用顺序1已全文实读的构建文件：extracted/SplineConv/rank1_submission_1174398/code/op_kernel/CMakeLists.txt",
+          "report_section": "03_SplineConv.md#F"
+        }
+      ]
+    },
+    {
+      "path": "extracted/SplineConv/rank3_submission_1177413/code/op_host/spline_conv.cpp",
+      "sha256": "2d1c5fea9b32553dbc97b77133970de67458f38828c1f70fd5e55bb1c7e65df7",
+      "total_lines": 502,
+      "status": "reviewed",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 502,
+          "notes": "连续全文人工实读；按报告B/D表的语义段解释，含pragma/空白/成员/构建配置。",
+          "report_section": "03_SplineConv.md#B/D"
+        }
+      ]
+    },
+    {
+      "path": "extracted/SplineConv/rank3_submission_1177413/code/op_host/CMakeLists.txt",
+      "sha256": "02333c3a83a459059bb0a96df1d3627e2f78f457d2a22d08e56e29439b22ddcf",
+      "total_lines": 24,
+      "status": "reviewed",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 24,
+          "notes": "SHA256逐字节一致，复用顺序1已全文实读的构建文件：extracted/SplineConv/rank1_submission_1174398/code/op_host/CMakeLists.txt",
+          "report_section": "03_SplineConv.md#F"
+        }
+      ]
+    }
+  ]
+}

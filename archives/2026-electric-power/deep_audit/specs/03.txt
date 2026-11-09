@@ -1,0 +1,184 @@
+
+===== PDF PAGE 1 =====
+2026/10/12 13:22                                                           CANNJudge
+
+
+
+
+   赛事 / 昇腾AI行业创新大赛——2026电力行业算子专场 / 潮流信息聚合算子 SplineConv
+
+
+
+                               潮流信息聚合算子 SplineConv                                      自定义算子工程
+
+
+            通过率： 59%                  通过人数： 24                   尝试人数： 41              开始答题            提交开源仓
+
+
+
+   题目内容                提交排名
+
+
+
+        题目内容
+        描述
+
+        算子说明
+
+        算子功能
+
+        基于电网拓扑的潮流代理模型把潮流结果拟合为图上的学习任务：母线作为节点、支路作为
+        边，节点与边的特征描述运行状态，用图卷积在拓扑上聚合信息。SplineConv 用伪坐标上
+        的 B-spline 张量积基构造随该连续量变化的卷积核，可用于这类代理模型的信息聚合。
+
+        算子接收节点特征、边表、边的伪坐标与核权重，先逐边计算 B-spline 基函数与权重索引，
+        再按索引取得核权重完成加权，最后按目标节点聚合，并可选地叠加节点自身特征的线性变
+        换与偏置。该边界对应 PyG 官方 SplineConv.forward 的语义。
+
+        计算规则：
+
+
+           S = (degree + 1)^dim,             K = ∏_d kernel_size[d]
+
+
+           对每条边 e 与基函数槽 s（s = 0 … S−1）：
+                 k = s;     wi = 0;      off = 1;        b = 1
+                 for d = 0 … dim−1:
+                      k_mod = k mod (degree+1);              k = k div (degree+1)
+                      v_d      = pseudo[e,d] · (kernel_size[d] − degree · is_open_spline[d])
+                      wi      += ((⌊v_d⌋ + k_mod) mod kernel_size[d]) · off;           off ← off · kernel_size[d]
+                      b       ← b · B_degree(frac(v_d), k_mod)
+                 basis[e,s] = b;           weight_index[e,s] = wi
+
+
+           message[e,:] = Σ_s basis[e,s] · (x[src[e],:] @ weight[weight_index[e,s],:,:])
+
+           out[i,:]           = Σ_{e: dst[e]=i} message[e,:] / (deg(i) 若 aggr='mean'，否则 1)
+           out                = out + x @ root_weight + bias
+
+
+https://cannjudge.cn/public/2026_electronic/splineconv                                                              1/4
+
+
+===== PDF PAGE 2 =====
+2026/10/12 13:22                                                          CANNJudge
+
+         B_degree(v, k_mod) 为 B-spline 分片多项式， v ∈ [0,1) ， frac(v) = v − ⌊v⌋ ：
+
+
+           degre            k_mod = 0                    k_mod = 1                k_mod = 2          k_mod =
+               e                                                                                         3
+
+          1               1−v                       v                     —                         —
+
+          2               0.5v² − v +               −v² + v + 0.5         0.5v²                     —
+                          0.5
+
+          3               (1 − v)³ / 6              (3v³ − 6v² + 4) /     (−3v³ + 3v² + 3v + 1) /   v³ / 6
+                                                    6                     6
+
+
+        边 界 约 定 ： edge_index[0] 为 source 、 edge_index[1] 为 target （ PyG 约 定 ） ；
+         deg(i) 为目标节点的入边数，为 0 时除法按 1 处理；伪坐标必须落在 [0, 1]。基函数满足
+        单位分解 Σ_s basis[e,s] = 1 。
+              CANNJudge                                                                              hansen277 退出
+
+         root_weight 项 是 对 节 点 自 身 特 征 x[i] 的 线 性 变 换 ， 不 经 过 基 函 数 与 聚 合 ； 它 与
+         edge_index 中可能出现的显式自环边（ src == dst ）是两条独立路径——后者按普通边
+        参与 basis /gather/聚合。两者可以同时存在并叠加。
+
+        输入输出规格
+
+               张量                   形状                   数据类型                            含义
+
+          x                   [N, C_in]              float32 /          节点特征
+                                                     bfloat16
+
+          edge_ind            [2, E]                 int64              边表，[0] 为 source、[1] 为 target
+          ex
+
+          edge_attr           [E, dim]               与x同                伪坐标，取值 ∈ [0, 1]
+
+          weight              [K, C_in,              与x同                B-spline 核权重，K = ∏ kernel_size[d]
+                              C_out]
+
+          root_wei            [C_in,                 与x同                可选，节点自身特征的线性变换权重，缺省
+          ght                 C_out]                                    时不参与计算
+
+          bias                [C_out]                与x同                可选偏置，缺省时不参与计算
+
+          output              [N, C_out]             与x同                输出特征
+
+
+         basis [E, S] 与 weight_index [E, S] 为中间量，不属于接口输出。
+
+        维度约束：N ∈ [16, 65536]，E ∈ [64, 262144]，dim ∈ {2, 3}，kernel_size[d] ∈ {2, 3,
+        4}，degree ∈ {1, 2, 3}，C_in, C_out ∈ [8, 128]；单次测试规模满足 E · (degree+1)^dim
+
+
+https://cannjudge.cn/public/2026_electronic/splineconv                                                              2/4
+
+
+===== PDF PAGE 3 =====
+2026/10/12 13:22                                                        CANNJudge
+
+        · C_in · C_out ≤ 2³¹ 。 当 is_open_spline[d] = True 时 ， 要 求 kernel_size[d] ≥
+        degree + 1 ，使缩放后的伪坐标非负。允许存在孤立节点（入度为 0）与自环。
+
+        支 持 范 围 ： 只 做 前 向 ， 不 计 算 反 向 梯 度 ； aggr 只 支 持 'add' 与 'mean' ， 不 支 持
+         'max' ； 不 支 持 二 分 图 形 式 （ x 为 source/target 特 征 元 组 ） 、 稀 疏 张 量 边 表 、
+         in_channels = -1 的延迟初始化。
+
+        属性参数
+
+                     参数                         类型            默认值                        含义
+
+          dim                             int            必选                  伪坐标维度
+
+          kernel_size                     list[int]      必选                  每一维的核尺寸，长度 = dim
+
+          is_open_spline                  list[bool]     [True] × dim        每一维使用开/闭 B-spline 基
+
+          degree                          int            1                   B-spline 基阶数，取 1/2/3
+
+          aggr                            str            'mean'              聚合方式，'add' 或 'mean'
+
+
+         is_open_spline 只影响式中的缩放因子（开样条取 kernel_size[d] − degree ，闭样条
+        取 kernel_size[d] ）； degree 决定每维基函数个数与 S ，须与分片多项式表一致。
+
+        功能示例
+
+        常数核退化：取 weight[k] 对所有 k ∈ [0, K) 为同一个矩阵 W₀ ，并取 root_weight
+        = 0 、 bias = 0 。 由 单 位 分 解 有                              message[e,:] = x[src[e],:] @ W₀ ， 于 是
+         aggr='mean' 时输出为邻域均值传播 x'_i = mean_{j∈N(i)} (x_j W₀) ， aggr='add'
+        时输出为 Σ_{j∈N(i)} x_j W₀ 。该示例用于确认基函数求和归一、gather 索引与聚合方向
+        正确。
+
+        任务要求
+
+        针对不同Data type和不同shape维度设计算子逻辑，保证算子精度正确：float32 结果满足
+        atol ≤ 1e-4、rtol ≤ 1e-4，bfloat16 结果满足 atol ≤ 1e-2、rtol ≤ 1e-2。
+
+        在保证正确性的前提下，充分发挥系统的计算能力和数据搬运能力，优化算子效率。
+
+        禁 止 事 项 ： 禁 止 调 用 PyG SplineConv 以 及                              pyg-lib / torch_spline_conv 的 现 成
+         spline_basis / spline_weighting 实现、CPU 回退、关闭或近似基函数分片多项式。
+
+
+
+
+        我的提交记录
+
+        暂无提交记录
+
+https://cannjudge.cn/public/2026_electronic/splineconv                                                        3/4
+
+
+===== PDF PAGE 4 =====
+2026/10/12 13:22                                         CANNJudge
+
+
+
+
+https://cannjudge.cn/public/2026_electronic/splineconv               4/4

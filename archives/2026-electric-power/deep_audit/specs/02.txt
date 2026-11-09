@@ -1,0 +1,121 @@
+
+===== PDF PAGE 1 =====
+2026/10/12 13:22                                                    CANNJudge
+
+
+
+
+   赛事 / 昇腾AI行业创新大赛——2026电力行业算子专场 / 潮流计算算子 pinv
+
+
+
+                                            潮流计算算子 pinv                 自定义算子工程
+
+
+            通过率： 39%                   通过人数： 19           尝试人数： 49              开始答题           提交开源仓
+
+
+
+   题目内容                提交排名
+
+              CANNJudge                                                                              hansen277 退出
+
+        题目内容
+        描述
+
+        算子说明
+
+        算子功能
+
+        线性化潮流灵敏度模型把节点注入功率与电压、相角的关系在工作点附近近似为 Δy ≈ A
+        Δx 。其中 A 往往不是方阵，也可能秩亏缺，此时用 Moore–Penrose 广义逆构造最小范数
+        意义下的灵敏度关系是常见做法。
+
+        本算子接收（一批）矩阵 A ，按阈值截断奇异值后重建伪逆，形状由 (m, n) 变为 (n,
+        m) 。
+
+        计算规则：
+
+
+           A = U diag(σ) Vᵀ                                   A ∈ R^{m×n}, σ₁ ≥ … ≥ σ_min(m,n) ≥ 0
+           threshold = max(atol, σ₁ · rtol)
+           σ⁺_i = 1/σ_i          (σ_i > threshold)；σ⁺_i = 0   (σ_i ≤ threshold)
+           A⁺ = V diag(σ⁺) Uᵀ                                 A⁺ ∈ R^{n×m}
+
+
+
+        所有不满足 σ_i > threshold 的奇异值（包括非零值）一律置零，该截断是算子定义的一
+        部分。
+
+        输入输出规格
+
+            张量                形状                   数据类型                           含义
+
+          A             [\*, m, n]             float32     输入矩阵（ * 为零个或多个 batch 维）
+
+          A⁺            [\*, n, m]             float32     阈值截断伪逆
+
+
+
+https://cannjudge.cn/public/2026_electronic/pinv                                                                    1/3
+
+
+===== PDF PAGE 2 =====
+2026/10/12 13:22                                             CANNJudge
+
+        维度约束：m, n ∈ [1, 512]，batch 维大小 ∈ [1, 64]。允许 A 秩亏缺（rank < min(m,
+        n)），但输入数据需保证保留与被丢弃的奇异值之间有明确间隔：保留的奇异值满足 σ ≥
+        1e-2 · σ₁ ，被丢弃的奇异值满足 σ ≤ 0.1 · max(atol, σ₁·rtol) ；阈值附近的奇异值会
+        使截断判定在数值上不稳定，故要求谱间隔。
+
+        支持范围：固定 hermitian=False （SVD 路径）； atol / rtol 只支持标量。
+
+        属性参数
+
+                 参数                       类型       默认值                   含义
+
+          atol                   float             0.0     绝对截断阈值
+
+          rtol                   float / None      None    相对截断阈值（相对最大奇异值）
+
+          hermitian              bool              False   是否按对称输入处理，本题固定 False
+
+
+        截断阈值严格为 max(atol, σ₁ · rtol) 。 rtol 的默认规则：未给出 rtol 时，若 atol
+        为默认的 0，则 rtol = max(m, n) · ε ；若显式给出 atol > 0 ，则 rtol = 0 ，此时阈
+        值退化为 atol ； rtol 给出时按给定值计算。 ε 为输入 dtype 的机器精度。
+
+        功能示例
+
+        取 A = diag(2, 0) ， σ₁ = 2 ，默认 rtol = 2ε ，阈值约 4.8e-7 ： σ = 2 被保留， σ
+        = 0 被丢弃，故 A⁺ = diag(0.5, 0) ；把对角元换成 diag(2, 0.5) ，全部奇异值保留，
+         A⁺ = diag(0.5, 2) 。该示例用于确认阈值判定与零奇异值处理正确。
+
+        任务要求
+
+        针对不同 shape 规模和 batch 配置，设计算子逻辑，保证算子精度正确：逐元素满足 atol
+        ≤ 1e-4、rtol ≤ 1e-4。
+
+        在保证正确性的前提下，充分发挥系统的计算能力和数据搬运能力，优化算子效率。
+
+        禁止事项：禁止调用完整的伪逆实现、CPU回退、忽略阈值截断。
+
+
+
+
+        我的提交记录
+        暂无提交记录
+
+
+
+
+https://cannjudge.cn/public/2026_electronic/pinv                                  2/3
+
+
+===== PDF PAGE 3 =====
+2026/10/12 13:22                                   CANNJudge
+
+
+
+
+https://cannjudge.cn/public/2026_electronic/pinv               3/3

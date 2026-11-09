@@ -1,0 +1,272 @@
+
+===== PDF PAGE 1 =====
+2026/10/12 13:21                                                          CANNJudge
+
+
+
+
+   赛事 / 昇腾AI行业创新大赛——2026电力行业算子专场 /
+   安全带判定融合算子 SafetyBeltViolationGeometry
+
+
+
+        安全带判定融合算子 SafetyBeltViolationGeometry                                                自定义算子工程
+
+
+            通过率： 61%                   通过人数： 44                   尝试人数： 72            开始答题   提交开源仓
+
+
+
+   题目内容                提交排名
+
+
+
+        题目内容
+        描述
+
+        电力作业现场人员安全带低挂高用几何判定融合算子赛题
+
+        赛题背景
+        在电力作业现场，人员安全带低挂高用是一种极其危险的不规范操作。当发生坠落时，这种
+        佩戴方式会使坠落距离倍增，导致人体承受的冲击力成倍增大，严重威胁作业人员的生命安
+        全。目前，人员安全带低挂高用的判定通常发生在目标检测或关键点检测之后：上游视觉模
+        型已经得到人员边界框和安全带挂点，后续模块再根据两者的空间位置关系进行规则判断。
+        本题要求采用Ascend C编程语言进行算子原生开发，自主设计 Tiling 与数据搬运方案，在
+        NPU 上实现“人员参考位置计算 + 挂点纵坐标读取 + 阈值比较 + 结果生成”的融合算子。
+
+        算子功能描述
+        算子接收已经完成检测并完成一一配对的人员边界框与安全带挂点。对于第 i 组输入，先根
+        据人员框的 y1、y2 和属性 waist_ratio 计算判定参考线 Y_ref，再将挂点纵坐标 cy 与 Y_ref
+        + threshold 比较，输出二值违规标志。
+        本算子只承担固定的几何判定计算，不负责人员检测、挂点检测、人员与挂点匹配、目标跟
+        踪、NMS、轨迹关联或最终告警策略。该边界与“上游模型输出结果后再进行行业几何处
+        理”的算子范式一致。
+
+        核心定义与约束
+
+        3.1 适用模型与算子边界
+
+        适用上游模型：任意能够输出人员边界框和安全带挂点坐标的目标检测、人体关键点或部件
+        检测模型，以及其他能够提供本题规定输入张量的视觉模型。
+        本题不验证安全带佩戴位置是否符合人体解剖学定义或安全规程中的实际定义，仅针对上游
+        已经完成检测与一一配对的输入结果，执行题目规定的固定几何判定计算。
+https://cannjudge.cn/public/2026_electronic/safetybeltviolationgeometry                                1/6
+
+
+===== PDF PAGE 2 =====
+2026/10/12 13:21                                                               CANNJudge
+
+        本算子固定计算路径：人员框参考位置计算 → 挂点纵坐标读取 → 阈值比较 → 结果写回。
+        参赛实现不得改变上述语义。
+
+        3.2 输入输出与属性总览
+
+             类型           参数名            类        维度         支持数          数据                     备注
+                                         型        形状         据类型          格式
+
+          INPUT           perso         ten       [B,4       float1       ND    [x1,y1,x2,y2]；图像坐标原点在左上
+          （必              n_box         sor       ]          6/floa             角，Y向下增大
+          选）              es                                 t32
+
+          INPUT           ancho         ten       [B,2       float1       ND    [cx,cy]；cy为安全带挂点纵坐标
+          （必              r_poin        sor       ]          6/floa
+          选）              ts                                 t32
+
+          ATTR            waist_        flo       标量         float3       -     判定参考线比例，合法范围(0,1]，推荐
+          （必              ratio         at                   2                  0.80/0.90/1.00
+          选）
+
+          INPUT           thresh        ten       [1]        float3       ND    非负像素距离容差。传入时形状必须为
+          （可              old           sor                  2                  [1]；未传入时由Host侧按0.0处理，并
+          选）                                                                    将0.0作为Tiling参数传递给Kernel。
+
+          OUTP            violati       ten       [B,1       float3       ND    1.0表示低挂高用，0.0表示正常
+          UT（必            on_sc         sor       ]          2
+          选）              ore
+
+
+        3.3 关键输入约束
+
+             Batch B ∈ [1,4096]，重点覆盖 B=1、32、33、256、1024、4096；必须正确处理非
+        32整倍数尾块。
+             person_boxes 最后一维固定为4，anchor_points 最后一维固定为2；输入为连续 ND
+        Tensor，禁止依赖特殊 stride 或转置视图。测试输入保证 person_boxes 满足 x1 <= x2 且
+        y1 <= y2；算子无需对非法人员框进行交换、裁剪或修正。
+             threshold 的单位与输入坐标一致，均为像素。
+             所有坐标均为有限实数，不含 NaN、+Inf、-Inf；测试坐标原则上落在图像范围内，算
+        子不负责坐标裁剪。
+             输入的第 i 个人员框与第 i 个挂点已经由上游完成配对；算子不得通过搜索、排序或匹配
+        改变配对关系。
+             waist_ratio 为正数且不大于1；threshold 为非负数。
+
+        3.4 数学公式与计算规则
+
+
+
+https://cannjudge.cn/public/2026_electronic/safetybeltviolationgeometry                                    2/6
+
+
+===== PDF PAGE 3 =====
+2026/10/12 13:21                                                          CANNJudge
+
+        定义人员判定参考线：
+        Y_ref = y1 + waist_ratio × (y2 - y1)
+        这里的 Y_ref 是题目定义的几何判定参考线，不声明其等同于人体解剖学腰部位置。
+        定义纵向差值：
+        DeltaH = cy - Y_ref
+        由于图像坐标系中 Y 值向下增大，当 DeltaH > threshold 时，判定挂点位于参考线下方且
+        超过允许容差。
+        最终输出：
+        violation_score = 1.0
+        当 cy > Y_ref + threshold；否则输出 0.0。相等边界按“不违规”处理，不引入额外
+        epsilon。
+        推荐的 Ascend C 融合计算顺序：向量加载 y1、y2、cy → 计算 y2-y1 → waist_ratio 广播
+        乘法 → 与 y1 相加得到 Y_ref → 加 threshold 后与 cy 比较 → Vector Store 输出。
+
+        3.5 输出要求
+
+             输出形状固定为 [B,1]，输出类型固定为 float32。
+             输出值只能为0.0或1.0，顺序与输入 Batch 一一对应。
+             不得产生额外对外可见的中间输出。
+
+        规则要求
+
+        4.1 开发与正确性要求
+             CANNJudge                                                                hansen277 退出
+
+             必须使用昇腾 Ascend C 实现；核心计算必须在 NPU Kernel 中完成，禁止 CPU 回退。
+             可使用 Vector API、Tiling、Local Memory/Buffer 与数据搬运流水等机制进行优化。
+             float32 输入：最终0/1判定必须与参考实现完全一致。
+             float16 输入：参与 Y_ref 计算和阈值比较的 y1、y2、cy 必须先转换为 float32；
+        waist_ratio 和 threshold 按 float32 参与计算。参考实现以输入 float16 数值转换后的
+        float32 值执行公式和比较，最终输出固定为 float32 的 0.0 或 1.0，判定结果必须完全一
+        致。
+             waist_ratio 覆盖0.80、0.90、1.00；threshold 覆盖0、多个正值；边界 cy = Y_ref +
+        threshold 必须判为0.0。
+             threshold 未传入时，参考实现和 Kernel 均按 threshold=0.0 执行；Kernel 不得访问不
+        存在的 threshold GM 地址。
+
+        4.2 性能要求
+
+             重点考察 B=1024、B=4096 下端到端 Kernel 时延。
+             减少 Global Memory 往返，建议单次加载后在片上缓存完成计算并直接写回。
+             尾块不得因固定32/64对齐假设造成越界访问。
+
+
+https://cannjudge.cn/public/2026_electronic/safetybeltviolationgeometry                              3/6
+
+
+===== PDF PAGE 4 =====
+2026/10/12 13:21                                                                  CANNJudge
+
+        4.3 禁止事项
+
+              禁止调用或实现完整目标检测/关键点检测模型。
+              禁止在算子内部实现人员与挂点匹配、NMS、跟踪或最终告警。
+              禁止 CPU 回退。
+              禁止修改题目规定的公式、坐标系、比较符号和输出语义。
+
+        示例说明
+        以下示例均使用 float32、waist_ratio=1.0、threshold=0.0。
+
+               示例                   person_boxes               anchor_point                   计算           输出
+                                                                          s
+
+          1 正常                 [[100,100,200,500               [[150,200]]           Y_ref=500；200>500为假   [0.0]
+                               ]]
+
+          2 违规                 [[100,100,200,500               [[150,600]]           Y_ref=500；600>500为真   [1.0]
+                               ]]
+
+          3 边界                 [[100,100,200,500               [[150,500]]           Y_ref=500；500>500为假   [0.0]
+                               ]]
+
+          4                    33组连续输入                         33组连续输入               逐元素并行计算并正确处理尾         [33,1
+          Batch=33                                                                   块                     ]
+
+
+        测试用例覆盖范围
+              数据类型：float16、float32。
+              Batch：1、32、33、1024、4096。
+              waist_ratio：0.80、0.90、1.00及测试指定合法值。
+              threshold：0及多个正值。
+              边界：cy=Y_ref+threshold 时输出0.0；y1=y2；坐标为0；坐标达到图像边界；B非32
+        整倍数时的尾块读写安全。
+              正确性：输入值随机化，验证计算不得依赖固定样例特征。
+
+        自动化测试用例
+
+        7.1 测试原则
+
+        每种输入数据类型分别提供 6 个测试用例：
+
+                                     数据类型                                                     用例数量
+
+          float32                                                             6
+
+https://cannjudge.cn/public/2026_electronic/safetybeltviolationgeometry                                            4/6
+
+
+===== PDF PAGE 5 =====
+2026/10/12 13:21                                                                 CANNJudge
+
+
+                                    数据类型                                                      用例数量
+
+          float16                                                           6
+
+          合计                                                                12
+
+
+        每种数据类型均覆盖：
+
+              小 Shape；
+              中 Shape；
+              大 Shape；
+              对齐 Shape；
+              非对齐 Shape；
+              阈值边界情况。
+
+        其中：
+        person_boxes shape = [B,4]
+        anchor_points shape = [B,2]
+        output shape = [B,1]
+        下面的 ×N 表示该输入按相同规则复制或循环生成 N 个样本，自动化脚本可直接据此构造
+        Tensor。
+
+        7.2 float32 测试用例
+
+        7.2.1 用例 S-F32-01：小 Shape，对齐
+
+                                项目                                                           内容
+
+          ID                                                     S-F32-01
+
+          dtype                                                  float32
+
+          B                                                      32
+
+          Shape 类型                                               小 Shape，32 对齐
+
+          waist_ratio                                            1.0
+
+          threshold                                              0
+
+
+
+
+        我的提交记录
+
+        暂无提交记录
+
+
+https://cannjudge.cn/public/2026_electronic/safetybeltviolationgeometry                              5/6
+
+
+===== PDF PAGE 6 =====
+2026/10/12 13:21                                                          CANNJudge
+
+
+
+
+https://cannjudge.cn/public/2026_electronic/safetybeltviolationgeometry               6/6

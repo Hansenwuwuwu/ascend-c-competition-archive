@@ -1,0 +1,235 @@
+
+===== PDF PAGE 1 =====
+2026/10/12 13:22                                                          CANNJudge
+
+
+
+
+   赛事 / 昇腾AI行业创新大赛——2026电力行业算子专场 / 电力巡检算子 SwiGLU
+
+
+
+                                        电力巡检算子 SwiGLU                           自定义算子工程
+
+
+            通过率： 34%                   通过人数： 22                 尝试人数： 64              开始答题        提交开源仓
+
+
+
+   题目内容                提交排名
+
+             CANNJudge                                                                             hansen277 退出
+
+        题目内容
+        描述
+
+
+        电力巡检 SwiGLU 算子
+
+        一、赛题背景
+        无人机输电线路巡检场景中，机载昇腾边缘NPU需实时运行ViT视觉模型，完成绝缘子缺
+        陷、销钉脱落、导线断股等异常识别。ViT各Transformer模块采用SwiGLU作为激活单元以
+        提升细粒度缺陷特征表达能力，但受限于机载算力与功耗预算，拆解实现的组合算子会带来
+        访存开销与推理延迟，影响巡检图像流的实时处理帧率。本题要求使用Ascend C实现
+        SwiGLU算子，替换ViT中的组合算子实现，服务于边缘视觉模型的实时推理。
+
+        二、算子功能描述
+        SwiGLU算子对输入张量做两路独立的线性变换（均含偏置），其中一路经过Swish（SiLU）
+        激活后，与另一路线性变换结果做逐元素相乘（门控），得到最终输出。两路线性变换的输
+        入输出维度相同，均等于输入特征维度。
+
+        三、核心定义与约束
+
+        3.1 参考算子
+
+        参考论文：Shazeer, "GLU Variants Improve Transformer", 2020
+
+        3.2 输入输出与属性总览
+
+               类型               参数          类型        维度         支持数       数据                备注
+                                 名                    形状         据类型       格式
+
+          INPUT               input         tens     (..., d)   float16   -           输入特征张量，支持任意前置维
+          （必选）                _x            or                                        度（如批次、序列长度）
+
+
+https://cannjudge.cn/public/2026_electronic/swiglu                                                                1/5
+
+
+===== PDF PAGE 2 =====
+2026/10/12 13:22                                                          CANNJudge
+
+
+               类型               参数          类型        维度        支持数        数据                  备注
+                                  名                   形状        据类型        格式
+
+          INPUT               weig          tens     (d, d)     float16   -           linear_1 权重矩阵
+          （必选）                ht_1          or
+
+          INPUT               bias_         tens     (d,)       float16   -           linear_1 偏置向量
+          （必选）                1             or
+
+          INPUT               weig          tens     (d, d)     float16   -           linear_2 权重矩阵
+          （必选）                ht_2          or
+
+          INPUT               bias_         tens     (d,)       float16   -           linear_2 偏置向量
+          （必选）                2             or
+
+          OUTPUT              outp          tens     (..., d)   float16   -           门控输出张量，形状与input_x
+          （输出）                ut            or                                        一致
+
+
+        3.3 关键输入约束
+
+        维度取值范围（均为正整数）：
+
+             特征维度 d（即 input_x 最后一维）∈ [1, 8192]
+             input_x 支持任意数量的前置维度（batch维、序列维等），前置维度乘积记为 M，M ∈
+        [1, 1048576]
+
+        非对齐场景兼容： d 及前置各维度均可能为非32整倍数，算子需适配内存/数据非32字节对
+        齐的场景
+
+        数值取值约束： 输入张量、权重、偏置的数值取值范围不超出 float16 的原生表达范围
+
+        权重形状约束：
+
+             weight_1、weight_2 均为方阵，形状为 (d, d)
+             bias_1、bias_2 形状均为 (d,)
+             所有输入张量数据类型均为 float16
+             weight_1/weight_2 的存储布局为 (out_dim, in_dim)
+
+        数据类型约束： 仅支持 float16
+
+        3.4 数学公式与计算规则
+
+        第一路线性变换（带偏置）：
+
+
+
+
+        Swish（SiLU）激活（β=1）：
+
+
+https://cannjudge.cn/public/2026_electronic/swiglu                                                        2/5
+
+
+===== PDF PAGE 3 =====
+2026/10/12 13:22                                                CANNJudge
+
+
+
+
+        第二路线性变换（带偏置）：
+
+
+
+
+        SwiGLU 输出（逐元素相乘）：
+
+
+
+
+        其中：
+
+                     为 Sigmoid 函数
+                   为逐元素（Hadamard）乘法
+                                        ，             ，   为 dimension
+
+        3.5 输出要求
+
+             输出张量形状与输入张量 input_x 完全一致（含所有前置维度）
+             输出数据类型与输入数据类型相同
+             输出张量为两路线性变换门控融合后的计算结果
+
+        四、规则要求
+        精度要求：计算结果需满足以下精度误差要求（float16，混合误差判定）：
+
+
+
+
+        其中 atol =                           ，rtol =         ，逐元素比较，全部元素通过方判定该用例通
+        过，等价于：
+
+         numpy.allclose(out, golden, rtol=1e-3, atol=1e-3)
+
+
+        五、示例说明
+
+            以下示例统一取 weight_1 = I （单位矩阵）， bias_1 = 0 ， weight_2 = I ，
+             bias_2 = 0 （示例2除外），即                          ，        ，此时 SwiGLU 退化为逐元素计算
+                                       ，便于直接验证核心激活计算逻辑。
+
+
+        示例 1：基础计算（float16类型，1D）
+
+        输入 x：tensor ([1.0, 2.0, 3.0])，dtype=float16，shape=[3]，weight_1=I，bias_1=0，
+        weight_2=I，bias_2=0
+
+        输出 y：tensor ([0.731, 3.521, 8.570])，dtype=float16，shape=[3]
+
+
+https://cannjudge.cn/public/2026_electronic/swiglu                                        3/5
+
+
+===== PDF PAGE 4 =====
+2026/10/12 13:22                                      CANNJudge
+
+        示例 2：非单位权重场景（float16，完整线性变换）
+
+        输入 x：tensor ([1.0, 2.0])，dtype=float16，shape=[2]
+        输入 weight_1：[[1.0, 0.0], [0.0, 1.0]]，bias_1：[0.5, 0.5]
+        输入 weight_2：[[2.0, 0.0], [0.0, 2.0]]，bias_2：[0.0, 0.0]
+
+        输出 y：tensor ([2.453, 9.24])，dtype=float16，shape=[2]
+
+        示例 3：多维张量计算（float16，3D输入，x=全1）
+
+        输 入 x ： shape=[2, 4, 64] ， dtype=float16 ， 全 部 元 素 为 1.0 ， weight_1=I(64×64) ，
+        bias_1=0，weight_2=I，bias_2=0
+
+        输出 y：shape=[2, 4, 64]，dtype=float16，每个元素均为 0.731（即 Swish(1.0) × 1.0 =
+        0.731）
+
+        六、测试用例覆盖范围
+        数据类型覆盖： float16
+
+        维度场景覆盖：
+
+             基础维度：1D 输入（无前置维度）
+             常规场景：含 batch 维、序列维的二维及三维输入
+             高维场景：大特征维度（≥256）与大前置维度乘积（M ≥ 4096）
+             非对齐场景：特征维度及前置各维度为非32整倍数（如 d=13、177）
+
+        前置维度形态覆盖：
+
+             单一前置维度（如仅 batch）
+             多重前置维度（如 batch × 序列长度）
+             前置维度为1（退化场景）
+
+        边界场景覆盖：
+
+             最小特征维度：d=1
+             数值边界：输入/权重/偏置含较大值，验证 Swish 在 float16 范围内的溢出与精度稳定性
+             具体维度组合上限以显存/内存可行性为准，测试用例会控制在合理显存占用范围内
+
+
+
+
+        我的提交记录
+
+        暂无提交记录
+
+
+
+
+https://cannjudge.cn/public/2026_electronic/swiglu                                       4/5
+
+
+===== PDF PAGE 5 =====
+2026/10/12 13:22                                     CANNJudge
+
+
+
+
+https://cannjudge.cn/public/2026_electronic/swiglu               5/5

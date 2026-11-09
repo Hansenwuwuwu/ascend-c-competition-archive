@@ -1,0 +1,428 @@
+{
+  "problem": 1,
+  "operator": "SafetyBeltViolationGeometry",
+  "status": "first_pass_source_review_complete",
+  "date": "2026-11-09",
+  "source_read_only": true,
+  "execution": "static-only; no compilation or NPU execution",
+  "line_count_method": "UTF-8-sig splitlines; PowerShell default encoding count is invalid for Chinese comments",
+  "report": "deep_audit/problems/01_SafetyBeltViolationGeometry.md",
+  "files": [
+    {
+      "path": "extracted/SafetyBeltViolationGeometry/rank3_submission_1177391/code/CMakeLists.txt",
+      "sha256": "650f11fab6711603bcfeb1af60463db47f060dbcb67de2cddd8398e5c0ebb3df",
+      "total_lines": 20,
+      "reused_from": "extracted/SafetyBeltViolationGeometry/rank1_submission_1120490/code/CMakeLists.txt",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 20,
+          "notes": "SHA256-identical full-file reuse; mapped to reviewed rank1 build file",
+          "report_section": "build"
+        }
+      ],
+      "reviewed_lines": 20,
+      "status": "reviewed",
+      "remaining_ranges": []
+    },
+    {
+      "path": "extracted/SafetyBeltViolationGeometry/rank3_submission_1177391/code/op_host/CMakeLists.txt",
+      "sha256": "02333c3a83a459059bb0a96df1d3627e2f78f457d2a22d08e56e29439b22ddcf",
+      "total_lines": 24,
+      "reused_from": "extracted/SafetyBeltViolationGeometry/rank1_submission_1120490/code/op_host/CMakeLists.txt",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 24,
+          "notes": "SHA256-identical full-file reuse; mapped to reviewed rank1 build file",
+          "report_section": "build"
+        }
+      ],
+      "reviewed_lines": 24,
+      "status": "reviewed",
+      "remaining_ranges": []
+    },
+    {
+      "path": "extracted/SafetyBeltViolationGeometry/rank3_submission_1177391/code/op_host/safety_belt_violation_geometry.cpp",
+      "sha256": "a7e9cd6d73316e92d8529c3e6d506e9337fbf583d2c31acb7b9d59e3b5293e77",
+      "total_lines": 199,
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 199,
+          "notes": "Read consecutive numbered source lines; semantic discussion in linked section",
+          "report_section": "rank3-host"
+        }
+      ],
+      "reviewed_lines": 199,
+      "status": "reviewed",
+      "remaining_ranges": []
+    },
+    {
+      "path": "extracted/SafetyBeltViolationGeometry/rank3_submission_1177391/code/op_kernel/CMakeLists.txt",
+      "sha256": "d05a8a3f067af24667c096c672c869b35f1cc854a201449455f86817929a2b07",
+      "total_lines": 15,
+      "reused_from": "extracted/SafetyBeltViolationGeometry/rank1_submission_1120490/code/op_kernel/CMakeLists.txt",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 15,
+          "notes": "SHA256-identical full-file reuse; mapped to reviewed rank1 build file",
+          "report_section": "build"
+        }
+      ],
+      "reviewed_lines": 15,
+      "status": "reviewed",
+      "remaining_ranges": []
+    },
+    {
+      "path": "extracted/SafetyBeltViolationGeometry/rank3_submission_1177391/code/op_kernel/safety_belt_violation_geometry.cpp",
+      "sha256": "1db2cf4e425029c96d3d36fcfa66232601fa1c5e497e0fff24c3c59fdd91f3b9",
+      "total_lines": 1369,
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 300,
+          "notes": "Read consecutive numbered source lines; semantic discussion in linked section",
+          "report_section": "rank3-kernel"
+        },
+        {
+          "start": 301,
+          "end": 620,
+          "notes": "Read consecutive numbered source lines; semantic discussion in linked section",
+          "report_section": "rank3-kernel"
+        },
+        {
+          "start": 621,
+          "end": 960,
+          "notes": "Read consecutive numbered source lines; semantic discussion in linked section",
+          "report_section": "rank3-kernel"
+        },
+        {
+          "start": 961,
+          "end": 1200,
+          "notes": "Read consecutive numbered source lines; semantic discussion in linked section",
+          "report_section": "rank3-kernel"
+        },
+        {
+          "start": 1201,
+          "end": 1369,
+          "notes": "Read consecutive numbered source lines; semantic discussion in linked section",
+          "report_section": "rank3-kernel"
+        }
+      ],
+      "reviewed_lines": 1369,
+      "status": "reviewed",
+      "remaining_ranges": []
+    },
+    {
+      "path": "extracted/SafetyBeltViolationGeometry/rank3_submission_1177391/code/op_kernel/safety_belt_violation_geometry_tiling.h",
+      "sha256": "4c233df38ef782bb6e53fd7e4e66cee1be0e0edf955f9568f9b357e2543dd534",
+      "total_lines": 16,
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 16,
+          "notes": "Read consecutive numbered source lines; semantic discussion in linked section",
+          "report_section": "rank3-host"
+        }
+      ],
+      "reviewed_lines": 16,
+      "status": "reviewed",
+      "remaining_ranges": []
+    },
+    {
+      "path": "extracted/SafetyBeltViolationGeometry/rank3_submission_1177391/code/op_kernel/tiling_key_safety_belt_violation_geometry.h",
+      "sha256": "7a94aab2dcd18c94e3af1aece65748ed1ad564aa1ec17b5d6516ea4727ab7d32",
+      "total_lines": 222,
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 222,
+          "notes": "Read consecutive numbered source lines; semantic discussion in linked section",
+          "report_section": "rank3-host"
+        }
+      ],
+      "reviewed_lines": 222,
+      "status": "reviewed",
+      "remaining_ranges": []
+    },
+    {
+      "path": "extracted/SafetyBeltViolationGeometry/rank2_submission_1175118/code/CMakeLists.txt",
+      "sha256": "650f11fab6711603bcfeb1af60463db47f060dbcb67de2cddd8398e5c0ebb3df",
+      "total_lines": 20,
+      "reused_from": "extracted/SafetyBeltViolationGeometry/rank1_submission_1120490/code/CMakeLists.txt",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 20,
+          "notes": "SHA256-identical full-file reuse; mapped to reviewed rank1 build file",
+          "report_section": "build"
+        }
+      ],
+      "reviewed_lines": 20,
+      "status": "reviewed",
+      "remaining_ranges": []
+    },
+    {
+      "path": "extracted/SafetyBeltViolationGeometry/rank2_submission_1175118/code/op_host/CMakeLists.txt",
+      "sha256": "02333c3a83a459059bb0a96df1d3627e2f78f457d2a22d08e56e29439b22ddcf",
+      "total_lines": 24,
+      "reused_from": "extracted/SafetyBeltViolationGeometry/rank1_submission_1120490/code/op_host/CMakeLists.txt",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 24,
+          "notes": "SHA256-identical full-file reuse; mapped to reviewed rank1 build file",
+          "report_section": "build"
+        }
+      ],
+      "reviewed_lines": 24,
+      "status": "reviewed",
+      "remaining_ranges": []
+    },
+    {
+      "path": "extracted/SafetyBeltViolationGeometry/rank2_submission_1175118/code/op_host/safety_belt_violation_geometry.cpp",
+      "sha256": "79e911b2f062d1bfa0bd064a1cb94a739b9d801cf780b093f8334b45eb4876ee",
+      "total_lines": 265,
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 265,
+          "notes": "Read consecutive numbered source lines; semantic discussion in linked section",
+          "report_section": "rank2-host"
+        }
+      ],
+      "reviewed_lines": 265,
+      "status": "reviewed",
+      "remaining_ranges": []
+    },
+    {
+      "path": "extracted/SafetyBeltViolationGeometry/rank2_submission_1175118/code/op_kernel/CMakeLists.txt",
+      "sha256": "d05a8a3f067af24667c096c672c869b35f1cc854a201449455f86817929a2b07",
+      "total_lines": 15,
+      "reused_from": "extracted/SafetyBeltViolationGeometry/rank1_submission_1120490/code/op_kernel/CMakeLists.txt",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 15,
+          "notes": "SHA256-identical full-file reuse; mapped to reviewed rank1 build file",
+          "report_section": "build"
+        }
+      ],
+      "reviewed_lines": 15,
+      "status": "reviewed",
+      "remaining_ranges": []
+    },
+    {
+      "path": "extracted/SafetyBeltViolationGeometry/rank2_submission_1175118/code/op_kernel/safety_belt_violation_geometry.cpp",
+      "sha256": "b3a570f3ef3413cf030d26049d8bbdfd1c9d0f08f839536386ce4f3f475c966e",
+      "total_lines": 4297,
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 210,
+          "notes": "Read consecutive numbered source lines; semantic discussion in linked section",
+          "report_section": "rank2-kernel-partial"
+        },
+        {
+          "start": 2574,
+          "end": 2700,
+          "notes": "Read consecutive numbered source lines; semantic discussion in linked section",
+          "report_section": "rank2-kernel-partial"
+        },
+        {
+          "start": 4050,
+          "end": 4297,
+          "notes": "Read consecutive numbered source lines; semantic discussion in linked section",
+          "report_section": "rank2-kernel-partial"
+        },
+        {
+          "start": 211,
+          "end": 2573,
+          "notes": "Continuous numbered-source read in 6 chunks. Semantic/math/layout/sync notes in continuation.",
+          "report_section": "rank2-kernel-continuation"
+        },
+        {
+          "start": 2701,
+          "end": 4049,
+          "notes": "Continuous numbered read in three chunks; all entry/preprocessor branches included.",
+          "report_section": "rank2-kernel-continuation"
+        }
+      ],
+      "reviewed_lines": 4297,
+      "status": "reviewed",
+      "remaining_ranges": []
+    },
+    {
+      "path": "extracted/SafetyBeltViolationGeometry/rank2_submission_1175118/code/op_kernel/safety_belt_violation_geometry_tiling.h",
+      "sha256": "857441238a6e300da3f2c1af46e194eee3db62a8ec281fb9337eb4de14af4a13",
+      "total_lines": 15,
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 15,
+          "notes": "Read consecutive numbered source lines; semantic discussion in linked section",
+          "report_section": "rank2-host"
+        }
+      ],
+      "reviewed_lines": 15,
+      "status": "reviewed",
+      "remaining_ranges": []
+    },
+    {
+      "path": "extracted/SafetyBeltViolationGeometry/rank2_submission_1175118/code/op_kernel/tiling_key_safety_belt_violation_geometry.h",
+      "sha256": "c625a0532947a3ddc683655ac42babd23cfbee7b91b4d4197503c44d74e8fe3d",
+      "total_lines": 1184,
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 1184,
+          "notes": "Full continuous numbered read 1-420,421-840,841-1184; each SEL cohort and current Host outputs reconciled.",
+          "report_section": "rank2-key-full"
+        }
+      ],
+      "reviewed_lines": 1184,
+      "status": "reviewed",
+      "remaining_ranges": []
+    },
+    {
+      "path": "extracted/SafetyBeltViolationGeometry/rank1_submission_1120490/code/CMakeLists.txt",
+      "sha256": "650f11fab6711603bcfeb1af60463db47f060dbcb67de2cddd8398e5c0ebb3df",
+      "total_lines": 20,
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 20,
+          "notes": "Read consecutive numbered source lines; semantic discussion in linked section",
+          "report_section": "build"
+        }
+      ],
+      "reviewed_lines": 20,
+      "status": "reviewed",
+      "remaining_ranges": []
+    },
+    {
+      "path": "extracted/SafetyBeltViolationGeometry/rank1_submission_1120490/code/op_host/CMakeLists.txt",
+      "sha256": "02333c3a83a459059bb0a96df1d3627e2f78f457d2a22d08e56e29439b22ddcf",
+      "total_lines": 24,
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 24,
+          "notes": "Read consecutive numbered source lines; semantic discussion in linked section",
+          "report_section": "build"
+        }
+      ],
+      "reviewed_lines": 24,
+      "status": "reviewed",
+      "remaining_ranges": []
+    },
+    {
+      "path": "extracted/SafetyBeltViolationGeometry/rank1_submission_1120490/code/op_host/safety_belt_violation_geometry.cpp",
+      "sha256": "cd02a905231d5e0f3692359de18cbc66b3267822e8bf91d2146c5ce2b8f28013",
+      "total_lines": 176,
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 176,
+          "notes": "Read consecutive numbered source lines; semantic discussion in linked section",
+          "report_section": "rank1-host"
+        }
+      ],
+      "reviewed_lines": 176,
+      "status": "reviewed",
+      "remaining_ranges": []
+    },
+    {
+      "path": "extracted/SafetyBeltViolationGeometry/rank1_submission_1120490/code/op_kernel/CMakeLists.txt",
+      "sha256": "d05a8a3f067af24667c096c672c869b35f1cc854a201449455f86817929a2b07",
+      "total_lines": 15,
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 15,
+          "notes": "Read consecutive numbered source lines; semantic discussion in linked section",
+          "report_section": "build"
+        }
+      ],
+      "reviewed_lines": 15,
+      "status": "reviewed",
+      "remaining_ranges": []
+    },
+    {
+      "path": "extracted/SafetyBeltViolationGeometry/rank1_submission_1120490/code/op_kernel/safety_belt_violation_geometry.cpp",
+      "sha256": "c3d87721888b10e1319447389fd12f20d57c651699a3288cc5a5d28f91d34628",
+      "total_lines": 4177,
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 260,
+          "notes": "Read consecutive numbered source lines; semantic discussion in linked section",
+          "report_section": "rank1-kernel-partial"
+        },
+        {
+          "start": 3740,
+          "end": 4177,
+          "notes": "Read consecutive numbered source lines; semantic discussion in linked section",
+          "report_section": "rank1-kernel-partial"
+        },
+        {
+          "start": 261,
+          "end": 1620,
+          "notes": "Continuous numbered-source read, completed before session resume; semantic ledger in report. Not a correctness or performance claim.",
+          "report_section": "rank1-kernel-continuation"
+        },
+        {
+          "start": 1621,
+          "end": 3739,
+          "notes": "Continuous numbered-source read 1621-2020,2021-2460,2461-2910,2911-3350,3351-3739. Math/layout/event/numeric ledger appended.",
+          "report_section": "rank1-kernel-continuation"
+        }
+      ],
+      "reviewed_lines": 4177,
+      "status": "reviewed",
+      "remaining_ranges": []
+    },
+    {
+      "path": "extracted/SafetyBeltViolationGeometry/rank1_submission_1120490/code/op_kernel/safety_belt_violation_geometry_tiling.h",
+      "sha256": "7a3386f6e078fb42650c24380486fb11be2e4eaead5678ae11b4e76b5da16b49",
+      "total_lines": 55,
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 55,
+          "notes": "Read consecutive numbered source lines; semantic discussion in linked section",
+          "report_section": "rank1-host"
+        }
+      ],
+      "reviewed_lines": 55,
+      "status": "reviewed",
+      "remaining_ranges": []
+    },
+    {
+      "path": "extracted/SafetyBeltViolationGeometry/rank1_submission_1120490/code/op_kernel/tiling_key_safety_belt_violation_geometry.h",
+      "sha256": "fb2d029326c361c211bf889a66bafb486589bf3a5f96a6d4e27330030b098104",
+      "total_lines": 20,
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 20,
+          "notes": "Read consecutive numbered source lines; semantic discussion in linked section",
+          "report_section": "rank1-host"
+        }
+      ],
+      "reviewed_lines": 20,
+      "status": "reviewed",
+      "remaining_ranges": []
+    }
+  ],
+  "summary": {
+    "files": 21,
+    "total_lines": 12172,
+    "reviewed_lines": 3797,
+    "reviewed_files": 18
+  },
+  "reviewed_lines": 12172,
+  "remaining_lines": 0
+}

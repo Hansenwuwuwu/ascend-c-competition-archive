@@ -1,0 +1,653 @@
+{
+  "schema_version": 1,
+  "problem": 2,
+  "operator": "pinv",
+  "status": "complete_first_pass",
+  "review_date": "2026-11-09",
+  "scope": "Read-only static semantic review. No downloaded program, build or kernel executed. complete means full text read, not correctness proof.",
+  "line_count_encoding": "UTF-8 Get-Content; blank physical lines included.",
+  "pdf_review": {
+    "text_all_pages_read": true,
+    "visual_pages_reviewed": [
+      1,
+      2
+    ],
+    "rendered_prefix": "../specs/rendered/02"
+  },
+  "summary": {
+    "total_files": 41,
+    "total_lines": 19921,
+    "complete_files": 41,
+    "reviewed_lines": 19921,
+    "partial_files": 0
+  },
+  "files": [
+    {
+      "path": "extracted/pinv/rank1_submission_1060506/code/CMakeLists.txt",
+      "sha256": "650f11fab6711603bcfeb1af60463db47f060dbcb67de2cddd8398e5c0ebb3df",
+      "total_lines": 20,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 20,
+          "notes": "Full text read with numbered continuous chunks; semantic details in linked report section.",
+          "report_section": "../problems/02_pinv.md#build"
+        }
+      ],
+      "unreviewed_ranges": []
+    },
+    {
+      "path": "extracted/pinv/rank1_submission_1060506/code/op_host/CMakeLists.txt",
+      "sha256": "02333c3a83a459059bb0a96df1d3627e2f78f457d2a22d08e56e29439b22ddcf",
+      "total_lines": 24,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 24,
+          "notes": "Full text read with numbered continuous chunks; semantic details in linked report section.",
+          "report_section": "../problems/02_pinv.md#build"
+        }
+      ],
+      "unreviewed_ranges": []
+    },
+    {
+      "path": "extracted/pinv/rank1_submission_1060506/code/op_host/linalg_pinv.cpp",
+      "sha256": "5317833a91d177f4222946c13ac2ad5c55b101442d9b25e820361ab6f897de25",
+      "total_lines": 346,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 346,
+          "notes": "Full text read with numbered continuous chunks; semantic details in linked report section.",
+          "report_section": "../problems/02_pinv.md#r1-host"
+        }
+      ],
+      "unreviewed_ranges": []
+    },
+    {
+      "path": "extracted/pinv/rank1_submission_1060506/code/op_kernel/CMakeLists.txt",
+      "sha256": "d05a8a3f067af24667c096c672c869b35f1cc854a201449455f86817929a2b07",
+      "total_lines": 15,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 15,
+          "notes": "Full text read with numbered continuous chunks; semantic details in linked report section.",
+          "report_section": "../problems/02_pinv.md#build"
+        }
+      ],
+      "unreviewed_ranges": []
+    },
+    {
+      "path": "extracted/pinv/rank1_submission_1060506/code/op_kernel/linalg_pinv.cpp",
+      "sha256": "75ae4626b932b2aad4601a85790bd97b46420986ebf0f124880f7e3179b5a94f",
+      "total_lines": 252,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 252,
+          "notes": "Full text read with numbered continuous chunks; semantic details in linked report section.",
+          "report_section": "../problems/02_pinv.md#r1-entry"
+        }
+      ],
+      "unreviewed_ranges": []
+    },
+    {
+      "path": "extracted/pinv/rank1_submission_1060506/code/op_kernel/linalg_pinv_tiling.h",
+      "sha256": "599bb59d9891767b0e747b79b1a4e5e529abf08da82e3831e78a6fe0f273b41e",
+      "total_lines": 20,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 20,
+          "notes": "Full text read with numbered continuous chunks; semantic details in linked report section.",
+          "report_section": "../problems/02_pinv.md#r1-host"
+        }
+      ],
+      "unreviewed_ranges": []
+    },
+    {
+      "path": "extracted/pinv/rank1_submission_1060506/code/op_kernel/pinv_compact.h",
+      "sha256": "52d30272b09202613872e704735cb7805127bfc7cdff9f1a5d258927d4710857",
+      "total_lines": 706,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 706,
+          "notes": "Full contiguous numbered-source first-pass read; all templates, branches, layout and numerical admission examined.",
+          "report_section": "../problems/02_pinv.md#r1-compact-stable"
+        }
+      ],
+      "unreviewed_ranges": []
+    },
+    {
+      "path": "extracted/pinv/rank1_submission_1060506/code/op_kernel/pinv_contract.h",
+      "sha256": "0bd9cd1551b2b68d29049e354dd65563454e82a009780aa1d0578086c342a1e0",
+      "total_lines": 187,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 187,
+          "notes": "Full text read with numbered continuous chunks; semantic details in linked report section.",
+          "report_section": "../problems/02_pinv.md#r1-contract"
+        }
+      ],
+      "unreviewed_ranges": []
+    },
+    {
+      "path": "extracted/pinv/rank1_submission_1060506/code/op_kernel/pinv_cube_residual.h",
+      "sha256": "d2f22b9a358a4c47c8fe6ee3b2c3d02f8792795aabdaa401387978914134c014",
+      "total_lines": 223,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 223,
+          "notes": "Full numbered text read, including numerical certificate or command handshake and digit-plane consumers.",
+          "report_section": "../problems/02_pinv.md#r1-cube"
+        }
+      ],
+      "unreviewed_ranges": []
+    },
+    {
+      "path": "extracted/pinv/rank1_submission_1060506/code/op_kernel/pinv_dsl_block_atomic.h",
+      "sha256": "ddf261fdc7cfde3a85e02b964a94d82579693bb87b74fda7e1aea3e2d1200dc8",
+      "total_lines": 549,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 549,
+          "notes": "Contiguous full text read including all generated variants, protocol and fallback; entry routing cross-checked.",
+          "report_section": "../problems/02_pinv.md#r1-dsl-pipelines"
+        }
+      ],
+      "unreviewed_ranges": []
+    },
+    {
+      "path": "extracted/pinv/rank1_submission_1060506/code/op_kernel/pinv_dsl_block_local.h",
+      "sha256": "232c3ef43c06c7e0d5c5958ed7d4896571495a94bea64fa2f87dc8b8dcd9a6c2",
+      "total_lines": 221,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 221,
+          "notes": "Full contiguous numbered-source read including generated solver bodies, all arithmetic adapters and hardcoded layouts. Static only.",
+          "report_section": "../problems/02_pinv.md#r1-dsl-common"
+        }
+      ],
+      "unreviewed_ranges": []
+    },
+    {
+      "path": "extracted/pinv/rank1_submission_1060506/code/op_kernel/pinv_dsl_common.h",
+      "sha256": "00976dc5b8c2e030bcf3571bd34ff56213270e12ce98b3e265a50aee1175aad5",
+      "total_lines": 2741,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 2741,
+          "notes": "Full contiguous numbered-source read including generated solver bodies, all arithmetic adapters and hardcoded layouts. Static only.",
+          "report_section": "../problems/02_pinv.md#r1-dsl-common"
+        }
+      ],
+      "unreviewed_ranges": []
+    },
+    {
+      "path": "extracted/pinv/rank1_submission_1060506/code/op_kernel/pinv_dsl_compact.h",
+      "sha256": "1eacf11ffc56e09f909547a61817e5aa43ae0a849f90f532f6ae06e2a96f5f0a",
+      "total_lines": 1374,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 1374,
+          "notes": "All generated variants read contiguously including unrolled pivots and fallbacks. Explicit job-loop break defect documented with a source-level mathematical counterexample.",
+          "report_section": "../problems/02_pinv.md#r1-dsl-compact"
+        }
+      ],
+      "unreviewed_ranges": []
+    },
+    {
+      "path": "extracted/pinv/rank1_submission_1060506/code/op_kernel/pinv_dsl_half_pipeline.h",
+      "sha256": "2a467ae404874bb08ebace6632d43d5485eacbaf64ebd240cc17e4a894aed23a",
+      "total_lines": 759,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 759,
+          "notes": "Contiguous full text read including all generated variants, protocol and fallback; entry routing cross-checked.",
+          "report_section": "../problems/02_pinv.md#r1-dsl-pipelines"
+        }
+      ],
+      "unreviewed_ranges": []
+    },
+    {
+      "path": "extracted/pinv/rank1_submission_1060506/code/op_kernel/pinv_dsl_local.h",
+      "sha256": "e2deecfa117210fa400b60bd2f2aacff04ba73fbe80977d4e721146b57d669da",
+      "total_lines": 507,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 507,
+          "notes": "Contiguous full text read including all generated variants, protocol and fallback; entry routing cross-checked.",
+          "report_section": "../problems/02_pinv.md#r1-dsl-pipelines"
+        }
+      ],
+      "unreviewed_ranges": []
+    },
+    {
+      "path": "extracted/pinv/rank1_submission_1060506/code/op_kernel/pinv_dsl_peer_rows.h",
+      "sha256": "940bfe7089dea8a92dd71ef2b5b1628170bae582f83c4c6a40c1c4d8b85d341d",
+      "total_lines": 263,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 263,
+          "notes": "Full contiguous numbered-source read including generated solver bodies, all arithmetic adapters and hardcoded layouts. Static only.",
+          "report_section": "../problems/02_pinv.md#r1-dsl-common"
+        }
+      ],
+      "unreviewed_ranges": []
+    },
+    {
+      "path": "extracted/pinv/rank1_submission_1060506/code/op_kernel/pinv_dsl_peer_tiles.h",
+      "sha256": "10615bd6410b7d10b62f0f7803d17a366dec54105b2cbea5531af40072016f41",
+      "total_lines": 572,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 572,
+          "notes": "Contiguous full text read including all generated variants, protocol and fallback; entry routing cross-checked.",
+          "report_section": "../problems/02_pinv.md#r1-dsl-pipelines"
+        }
+      ],
+      "unreviewed_ranges": []
+    },
+    {
+      "path": "extracted/pinv/rank1_submission_1060506/code/op_kernel/pinv_dsl_window.h",
+      "sha256": "6afc5fefe71edf995f407ded745c01d956bf78cdf67a7c0f42d1ead76c74fd07",
+      "total_lines": 2981,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 2981,
+          "notes": "连续逐行阅读完整窗口/blocked DSL文件；只表示首轮静态阅读，不表示数值、同步、SDK或性能证明。",
+          "report_section": "../problems/02_pinv.md#r1-window-dsl-full"
+        }
+      ],
+      "unreviewed_ranges": [
+        {
+          "start": 1,
+          "end": 2981,
+          "notes": "Not read; no coverage claimed."
+        }
+      ]
+    },
+    {
+      "path": "extracted/pinv/rank1_submission_1060506/code/op_kernel/pinv_local.h",
+      "sha256": "5db463142fa44dea584c8461ccd9918cb5363cd031fbe44383cec8c1d0df2bce",
+      "total_lines": 545,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 545,
+          "notes": "Contiguous full numbered source read; native inverse, metadata producer/worker protocol and certified refinement reviewed. No source execution.",
+          "report_section": "../problems/02_pinv.md#r1-native-followup"
+        }
+      ],
+      "unreviewed_ranges": []
+    },
+    {
+      "path": "extracted/pinv/rank1_submission_1060506/code/op_kernel/pinv_pipeline.h",
+      "sha256": "844f217a0f6ef2bf74e99c011e1d0780eac47428888eb9b673fb0c772094e720",
+      "total_lines": 408,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 408,
+          "notes": "Contiguous full numbered source read; native inverse, metadata producer/worker protocol and certified refinement reviewed. No source execution.",
+          "report_section": "../problems/02_pinv.md#r1-native-followup"
+        }
+      ],
+      "unreviewed_ranges": []
+    },
+    {
+      "path": "extracted/pinv/rank1_submission_1060506/code/op_kernel/pinv_rect.h",
+      "sha256": "9c6a21e7f8d87abf7bf45f0f9dd221dd6305c3b3a676ebd4b4f5fdd81e98231e",
+      "total_lines": 404,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 404,
+          "notes": "Full numbered text read, including numerical certificate or command handshake and digit-plane consumers.",
+          "report_section": "../problems/02_pinv.md#r1-rect"
+        }
+      ],
+      "unreviewed_ranges": []
+    },
+    {
+      "path": "extracted/pinv/rank1_submission_1060506/code/op_kernel/pinv_refinement.h",
+      "sha256": "a0187cf469ca6c4053fc6a80c0aed78e4487eb4f17d125eaed66bb6cbfa56b9b",
+      "total_lines": 326,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 326,
+          "notes": "Contiguous full numbered source read; native inverse, metadata producer/worker protocol and certified refinement reviewed. No source execution.",
+          "report_section": "../problems/02_pinv.md#r1-native-followup"
+        }
+      ],
+      "unreviewed_ranges": []
+    },
+    {
+      "path": "extracted/pinv/rank1_submission_1060506/code/op_kernel/pinv_stable.h",
+      "sha256": "bd91fda3c59dd4397b64e47ace57a814aa9fb04e37e317551bc9e3bdfc517711",
+      "total_lines": 2034,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 2034,
+          "notes": "Full contiguous numbered-source first-pass read; all templates, branches, layout and numerical admission examined.",
+          "report_section": "../problems/02_pinv.md#r1-compact-stable"
+        }
+      ],
+      "unreviewed_ranges": []
+    },
+    {
+      "path": "extracted/pinv/rank1_submission_1060506/code/op_kernel/pinv_vector_precision.h",
+      "sha256": "a9b0cf06d124d8c7533b175c9a5c8dcf8253ffc5098b3b3c15642bd3cd953bfc",
+      "total_lines": 31,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 31,
+          "notes": "Full text read with numbered continuous chunks; semantic details in linked report section.",
+          "report_section": "../problems/02_pinv.md#r1-contract"
+        }
+      ],
+      "unreviewed_ranges": []
+    },
+    {
+      "path": "extracted/pinv/rank1_submission_1060506/code/op_kernel/pinv_wide.h",
+      "sha256": "42bd969904d9f75d0921ee366c026f350f83715ade7cd90e1a6221580bb5b6fb",
+      "total_lines": 39,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 39,
+          "notes": "Full text read with numbered continuous chunks; semantic details in linked report section.",
+          "report_section": "../problems/02_pinv.md#r1-contract"
+        }
+      ],
+      "unreviewed_ranges": []
+    },
+    {
+      "path": "extracted/pinv/rank1_submission_1060506/code/op_kernel/pinv_window_pipeline.h",
+      "sha256": "dcec52148e0d1c472fc2c0e8801597ab2556c69ff85ab43a5defd12b8cf1a441",
+      "total_lines": 321,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 321,
+          "notes": "Contiguous full numbered source read; native inverse, metadata producer/worker protocol and certified refinement reviewed. No source execution.",
+          "report_section": "../problems/02_pinv.md#r1-native-followup"
+        }
+      ],
+      "unreviewed_ranges": []
+    },
+    {
+      "path": "extracted/pinv/rank1_submission_1060506/code/op_kernel/tiling_key_linalg_pinv.h",
+      "sha256": "09b11052968c5d405bb69aeb65d43c884604487a50d689478849c2493ea92b73",
+      "total_lines": 26,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 26,
+          "notes": "Full text read with numbered continuous chunks; semantic details in linked report section.",
+          "report_section": "../problems/02_pinv.md#r1-host"
+        }
+      ],
+      "unreviewed_ranges": []
+    },
+    {
+      "path": "extracted/pinv/rank2_submission_1049211/code/CMakeLists.txt",
+      "sha256": "650f11fab6711603bcfeb1af60463db47f060dbcb67de2cddd8398e5c0ebb3df",
+      "total_lines": 20,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 20,
+          "notes": "SHA-256 identical; full semantic reading reused from extracted/pinv/rank1_submission_1060506/code/CMakeLists.txt",
+          "report_section": "../problems/02_pinv.md#build"
+        }
+      ],
+      "unreviewed_ranges": [],
+      "identical_to": "extracted/pinv/rank1_submission_1060506/code/CMakeLists.txt"
+    },
+    {
+      "path": "extracted/pinv/rank2_submission_1049211/code/op_host/CMakeLists.txt",
+      "sha256": "02333c3a83a459059bb0a96df1d3627e2f78f457d2a22d08e56e29439b22ddcf",
+      "total_lines": 24,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 24,
+          "notes": "SHA-256 identical; full semantic reading reused from extracted/pinv/rank1_submission_1060506/code/op_host/CMakeLists.txt",
+          "report_section": "../problems/02_pinv.md#build"
+        }
+      ],
+      "unreviewed_ranges": [],
+      "identical_to": "extracted/pinv/rank1_submission_1060506/code/op_host/CMakeLists.txt"
+    },
+    {
+      "path": "extracted/pinv/rank2_submission_1049211/code/op_host/linalg_pinv.cpp",
+      "sha256": "f81010e716a1a6ef889dafae1d588b3e2e977d931f109ada11eb966717761b04",
+      "total_lines": 108,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 108,
+          "notes": "Full text read with numbered continuous chunks; semantic details in linked report section.",
+          "report_section": "../problems/02_pinv.md#r2-host"
+        }
+      ],
+      "unreviewed_ranges": []
+    },
+    {
+      "path": "extracted/pinv/rank2_submission_1049211/code/op_kernel/CMakeLists.txt",
+      "sha256": "d05a8a3f067af24667c096c672c869b35f1cc854a201449455f86817929a2b07",
+      "total_lines": 15,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 15,
+          "notes": "SHA-256 identical; full semantic reading reused from extracted/pinv/rank1_submission_1060506/code/op_kernel/CMakeLists.txt",
+          "report_section": "../problems/02_pinv.md#build"
+        }
+      ],
+      "unreviewed_ranges": [],
+      "identical_to": "extracted/pinv/rank1_submission_1060506/code/op_kernel/CMakeLists.txt"
+    },
+    {
+      "path": "extracted/pinv/rank2_submission_1049211/code/op_kernel/linalg_pinv.cpp",
+      "sha256": "bea57608c2adc66ef2e27951a12dfcaa329ecb5d72ed76b8baaeb354fedae6df",
+      "total_lines": 1968,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 1968,
+          "notes": "Full text read with numbered continuous chunks; semantic details in linked report section.",
+          "report_section": "../problems/02_pinv.md#r2-kernel"
+        }
+      ],
+      "unreviewed_ranges": []
+    },
+    {
+      "path": "extracted/pinv/rank2_submission_1049211/code/op_kernel/linalg_pinv_tiling.h",
+      "sha256": "d270f8d5a05d186128c0bf712b9c10c379985b474aaa352e32c868090554d2a1",
+      "total_lines": 35,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 35,
+          "notes": "Full text read with numbered continuous chunks; semantic details in linked report section.",
+          "report_section": "../problems/02_pinv.md#r2-host"
+        }
+      ],
+      "unreviewed_ranges": []
+    },
+    {
+      "path": "extracted/pinv/rank2_submission_1049211/code/op_kernel/tiling_key_linalg_pinv.h",
+      "sha256": "383e02a5a6d98e10316444ab84a3b032e8f8ced8300be0aef7402218b1c124cc",
+      "total_lines": 34,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 34,
+          "notes": "Full text read with numbered continuous chunks; semantic details in linked report section.",
+          "report_section": "../problems/02_pinv.md#r2-host"
+        }
+      ],
+      "unreviewed_ranges": []
+    },
+    {
+      "path": "extracted/pinv/rank3_submission_1173359/code/CMakeLists.txt",
+      "sha256": "650f11fab6711603bcfeb1af60463db47f060dbcb67de2cddd8398e5c0ebb3df",
+      "total_lines": 20,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 20,
+          "notes": "SHA-256 identical; full semantic reading reused from extracted/pinv/rank1_submission_1060506/code/CMakeLists.txt",
+          "report_section": "../problems/02_pinv.md#build"
+        }
+      ],
+      "unreviewed_ranges": [],
+      "identical_to": "extracted/pinv/rank1_submission_1060506/code/CMakeLists.txt"
+    },
+    {
+      "path": "extracted/pinv/rank3_submission_1173359/code/op_host/CMakeLists.txt",
+      "sha256": "02333c3a83a459059bb0a96df1d3627e2f78f457d2a22d08e56e29439b22ddcf",
+      "total_lines": 24,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 24,
+          "notes": "SHA-256 identical; full semantic reading reused from extracted/pinv/rank1_submission_1060506/code/op_host/CMakeLists.txt",
+          "report_section": "../problems/02_pinv.md#build"
+        }
+      ],
+      "unreviewed_ranges": [],
+      "identical_to": "extracted/pinv/rank1_submission_1060506/code/op_host/CMakeLists.txt"
+    },
+    {
+      "path": "extracted/pinv/rank3_submission_1173359/code/op_host/linalg_pinv.cpp",
+      "sha256": "27cbd21a965a1339ce972011f0c3d8ff525fe82866b00206f7b89e02c509c68e",
+      "total_lines": 98,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 98,
+          "notes": "Full text read with numbered continuous chunks; semantic details in linked report section.",
+          "report_section": "../problems/02_pinv.md#r3-host"
+        }
+      ],
+      "unreviewed_ranges": []
+    },
+    {
+      "path": "extracted/pinv/rank3_submission_1173359/code/op_kernel/CMakeLists.txt",
+      "sha256": "d05a8a3f067af24667c096c672c869b35f1cc854a201449455f86817929a2b07",
+      "total_lines": 15,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 15,
+          "notes": "SHA-256 identical; full semantic reading reused from extracted/pinv/rank1_submission_1060506/code/op_kernel/CMakeLists.txt",
+          "report_section": "../problems/02_pinv.md#build"
+        }
+      ],
+      "unreviewed_ranges": [],
+      "identical_to": "extracted/pinv/rank1_submission_1060506/code/op_kernel/CMakeLists.txt"
+    },
+    {
+      "path": "extracted/pinv/rank3_submission_1173359/code/op_kernel/linalg_pinv.cpp",
+      "sha256": "4000e657565d3b719259a554762f7de3b4c4b7c2f4e5eaa427ca8b113371955e",
+      "total_lines": 1642,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 1642,
+          "notes": "Full text read with numbered continuous chunks; semantic details in linked report section.",
+          "report_section": "../problems/02_pinv.md#r3-kernel"
+        }
+      ],
+      "unreviewed_ranges": []
+    },
+    {
+      "path": "extracted/pinv/rank3_submission_1173359/code/op_kernel/linalg_pinv_tiling.h",
+      "sha256": "b5d79cb974567213317cf69fd6e42f8254dfd4d66b209542cd8de324a800470b",
+      "total_lines": 10,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 10,
+          "notes": "Full text read with numbered continuous chunks; semantic details in linked report section.",
+          "report_section": "../problems/02_pinv.md#r3-host"
+        }
+      ],
+      "unreviewed_ranges": []
+    },
+    {
+      "path": "extracted/pinv/rank3_submission_1173359/code/op_kernel/tiling_key_linalg_pinv.h",
+      "sha256": "1cac7f65bcd9d9012e990bee66b7bcf38f5b2cb30b3f31795bd59c4ddcd6cf86",
+      "total_lines": 14,
+      "status": "complete",
+      "reviewed_ranges": [
+        {
+          "start": 1,
+          "end": 14,
+          "notes": "Full text read with numbered continuous chunks; semantic details in linked report section.",
+          "report_section": "../problems/02_pinv.md#r3-host"
+        }
+      ],
+      "unreviewed_ranges": []
+    }
+  ]
+}

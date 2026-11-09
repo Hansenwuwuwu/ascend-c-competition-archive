@@ -1,0 +1,82 @@
+[
+  {
+    "problem": 1,
+    "pdf": "problems/01_SafetyBeltViolationGeometry.pdf",
+    "sha256": "944ccc663fe1b145c44f4e3d75d50b26dcf65be910e1b4b1a4b447758b92d766",
+    "text": "deep_audit/specs/01.txt",
+    "pages": 6,
+    "text_characters": 9213
+  },
+  {
+    "problem": 2,
+    "pdf": "problems/02_pinv.pdf",
+    "sha256": "fdac3872a5d8bc3bce8005818bd359db4f0e44e1b3e6918b5f66b9350b633c0e",
+    "text": "deep_audit/specs/02.txt",
+    "pages": 3,
+    "text_characters": 3186
+  },
+  {
+    "problem": 3,
+    "pdf": "problems/03_SplineConv.pdf",
+    "sha256": "e7ac89370a4f598d6cec9c37cf60bb27418648085d644e4faa2c4ca22d56b682",
+    "text": "deep_audit/specs/03.txt",
+    "pages": 4,
+    "text_characters": 6709
+  },
+  {
+    "problem": 4,
+    "pdf": "problems/04_det.pdf",
+    "sha256": "0772d7030ff9aafa934e7e40ec2ecd81e076bf16dbcad25a76717360e420bbfe",
+    "text": "deep_audit/specs/04.txt",
+    "pages": 2,
+    "text_characters": 2525
+  },
+  {
+    "problem": 5,
+    "pdf": "problems/05_SwiGLU.pdf",
+    "sha256": "4e1b6fe35fefc1523c385df6a464c74ac5b7a7e5183c842a38d7b93b56f58391",
+    "text": "deep_audit/specs/05.txt",
+    "pages": 5,
+    "text_characters": 6220
+  },
+  {
+    "problem": 6,
+    "pdf": "problems/06_lstsq.pdf",
+    "sha256": "a53cd4d68069821d5c02d65a1672d8c2f13d2476c6d3768e1f0a630fea93860d",
+    "text": "deep_audit/specs/06.txt",
+    "pages": 3,
+    "text_characters": 3291
+  },
+  {
+    "problem": 7,
+    "pdf": "problems/07_FireCandidateDecodeFusion.pdf",
+    "sha256": "0605842131e0f8d71b83b85f636ebddbd9f20b57e9ef8c7ba54a738a3d03bcb4",
+    "text": "deep_audit/specs/07.txt",
+    "pages": 4,
+    "text_characters": 7056
+  },
+  {
+    "problem": 8,
+    "pdf": "problems/08_eigh.pdf",
+    "sha256": "271e2bffcba572a50600c24b4a2bd90b821cdb64352fdbafb0826488a6dc1744",
+    "text": "deep_audit/specs/08.txt",
+    "pages": 2,
+    "text_characters": 2722
+  },
+  {
+    "problem": 9,
+    "pdf": "problems/09_solve.pdf",
+    "sha256": "48a1f5e76bf2441eba51cce5db27464c74c00df4ac2a9eee637d9732ff875fb6",
+    "text": "deep_audit/specs/09.txt",
+    "pages": 2,
+    "text_characters": 2463
+  },
+  {
+    "problem": 10,
+    "pdf": "problems/10_TreeLineMinDistance.pdf",
+    "sha256": "12f40bc4b660134af63b4068c4eacf38b487654d60965515d3f4a6fba68c1d9d",
+    "text": "deep_audit/specs/10.txt",
+    "pages": 4,
+    "text_characters": 6620
+  }
+]

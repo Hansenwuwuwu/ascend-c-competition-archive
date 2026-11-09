@@ -1,0 +1,9 @@
+* text=auto
+*.md text eol=lf
+*.py text eol=lf
+*.json text eol=lf
+*.yml text eol=lf
+archives/2026-electric-power/extracted/** -text
+archives/2026-electric-power/raw/** -text
+archives/2026-electric-power/problems/*.pdf -text
+archives/2026-electric-power/source/** -text
