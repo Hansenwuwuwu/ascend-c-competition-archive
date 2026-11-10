@@ -1,4 +1,4 @@
-# 05 SwiGLU：题面与历史对照边界
+# 05 电力巡检算子 SwiGLU：题面与历史对照边界
 
 题面：[原始PDF](../../problems/05_SwiGLU.pdf)；[题目契约](../SPEC_CONTRACTS.md)。
 

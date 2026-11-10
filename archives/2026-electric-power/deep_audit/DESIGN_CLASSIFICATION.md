@@ -1,6 +1,6 @@
 # 十题获奖源码：完整审计与设计适用范围分类
 
-日期2026-11-09。此文是全库源码审计后的统一分类总报告；逐题、逐提交、逐连续行段的语义账见各题报告。9题共有的27份前三名提交、271个源码文件、139,460物理行均完成首轮连续源码审阅，原档哈希与覆盖范围经 `check_coverage.py` 核验。第5题本批次没有公示前三名源码，只审题面并明确边界，不虚构代码审计。
+日期2026-11-09。此文是全库源码审计后的统一分类总报告；逐题、逐提交、逐连续行段的语义账见各题报告。9题共有的27份公示快照提交、271个源码文件、139,460物理行均完成首轮连续源码审阅，原档哈希与覆盖范围经 `check_coverage.py` 核验。第5题“电力巡检算子 SwiGLU”不在该公示快照中；后续收到的三份本地补充代码另行审阅，未并入这里的覆盖统计。
 
 **审计覆盖表**
 
@@ -10,7 +10,7 @@
 |02 pinv|19,921/19,921|41/41|[题2设计复盘](problems/02_pinv_REVIEW.md) / [逐行证据账本](problems/02_pinv.md)|完成|
 |03 SplineConv|10,607/10,607|40/40|[题3设计复盘](problems/03_SplineConv_REVIEW.md) / [逐行证据账本](problems/03_SplineConv.md)|完成|
 |04 det|9,262/9,262|27/27|[题4设计复盘](problems/04_det_REVIEW.md) / [逐行证据账本](problems/04_det.md)|完成|
-|05 SwiGLU|本批无公示源码|—|[题5边界与方法索引](problems/05_SwiGLU_REVIEW.md) / [原题面记录](problems/05_SwiGLU.md)|不适用|
+|05 电力巡检算子 SwiGLU|公示快照不含；另有3份本地补充|—|[前三名设计复盘](problems/05_SwiGLU_REVIEW.md) / [完整静态源码审计](problems/05_SwiGLU_TOP3_LOCAL_SUPPLEMENT_20261109.md)|补充材料独立审计，不计入27份快照覆盖|
 |06 lstsq|12,371/12,371|24/24|[题6设计复盘](problems/06_lstsq_REVIEW.md) / [逐行证据账本](problems/06_lstsq.md)|完成|
 |07 FireCandidateDecodeFusion|18,301/18,301|44/44|[题7设计复盘](problems/07_FireCandidateDecodeFusion_REVIEW.md) / [逐行证据账本](problems/07_FireCandidateDecodeFusion.md)|完成|
 |08 eigh|25,114/25,114|26/26|[题8设计复盘](problems/08_eigh_REVIEW.md) / [逐行证据账本](problems/08_eigh.md)|完成|
@@ -89,9 +89,9 @@
 |A/B不同ready、下一pivot先更新、helper分块发布|G异步生产消费，r3多个头|先满足真实关键依赖，而非一律等整个stage|paired本core ready不代表all-helper A ready；需wave/slot版本和复用ack。|
 |WriteGmByPassDCache/包装初始化宏|SDK/硬件绑定实现，不单列通用优秀法|可能省tiny输出/启动成本|官方版本支持不同，须锁CANN与生成wrapper；本轮未性能归因。|
 
-### 05 SwiGLU
+### 05 电力巡检算子 SwiGLU
 
-题面已对齐，但该批公示归档没有题5获奖代码。不能凭我们历史实验、排名耗时或其他题同作者代码虚构获奖实现。以下只列后续对照维度，不列为新发现：X投影两路的数据复用F（共享左操作数GEMM）、投影与激活逐tile交接F/G、tiny专核与大矩阵Cube分路G、half中间舍入与题面契约P。历史L/T版本的正向结果应保留具体parent、目标硬件、shape、是否重复测量，不能当此归档某设计的证据。详见[题5边界与方法索引](problems/05_SwiGLU_REVIEW.md)及[原始边界记录](problems/05_SwiGLU.md)。
+公示快照不含题5获奖代码，但之后收到的三份本地源码已有独立的[设计复盘](problems/05_SwiGLU_REVIEW.md)和[完整静态审计](problems/05_SwiGLU_TOP3_LOCAL_SUPPLEMENT_20261109.md)。不能凭我们历史实验、排名耗时或其他题同作者代码虚构获奖实现。通用对照维度包括：X投影两路的数据复用F（共享左操作数GEMM）、投影与激活逐tile交接F/G、tiny专核与大矩阵Cube分路G、half中间舍入与题面契约P。历史L/T版本的正向结果应保留具体parent、目标硬件、shape、是否重复测量，不能当获奖代码的性能因果证据。题面边界见[原始记录](problems/05_SwiGLU.md)。
 
 ### 06 lstsq
 
