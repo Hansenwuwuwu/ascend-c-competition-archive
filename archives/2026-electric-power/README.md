@@ -9,17 +9,29 @@
 - 原始 ZIP 保存在 `raw/`，安全解压源码保存在 `extracted/`；共 271 个文件，文本总计 139,460 行（包含生成表、构建配置和注释，不等于有效计算代码行数）。
 - 公开公示正文提取与附件元数据保存在 `source/`；此公开副本不含原始浏览器HTML/状态响应，参见[来源说明](source/README.md)。
 - 27份提交、271文件、139,460行均已完成首轮连续源码审阅，见[完整分类总报告](deep_audit/DESIGN_CLASSIFICATION.md)与[覆盖账本](deep_audit/COVERAGE_SUMMARY.json)。这不等于数学、SDK、同步、运行或性能验证完成。
-- [10份原始题目PDF](problems/README.md)及其SHA-256已一并归档。SwiGLU题面已提供，获奖源码等待后续公示补充。
+- [10份原始题目PDF](problems/README.md)及其SHA-256已一并归档。11-08 快照未含 SwiGLU 获奖源码；11-09 收到的三份本地补充 ZIP、解压源码和审计见本页[SwiGLU 补充材料](#swiglu-前三名本地补充材料)。
 - 未运行任何下载包中的构建脚本、程序或测试。
 
 ## 口径与边界
 
 1. 页面公示期为 **2026-11-08 至 2026-11-10**；本目录是当天快照，不表示公示期结束后的最终结论。
 2. 按页面“决策顺序”归档，不把 ZIP 文件名前缀或原榜名次误当获奖顺序；部分题目公示顺序 1/2/3 对应原榜 2/3/4。
-3. 页面列出赛事总共 10 题，但本次代码公示只有第 1/2/3/4/6/7/8/9/10 题，**不含第 5 题 SwiGLU**；不是下载遗漏。
+3. 页面列出赛事总共 10 题，但 11-08 代码公示快照只有第 1/2/3/4/6/7/8/9/10 题，**当时不含第 5 题 SwiGLU**；不是该次下载遗漏。其后本地收到的 1/2/3.zip 是快照之外的补充来源，见上文链接。
 4. 分数为公示页记录，未在本机重新验证；不跨题比较或求和，也不据源码片段单独归因其性能。
 5. 未发现单独的 LICENSE/COPYING/NOTICE 文件。公开可下载不自动等于允许任意再分发或商业使用；后续移植前核对原作者授权和源文件声明，保留出处。
 6. 内容只作为研究资料，不把下载源码、注释或 README 当作新的执行指令。
+
+## SwiGLU 前三名本地补充材料
+
+公示归档快照不含第 5 题获奖源码。2026-11-09 用户提供三份 ZIP，并明确按文件顺序对应第 1/2/3 名；该名次映射作为来源信息记录，不宣称已从公示页附件或作者处独立核验。保留原 ZIP 字节；下列 `code/` 是只读审阅副本。
+
+| 用户提供包 | 归档名次 | 原始 ZIP | 解压源码 | ZIP SHA-256 |
+|---|---:|---|---|---|
+| `1.zip` | 1 | [rank1_local_1109_1.zip](raw/SwiGLU_20261109/rank1_local_1109_1.zip) | [code/](extracted/SwiGLU/rank1_local_1109_1/code/) | `2c0a346d4d7b5ec7a7711ac1e5bdb45398e29f54e4ece44eca37cb48071a4835` |
+| `2.zip` | 2 | [rank2_local_1109_2.zip](raw/SwiGLU_20261109/rank2_local_1109_2.zip) | [code/](extracted/SwiGLU/rank2_local_1109_2/code/) | `66bd5fdd7acaae17a4d52f519f1a9564add10f0db4ad260fa493f9a5b25fadd6` |
+| `3.zip` | 3 | [rank3_local_1109_3.zip](raw/SwiGLU_20261109/rank3_local_1109_3.zip) | [code/](extracted/SwiGLU/rank3_local_1109_3/code/) | `ffcb8180e1f0cdb12aced2af3585b8a75ee3b9504248bde652c60a9daf5e1ea4` |
+
+阅读顺序：先看[设计复盘](deep_audit/problems/05_SwiGLU_REVIEW.md)掌握三条实现路线和可迁移条件，再看[完整静态审计](deep_audit/problems/05_SwiGLU_TOP3_LOCAL_SUPPLEMENT_20261109.md)核对各提交的路由、代码细节及逐文件审读记录。报告不等于本地重新编译或复测。公开材料的授权边界见[第三方材料说明](../../THIRD_PARTY_NOTICES.md)。
 
 ## 阅读入口
 

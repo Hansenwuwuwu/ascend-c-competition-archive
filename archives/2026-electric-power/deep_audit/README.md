@@ -19,7 +19,7 @@
 |02 pinv|19921/19921|[设计复盘](problems/02_pinv_REVIEW.md)；[源码证据账本](problems/02_pinv.md)，三份提交源码首轮完成|
 |03 SplineConv|10607/10607|[设计复盘](problems/03_SplineConv_REVIEW.md)；[源码账本](problems/03_SplineConv.md)，三份提交源码首轮完成|
 |04 det|9262/9262|[设计复盘](problems/04_det_REVIEW.md)；[源码账本](problems/04_det.md)，实际路由/未启用路径已区分|
-|05 SwiGLU|无公示源码|[边界与方法索引](problems/05_SwiGLU_REVIEW.md)；[题面边界](problems/05_SwiGLU.md)，不冒充获奖代码审计|
+|05 SwiGLU|公示快照无；另有3份用户提供补充源码|[前三名设计复盘](problems/05_SwiGLU_REVIEW.md)；[完整静态源码审计](problems/05_SwiGLU_TOP3_LOCAL_SUPPLEMENT_20261109.md)；[题面边界](problems/05_SwiGLU.md)。补充材料单独计数，不并入公示快照的27份提交覆盖统计|
 |06 lstsq|12371/12371|[设计复盘](problems/06_lstsq_REVIEW.md)；[源码账本](problems/06_lstsq.md)，三份提交首轮源码覆盖完成|
 |07 Fire解码|18301/18301|[设计复盘](problems/07_FireCandidateDecodeFusion_REVIEW.md)；[源码账本](problems/07_FireCandidateDecodeFusion.md)，三份提交源码首轮完成|
 |08 eigh|25114/25114|[设计复盘](problems/08_eigh_REVIEW.md)；[源码账本](problems/08_eigh.md)，三份提交源码首轮完成|

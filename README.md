@@ -33,14 +33,14 @@
 | 02 | pinv | [PDF](archives/2026-electric-power/problems/02_pinv.pdf) | [3份](archives/2026-electric-power/extracted/pinv/) | [复盘](archives/2026-electric-power/deep_audit/problems/02_pinv_REVIEW.md) | [账本](archives/2026-electric-power/deep_audit/problems/02_pinv.md) |
 | 03 | SplineConv | [PDF](archives/2026-electric-power/problems/03_SplineConv.pdf) | [3份](archives/2026-electric-power/extracted/SplineConv/) | [复盘](archives/2026-electric-power/deep_audit/problems/03_SplineConv_REVIEW.md) | [账本](archives/2026-electric-power/deep_audit/problems/03_SplineConv.md) |
 | 04 | det | [PDF](archives/2026-electric-power/problems/04_det.pdf) | [3份](archives/2026-electric-power/extracted/det/) | [复盘](archives/2026-electric-power/deep_audit/problems/04_det_REVIEW.md) | [账本](archives/2026-electric-power/deep_audit/problems/04_det.md) |
-| 05 | SwiGLU | [PDF](archives/2026-electric-power/problems/05_SwiGLU.pdf) | 本次快照未包含获奖源码 | [边界与方法索引](archives/2026-electric-power/deep_audit/problems/05_SwiGLU_REVIEW.md) | [题面记录](archives/2026-electric-power/deep_audit/problems/05_SwiGLU.md) |
+| 05 | SwiGLU | [PDF](archives/2026-electric-power/problems/05_SwiGLU.pdf) | [前三名源码 ZIP 与解压目录](archives/2026-electric-power/README.md#swiglu-前三名本地补充材料) | [设计复盘](archives/2026-electric-power/deep_audit/problems/05_SwiGLU_REVIEW.md) | [完整源码审计](archives/2026-electric-power/deep_audit/problems/05_SwiGLU_TOP3_LOCAL_SUPPLEMENT_20261109.md) |
 | 06 | lstsq | [PDF](archives/2026-electric-power/problems/06_lstsq.pdf) | [3份](archives/2026-electric-power/extracted/lstsq/) | [复盘](archives/2026-electric-power/deep_audit/problems/06_lstsq_REVIEW.md) | [账本](archives/2026-electric-power/deep_audit/problems/06_lstsq.md) |
 | 07 | FireCandidateDecodeFusion | [PDF](archives/2026-electric-power/problems/07_FireCandidateDecodeFusion.pdf) | [3份](archives/2026-electric-power/extracted/FireCandidateDecodeFusion/) | [复盘](archives/2026-electric-power/deep_audit/problems/07_FireCandidateDecodeFusion_REVIEW.md) | [账本](archives/2026-electric-power/deep_audit/problems/07_FireCandidateDecodeFusion.md) |
 | 08 | eigh | [PDF](archives/2026-electric-power/problems/08_eigh.pdf) | [3份](archives/2026-electric-power/extracted/eigh/) | [复盘](archives/2026-electric-power/deep_audit/problems/08_eigh_REVIEW.md) | [账本](archives/2026-electric-power/deep_audit/problems/08_eigh.md) |
 | 09 | solve | [PDF](archives/2026-electric-power/problems/09_solve.pdf) | [3份](archives/2026-electric-power/extracted/solve/) | [复盘](archives/2026-electric-power/deep_audit/problems/09_solve_REVIEW.md) | [账本](archives/2026-electric-power/deep_audit/problems/09_solve.md) |
 | 10 | TreeLineMinDistance | [PDF](archives/2026-electric-power/problems/10_TreeLineMinDistance.pdf) | [3份](archives/2026-electric-power/extracted/TreeLineMinDistance/) | [复盘](archives/2026-electric-power/deep_audit/problems/10_TreeLineMinDistance_REVIEW.md) | [账本](archives/2026-electric-power/deep_audit/problems/10_TreeLineMinDistance.md) |
 
-原始PDF由仓库维护者提供；题面PDF的SHA-256与审计时使用的材料一致。第五题的PDF已经归档，但本批公开公示材料中没有该题获奖提交源码，所以只记录题面和资料边界，不以本项目自己的SwiGLU实现替代获奖代码审计。
+原始PDF由仓库维护者提供；题面PDF的SHA-256与审计时使用的材料一致。2026-11-08 公示快照确实没有 SwiGLU 获奖源码；之后用户提供的前三名 ZIP 已作为独立的本地补充材料归档，来源、名次映射和权利边界见[赛事归档说明](archives/2026-electric-power/README.md#swiglu-前三名本地补充材料)。
 
 ## 审计做到了什么
 
