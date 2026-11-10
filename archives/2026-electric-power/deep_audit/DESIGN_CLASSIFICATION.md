@@ -10,7 +10,7 @@
 |02 pinv|19,921/19,921|41/41|[题2设计复盘](problems/02_pinv_REVIEW.md) / [逐行证据账本](problems/02_pinv.md)|完成|
 |03 SplineConv|10,607/10,607|40/40|[题3设计复盘](problems/03_SplineConv_REVIEW.md) / [逐行证据账本](problems/03_SplineConv.md)|完成|
 |04 det|9,262/9,262|27/27|[题4设计复盘](problems/04_det_REVIEW.md) / [逐行证据账本](problems/04_det.md)|完成|
-|05 电力巡检算子 SwiGLU|公示快照不含；另有3份本地补充|—|[前三名设计复盘](problems/05_SwiGLU_REVIEW.md) / [完整静态源码审计](problems/05_SwiGLU_TOP3_LOCAL_SUPPLEMENT_20261109.md)|补充材料独立审计，不计入27份快照覆盖|
+|05 SwiGLU|公示快照不含；另有3份本地补充|—|[前三名设计复盘](problems/05_SwiGLU_REVIEW.md) / [完整静态源码审计](problems/05_SwiGLU_TOP3_LOCAL_SUPPLEMENT_20261109.md)|补充材料独立审计，不计入27份快照覆盖|
 |06 lstsq|12,371/12,371|24/24|[题6设计复盘](problems/06_lstsq_REVIEW.md) / [逐行证据账本](problems/06_lstsq.md)|完成|
 |07 FireCandidateDecodeFusion|18,301/18,301|44/44|[题7设计复盘](problems/07_FireCandidateDecodeFusion_REVIEW.md) / [逐行证据账本](problems/07_FireCandidateDecodeFusion.md)|完成|
 |08 eigh|25,114/25,114|26/26|[题8设计复盘](problems/08_eigh_REVIEW.md) / [逐行证据账本](problems/08_eigh.md)|完成|
